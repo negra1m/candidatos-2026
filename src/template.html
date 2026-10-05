@@ -1,0 +1,340 @@
+<title>Lula e Flávio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eceeef;
+  --pane:#f6f7f7;
+  --ink:#1b1f22;
+  --ink-2:#4a5258;
+  --ink-3:#586169;
+  --line:#cfd4d8;
+  --chip-bg:#e1e5e8;
+  --chip-ink:#2b3136;
+  --mark-bg:#1b1f22;
+  --mark-ink:#f6f7f7;
+  --focus:#2d5f8a;
+  --font-sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0f10;
+    --pane:#15181a;
+    --ink:#e8ebed;
+    --ink-2:#b1b9bf;
+    --ink-3:#8c959c;
+    --line:#2b3135;
+    --chip-bg:#242a2e;
+    --chip-ink:#d6dbdf;
+    --mark-bg:#e8ebed;
+    --mark-ink:#15181a;
+    --focus:#7fb2dd;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0f10;
+  --pane:#15181a;
+  --ink:#e8ebed;
+  --ink-2:#b1b9bf;
+  --ink-3:#8c959c;
+  --line:#2b3135;
+  --chip-bg:#242a2e;
+  --chip-ink:#d6dbdf;
+  --mark-bg:#e8ebed;
+  --mark-ink:#15181a;
+  --focus:#7fb2dd;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-sans);font-size:16px;line-height:1.6;overflow:hidden}
+#app{height:100%;overflow-y:auto;overflow-x:hidden;display:block;position:relative}
+.tabs{display:none}
+.hero{padding:40px 24px 28px;background:var(--bg)}
+.hero h1{margin:0;font-size:clamp(28px,5vw,48px);line-height:1.05;font-weight:700;letter-spacing:-.02em}
+.hero p{margin:14px 0 0;max-width:68ch;color:var(--ink);font-size:18px;line-height:1.6}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.filters button{font:inherit;font-size:16px;font-weight:600;color:var(--ink);background:transparent;border:2px solid var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;line-height:1.2}
+.filters button:hover{background:var(--chip-bg)}
+.filters button[aria-pressed="true"]{background:var(--mark-bg);color:var(--mark-ink)}
+.filters button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.hero .crit{font-size:16px;color:var(--ink);margin-top:14px}
+.hero .crit:empty{display:none}
+.empty{margin:24px 0;padding:16px;background:var(--chip-bg);color:var(--ink);font-size:16px}
+.tag.ctrv{background:transparent;color:var(--ink);border:2px dashed var(--ink-2);padding:0 6px;font-weight:700}
+.ev .st{margin:10px 0 0;padding:8px 10px;background:var(--chip-bg);color:var(--ink);border-left:4px solid var(--ink-2);font-size:16px;line-height:1.55}
+.ev .st + .st{margin-top:6px}
+.ev .st b{font-weight:700}
+.split{height:100%;height:100dvh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:0;min-height:0;background:var(--pane);border-top:2px solid var(--line)}
+.pane{background:var(--pane);display:grid;grid-row:span 2;grid-template-rows:auto minmax(0,1fr);min-height:0;min-width:0}
+.pane + .pane{border-left:2px solid var(--line)}
+@supports (grid-template-rows:subgrid){.pane{grid-template-rows:subgrid}}
+.id>div{min-width:0}
+.id{display:flex;gap:20px;align-items:flex-end;padding:24px 32px 18px;border-bottom:1px solid var(--line);flex:none}
+.id img{width:112px;height:140px;object-fit:cover;object-position:center top;display:block;background:var(--chip-bg);flex:none}
+.id h2{margin:0;font-size:26px;line-height:1.1;font-weight:700;letter-spacing:-.01em}
+.id .full{margin:4px 0 0;color:var(--ink-2);font-size:16px}
+.id .meta{overflow-wrap:anywhere;margin:8px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45}
+.scroll{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;padding:8px 32px 48px;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:var(--ink-3) transparent}
+.scroll:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+ol{list-style:none;margin:0;padding:0}
+.ev{padding:22px 0 22px 22px;border-left:2px solid var(--line);position:relative}
+.ev::before{content:"";position:absolute;left:-6px;top:28px;width:10px;height:10px;background:var(--pane);border:2px solid var(--ink-3);border-radius:50%}
+.ev time{font-family:var(--font-mono);font-size:14px;color:var(--ink-2);display:block}
+.ev h3{margin:4px 0 8px;font-size:20px;line-height:1.3;font-weight:700;overflow-wrap:anywhere}
+.ev p{margin:0;color:var(--ink);overflow-wrap:anywhere}
+.ev b{font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags .tag{margin-top:0}
+.tag.abr{font-weight:700}
+.tag.abr-nacional{background:var(--mark-bg);color:var(--mark-ink)}
+.tag.abr-estadual{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.tag.abr-internacional{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink-3);border-radius:10px}
+.ev .pub{margin:10px 0 0;font-size:16px}
+.tag{display:inline-block;margin-top:10px;padding:2px 8px;background:var(--chip-bg);color:var(--chip-ink);font-size:14px;border-radius:3px}
+.ev .law{margin:10px 0 0;color:var(--mark-ink);padding:6px 8px;background:var(--mark-bg);color:var(--mark-ink);font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.law b{font-weight:700}
+.src{display:block;margin-top:12px;font-size:15px;color:var(--ink);overflow-wrap:anywhere}
+.src a{color:var(--ink);font-weight:500}
+.src a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+footer{background:var(--bg);border-top:2px solid var(--line);padding:12px 32px;font-size:14px;line-height:1.55;color:var(--ink-2);max-height:8rem;overflow-y:auto}
+footer p{margin:0 0 4px;max-width:140ch;overflow-wrap:anywhere}
+footer a{color:var(--ink-2)}
+@media (max-width:700px){
+  body{font-size:15px;line-height:1.55}
+  .id{flex-direction:column;align-items:flex-start;gap:8px;padding:12px 10px 10px}
+  .id img{width:48px;height:60px}
+  .id h2{font-size:18px}
+  .id .full{font-size:14px;margin-top:2px}
+  .id .meta{font-size:13px;margin-top:4px}
+  .scroll{padding:4px 10px 24px}
+  .ev{padding:16px 0 16px 14px}
+  .ev::before{top:21px}
+  .ev time{font-size:13px}
+  .ev h3{font-size:17px}
+  .tag{font-size:13px}
+  .ev .law,.src,.ev .pub,.ev .st{font-size:15px}
+  .hero{padding:20px 12px 16px}
+  .hero p{font-size:16px;margin-top:10px}
+  .filters{gap:6px;margin-top:14px}
+  .filters button{font-size:15px;padding:6px 12px}
+  .hero .crit{font-size:15px}
+  footer{padding:8px 10px;font-size:13px;max-height:8rem}
+}@media (max-width:700px){
+  .hero{padding:16px 12px 12px}
+  .hero h1{font-size:24px}
+  .hero p{font-size:15px;margin-top:8px}
+  .filters{flex-wrap:nowrap;overflow-x:auto;margin:12px -12px 0;padding:2px 12px 6px;gap:8px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  .filters button{flex:none;min-height:44px;white-space:nowrap}
+  .hero .crit{font-size:15px;margin-top:8px}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:2px;position:sticky;top:0;z-index:5;background:var(--line);padding-top:env(safe-area-inset-top);border-bottom:2px solid var(--line)}
+  .tab{font:inherit;display:flex;align-items:center;gap:8px;min-height:56px;padding:6px 10px;border:0;margin:0;background:var(--pane);color:var(--ink);text-align:left;cursor:pointer;min-width:0}
+  .tab img{width:36px;height:44px;object-fit:cover;object-position:center top;flex:none;background:var(--chip-bg);display:block}
+  .tab span{display:block;min-width:0}
+  .tab .tn{font-weight:700;font-size:15px;line-height:1.2;overflow-wrap:anywhere}
+  .tab .tc{font-size:13px;line-height:1.3;color:var(--ink-2)}
+  .tab[aria-selected="true"]{background:var(--mark-bg);color:var(--mark-ink)}
+  .tab[aria-selected="true"] .tc{color:var(--mark-ink)}
+  .tab:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+  .split{height:auto;display:block;background:var(--pane)}
+  .split{grid-template-rows:none;border-top:0}
+  .pane{display:block;grid-row:auto}
+  .pane + .pane{border-left:0}
+  .pane.off{display:none}
+  .id img{display:none}
+  .id{padding:14px 12px 10px}
+  .id h2{font-size:22px}
+  .scroll{overflow:visible;padding:4px 12px 24px;scrollbar-gutter:auto}
+  footer{max-height:none;overflow:visible;padding:12px}
+}@media (prefers-reduced-motion:no-preference){
+  .scroll{scroll-behavior:smooth}
+}
+</style>
+<div id="app">
+  <header class="hero">
+    <h1>Qual candidato fez o que?</h1>
+    <p>Veja as leis e os programas que Lula e Flávio Bolsonaro fizeram ou ajudaram a aprovar. Veja também os casos dos dois na Justiça. Os dois disputam o 2º turno no dia 25 de outubro. Cada item diz de onde veio a informação.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filtrar itens por valor"></div>
+    <p class="crit" id="crit" aria-live="polite"></p>
+  </header>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Escolher candidato"></div>
+  <main class="split" id="split">
+    <section class="pane" id="pane-lula" aria-label="Linha do tempo de Lula"></section>
+    <section class="pane" id="pane-flavio" aria-label="Linha do tempo de Flávio Bolsonaro"></section>
+  </main>
+  <footer id="foot"></footer>
+</div>
+<script>
+const DATA = {lula: @@LULA@@, flavio: @@FLAVIO@@};
+const CAT = {eleicao:"eleição",programa_social:"programa social",saude:"saúde",educacao:"educação",seguranca:"segurança",assistencia:"ajuda social"};
+const MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+function fmtData(s){
+  const p = String(s).split("-");
+  if (p.length === 1) return p[0];
+  if (p.length === 2) return MESES[+p[1]-1] + " de " + p[0];
+  return (+p[2]) + " de " + MESES[+p[1]-1] + " de " + p[0];
+}
+function el(tag, cls, text){
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+const FILTROS = [
+  {id:"todos", nome:"Tudo", crit:""},
+  {id:"familia", nome:"Família", crit:"Leis que ajudam a família: dinheiro para a casa, filhos, moradia, cuidar de quem depende de alguém, decidir ter ou não filhos e violência dentro de casa."},
+  {id:"soberania", nome:"Soberania do país", crit:"Soberania é o país mandar nas próprias coisas. Aqui entram leis sobre a relação do Brasil com outros países e sobre áreas importantes do país: defesa, aviões, grandes obras e energia."},
+  {id:"seguranca", nome:"Segurança", crit:"Leis sobre polícia, cadeia, crimes e proteção contra violência."},
+  {id:"pobreza", nome:"Combate à pobreza", crit:"Leis que dão dinheiro, combatem a fome ou ajudam quem ganha pouco a ter casa, luz e o básico."},
+  {id:"controversia", nome:"Casos na Justiça", crit:"Casos dos últimos dois anos em que o próprio candidato virou alvo da Justiça, da polícia ou de outro órgão do governo. Também entram casos antigos que tiveram novidade nesse tempo. E dois pedidos de investigação que ainda não andaram: Vorcaro (Lula) e Estados Unidos (Flávio). Estar aqui não quer dizer que a pessoa é culpada. Cada item diz em que pé está o caso."}
+];
+const ABR = {"Nacional":"Vale no Brasil todo","Estadual (RJ)":"Vale só no estado do Rio","Internacional":"Acordo entre países"};
+let filtroAtual = "todos";
+const refs = {};
+function passa(ev, f){
+  if (f === "todos") return true;
+  if (f === "controversia") return ev.categoria === "controversia";
+  return ev.categoria !== "controversia" && Array.isArray(ev.valores) && ev.valores.indexOf(f) >= 0;
+}
+function n1(n, um, varios){ return n + " " + (n === 1 ? um : varios); }
+function plural(n, um, varios){ return n + " " + (n === 1 ? um : varios); }
+function render(key){
+  const d = DATA[key], pane = document.getElementById("pane-" + key);
+  const id = el("header", "id");
+  const img = el("img"); img.src = d.foto.arquivo; img.alt = "Retrato oficial de " + d.nome_completo;
+  id.appendChild(img);
+  const t = el("div");
+  t.appendChild(el("h2", null, d.nome));
+  t.appendChild(el("p", "full", d.nome_completo));
+  t.appendChild(el("p", "meta", d.partido_atual + " · " + d.cargo_atual));
+  const n = {}, leis = d.eventos.filter(function(e){ return e.categoria !== "controversia"; });
+  leis.forEach(function(e){ n[e.abrangencia] = (n[e.abrangencia] || 0) + 1; });
+  const partes = [n1(leis.length, "lei ou programa", "leis e programas")];
+  if (n["Nacional"]) partes.push(n["Nacional"] === 1 ? "1 vale no Brasil todo" : n["Nacional"] + " valem no Brasil todo");
+  if (n["Estadual (RJ)"]) partes.push(n["Estadual (RJ)"] + " só no estado do Rio");
+  if (n["Internacional"]) partes.push(plural(n["Internacional"], "acordo entre países", "acordos entre países"));
+  const nc = d.eventos.length - leis.length;
+  if (nc) partes.push(plural(nc, "caso na Justiça", "casos na Justiça"));  t.appendChild(el("p", "meta", partes.join(" · ")));
+  const cnt = el("p", "meta cnt"); t.appendChild(cnt);
+  id.appendChild(t);
+  pane.appendChild(id);
+  const sc = el("div", "scroll"); sc.tabIndex = 0;
+  sc.setAttribute("role", "region"); sc.setAttribute("aria-label", "Acontecimentos de " + d.nome);
+  pane.appendChild(sc);
+  refs[key] = {sc: sc, cnt: cnt, tabCnt: null};
+  pane.setAttribute("role", "tabpanel"); pane.setAttribute("aria-labelledby", "tab-" + key);
+}
+function atualiza(key){
+  const d = DATA[key], r = refs[key], f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
+  const lista = d.eventos.filter(function(e){ return passa(e, filtroAtual); });
+  r.cnt.textContent = filtroAtual === "todos" ? "" : plural(lista.length, "item neste filtro", "itens neste filtro");
+  r.cnt.style.display = filtroAtual === "todos" ? "none" : "";
+  if (r.tabCnt) r.tabCnt.textContent = plural(lista.length, "item", "itens");
+  r.sc.textContent = ""; r.sc.scrollTop = 0;
+  if (!lista.length){
+    r.sc.appendChild(el("p", "empty", "Nenhum item deste candidato entra em " + f.nome + "."));
+    return;
+  }
+  const ol = el("ol");
+  lista.forEach(function(ev){
+    const li = el("li", "ev");
+    const tm = el("time", null, fmtData(ev.data)); tm.dateTime = ev.data;
+    li.appendChild(tm);
+    li.appendChild(el("h3", null, ev.titulo_simples || ev.titulo));
+    li.appendChild(el("p", null, ev.texto_simples || ev.descricao));
+    const tg = el("div", "tags");
+    if (ev.categoria === "controversia"){
+      tg.appendChild(el("span", "tag ctrv", "Caso na Justiça"));
+    } else {
+      tg.appendChild(el("span", "tag", CAT[ev.categoria] || ev.categoria.replace(/_/g, " ")));
+      if (ev.abrangencia) tg.appendChild(el("span", "tag abr abr-" + ev.abrangencia.split(" ")[0].toLowerCase(), ABR[ev.abrangencia] || ev.abrangencia));
+    }
+    li.appendChild(tg);
+    function linha(cls, rotulo, txt){
+      if (!txt) return;
+      const p = el("p", cls); p.appendChild(el("b", null, rotulo + " ")); p.appendChild(document.createTextNode(txt)); li.appendChild(p);
+    }
+    linha("pub", "Para quem é:", ev.publico_simples || ev.publico);
+    linha("pub", "Para que serve:", ev.para_que_serve);
+    linha("st", "Em que pé está:", ev.status_simples || ev.status);
+    linha("st", "O que o candidato diz:", ev.resposta_simples || ev.resposta);
+    linha("law", "Lei:", ev.marco_legal);
+    const src = el("p", "src"); src.appendChild(el("b", null, "De onde veio a informação: "));
+    const a = el("a", null, ev.fonte.nome);
+    a.href = ev.fonte.url; a.target = "_blank"; a.rel = "noopener";
+    src.appendChild(a);
+    li.appendChild(src);    ol.appendChild(li);
+  });
+  r.sc.appendChild(ol);
+}
+function aplica(){
+  Array.prototype.forEach.call(document.querySelectorAll("#filters button"), function(b){
+    b.setAttribute("aria-pressed", String(b.dataset.f === filtroAtual));
+  });
+  const f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
+  document.getElementById("crit").textContent = f.crit;
+  atualiza("lula"); atualiza("flavio");
+}
+render("lula"); render("flavio");
+let ativo = "lula";
+const mq = window.matchMedia("(max-width:700px)");
+function mostra(key, rolar){
+  ativo = key;
+  ["lula","flavio"].forEach(function(k){
+    document.getElementById("pane-" + k).classList.toggle("off", k !== key);
+    const tb = document.getElementById("tab-" + k);
+    tb.setAttribute("aria-selected", String(k === key)); tb.tabIndex = k === key ? 0 : -1;
+  });
+  if (rolar && mq.matches){
+    const app = document.getElementById("app"), alvo = document.getElementById("split").offsetTop - document.getElementById("tabs").offsetHeight;
+    if (app.scrollTop > alvo) app.scrollTop = alvo;
+  }
+}
+["lula","flavio"].forEach(function(k){
+  const d = DATA[k], b = el("button", "tab"); b.type = "button"; b.id = "tab-" + k;
+  b.setAttribute("role", "tab"); b.setAttribute("aria-controls", "pane-" + k);
+  const im = el("img"); im.src = d.foto.arquivo; im.alt = ""; b.appendChild(im);
+  const sp = el("span"); sp.appendChild(el("span", "tn", d.nome));
+  const c = el("span", "tc"); sp.appendChild(c); b.appendChild(sp);
+  refs[k].tabCnt = c;
+  b.addEventListener("click", function(){ mostra(k, true); });
+  b.addEventListener("keydown", function(e){
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft"){ const o = k === "lula" ? "flavio" : "lula"; mostra(o, true); document.getElementById("tab-" + o).focus(); }
+  });
+  document.getElementById("tabs").appendChild(b);
+});
+(function(){
+  let x0 = null, y0 = 0;
+  const sp = document.getElementById("split");
+  sp.addEventListener("touchstart", function(e){ x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+  sp.addEventListener("touchend", function(e){
+    if (x0 === null || !mq.matches) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > 2 * Math.abs(dy)) mostra(dx < 0 ? "flavio" : "lula", true);
+  }, {passive:true});
+})();
+mostra("lula", false);FILTROS.forEach(function(f){
+  const b = el("button", null, f.nome); b.type = "button"; b.dataset.f = f.id;
+  b.addEventListener("click", function(){ filtroAtual = f.id; aplica(); });
+  document.getElementById("filters").appendChild(b);
+});
+aplica();
+(function(){
+  const f = document.getElementById("foot");
+  f.appendChild(el("p", null, "As informações são públicas. Cada item diz de onde veio. Atualizado em 5 de outubro de 2026. As regras são as mesmas para os dois: entram leis e programas que já valem e casos na Justiça, do mais novo para o mais antigo. Projetos que ainda não viraram lei não entram. Quem fez esta página separou os itens por tema seguindo as regras de cada botão. A lei e a fonte de cada item ficam para quem quiser conferir."));
+  const p = el("p", null, "Fotos: ");
+  ["lula","flavio"].forEach(function(k, i){
+    const d = DATA[k];
+    if (i) p.appendChild(document.createTextNode(" · "));
+    p.appendChild(document.createTextNode(d.nome + ", " + d.foto.autor + ", " + d.foto.licenca + " ("));
+    const a = el("a", null, "fonte"); a.href = d.foto.fonte_url; a.target = "_blank"; a.rel = "noopener";
+    p.appendChild(a); p.appendChild(document.createTextNode(")"));
+  });
+  f.appendChild(p);
+})();
+</script>

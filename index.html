@@ -1,0 +1,1692 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
+<title>Lula e Flávio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eceeef;
+  --pane:#f6f7f7;
+  --ink:#1b1f22;
+  --ink-2:#4a5258;
+  --ink-3:#586169;
+  --line:#cfd4d8;
+  --chip-bg:#e1e5e8;
+  --chip-ink:#2b3136;
+  --mark-bg:#1b1f22;
+  --mark-ink:#f6f7f7;
+  --focus:#2d5f8a;
+  --font-sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0f10;
+    --pane:#15181a;
+    --ink:#e8ebed;
+    --ink-2:#b1b9bf;
+    --ink-3:#8c959c;
+    --line:#2b3135;
+    --chip-bg:#242a2e;
+    --chip-ink:#d6dbdf;
+    --mark-bg:#e8ebed;
+    --mark-ink:#15181a;
+    --focus:#7fb2dd;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0f10;
+  --pane:#15181a;
+  --ink:#e8ebed;
+  --ink-2:#b1b9bf;
+  --ink-3:#8c959c;
+  --line:#2b3135;
+  --chip-bg:#242a2e;
+  --chip-ink:#d6dbdf;
+  --mark-bg:#e8ebed;
+  --mark-ink:#15181a;
+  --focus:#7fb2dd;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-sans);font-size:16px;line-height:1.6;overflow:hidden}
+#app{height:100%;overflow-y:auto;overflow-x:hidden;display:block;position:relative}
+.tabs{display:none}
+.hero{padding:40px 24px 28px;background:var(--bg)}
+.hero h1{margin:0;font-size:clamp(28px,5vw,48px);line-height:1.05;font-weight:700;letter-spacing:-.02em}
+.hero p{margin:14px 0 0;max-width:68ch;color:var(--ink);font-size:18px;line-height:1.6}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.filters button{font:inherit;font-size:16px;font-weight:600;color:var(--ink);background:transparent;border:2px solid var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer;line-height:1.2}
+.filters button:hover{background:var(--chip-bg)}
+.filters button[aria-pressed="true"]{background:var(--mark-bg);color:var(--mark-ink)}
+.filters button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.hero .crit{font-size:16px;color:var(--ink);margin-top:14px}
+.hero .crit:empty{display:none}
+.empty{margin:24px 0;padding:16px;background:var(--chip-bg);color:var(--ink);font-size:16px}
+.tag.ctrv{background:transparent;color:var(--ink);border:2px dashed var(--ink-2);padding:0 6px;font-weight:700}
+.ev .st{margin:10px 0 0;padding:8px 10px;background:var(--chip-bg);color:var(--ink);border-left:4px solid var(--ink-2);font-size:16px;line-height:1.55}
+.ev .st + .st{margin-top:6px}
+.ev .st b{font-weight:700}
+.split{height:100%;height:100dvh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:0;min-height:0;background:var(--pane);border-top:2px solid var(--line)}
+.pane{background:var(--pane);display:grid;grid-row:span 2;grid-template-rows:auto minmax(0,1fr);min-height:0;min-width:0}
+.pane + .pane{border-left:2px solid var(--line)}
+@supports (grid-template-rows:subgrid){.pane{grid-template-rows:subgrid}}
+.id>div{min-width:0}
+.id{display:flex;gap:20px;align-items:flex-end;padding:24px 32px 18px;border-bottom:1px solid var(--line);flex:none}
+.id img{width:112px;height:140px;object-fit:cover;object-position:center top;display:block;background:var(--chip-bg);flex:none}
+.id h2{margin:0;font-size:26px;line-height:1.1;font-weight:700;letter-spacing:-.01em}
+.id .full{margin:4px 0 0;color:var(--ink-2);font-size:16px}
+.id .meta{overflow-wrap:anywhere;margin:8px 0 0;color:var(--ink-2);font-size:15px;line-height:1.45}
+.scroll{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;padding:8px 32px 48px;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:var(--ink-3) transparent}
+.scroll:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+ol{list-style:none;margin:0;padding:0}
+.ev{padding:22px 0 22px 22px;border-left:2px solid var(--line);position:relative}
+.ev::before{content:"";position:absolute;left:-6px;top:28px;width:10px;height:10px;background:var(--pane);border:2px solid var(--ink-3);border-radius:50%}
+.ev time{font-family:var(--font-mono);font-size:14px;color:var(--ink-2);display:block}
+.ev h3{margin:4px 0 8px;font-size:20px;line-height:1.3;font-weight:700;overflow-wrap:anywhere}
+.ev p{margin:0;color:var(--ink);overflow-wrap:anywhere}
+.ev b{font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags .tag{margin-top:0}
+.tag.abr{font-weight:700}
+.tag.abr-nacional{background:var(--mark-bg);color:var(--mark-ink)}
+.tag.abr-estadual{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.tag.abr-internacional{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink-3);border-radius:10px}
+.ev .pub{margin:10px 0 0;font-size:16px}
+.tag{display:inline-block;margin-top:10px;padding:2px 8px;background:var(--chip-bg);color:var(--chip-ink);font-size:14px;border-radius:3px}
+.ev .law{margin:10px 0 0;color:var(--mark-ink);padding:6px 8px;background:var(--mark-bg);color:var(--mark-ink);font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.law b{font-weight:700}
+.src{display:block;margin-top:12px;font-size:15px;color:var(--ink);overflow-wrap:anywhere}
+.src a{color:var(--ink);font-weight:500}
+.src a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+footer{background:var(--bg);border-top:2px solid var(--line);padding:12px 32px;font-size:14px;line-height:1.55;color:var(--ink-2);max-height:8rem;overflow-y:auto}
+footer p{margin:0 0 4px;max-width:140ch;overflow-wrap:anywhere}
+footer a{color:var(--ink-2)}
+@media (max-width:700px){
+  body{font-size:15px;line-height:1.55}
+  .id{flex-direction:column;align-items:flex-start;gap:8px;padding:12px 10px 10px}
+  .id img{width:48px;height:60px}
+  .id h2{font-size:18px}
+  .id .full{font-size:14px;margin-top:2px}
+  .id .meta{font-size:13px;margin-top:4px}
+  .scroll{padding:4px 10px 24px}
+  .ev{padding:16px 0 16px 14px}
+  .ev::before{top:21px}
+  .ev time{font-size:13px}
+  .ev h3{font-size:17px}
+  .tag{font-size:13px}
+  .ev .law,.src,.ev .pub,.ev .st{font-size:15px}
+  .hero{padding:20px 12px 16px}
+  .hero p{font-size:16px;margin-top:10px}
+  .filters{gap:6px;margin-top:14px}
+  .filters button{font-size:15px;padding:6px 12px}
+  .hero .crit{font-size:15px}
+  footer{padding:8px 10px;font-size:13px;max-height:8rem}
+}@media (max-width:700px){
+  .hero{padding:16px 12px 12px}
+  .hero h1{font-size:24px}
+  .hero p{font-size:15px;margin-top:8px}
+  .filters{flex-wrap:nowrap;overflow-x:auto;margin:12px -12px 0;padding:2px 12px 6px;gap:8px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+  .filters button{flex:none;min-height:44px;white-space:nowrap}
+  .hero .crit{font-size:15px;margin-top:8px}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:2px;position:sticky;top:0;z-index:5;background:var(--line);padding-top:env(safe-area-inset-top);border-bottom:2px solid var(--line)}
+  .tab{font:inherit;display:flex;align-items:center;gap:8px;min-height:56px;padding:6px 10px;border:0;margin:0;background:var(--pane);color:var(--ink);text-align:left;cursor:pointer;min-width:0}
+  .tab img{width:36px;height:44px;object-fit:cover;object-position:center top;flex:none;background:var(--chip-bg);display:block}
+  .tab span{display:block;min-width:0}
+  .tab .tn{font-weight:700;font-size:15px;line-height:1.2;overflow-wrap:anywhere}
+  .tab .tc{font-size:13px;line-height:1.3;color:var(--ink-2)}
+  .tab[aria-selected="true"]{background:var(--mark-bg);color:var(--mark-ink)}
+  .tab[aria-selected="true"] .tc{color:var(--mark-ink)}
+  .tab:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+  .split{height:auto;display:block;background:var(--pane)}
+  .split{grid-template-rows:none;border-top:0}
+  .pane{display:block;grid-row:auto}
+  .pane + .pane{border-left:0}
+  .pane.off{display:none}
+  .id img{display:none}
+  .id{padding:14px 12px 10px}
+  .id h2{font-size:22px}
+  .scroll{overflow:visible;padding:4px 12px 24px;scrollbar-gutter:auto}
+  footer{max-height:none;overflow:visible;padding:12px}
+}@media (prefers-reduced-motion:no-preference){
+  .scroll{scroll-behavior:smooth}
+}
+</style>
+<div id="app">
+  <header class="hero">
+    <h1>Qual candidato fez o que?</h1>
+    <p>Veja as leis e os programas que Lula e Flávio Bolsonaro fizeram ou ajudaram a aprovar. Veja também os casos dos dois na Justiça. Os dois disputam o 2º turno no dia 25 de outubro. Cada item diz de onde veio a informação.</p>
+    <div class="filters" id="filters" role="group" aria-label="Filtrar itens por valor"></div>
+    <p class="crit" id="crit" aria-live="polite"></p>
+  </header>
+  <div class="tabs" id="tabs" role="tablist" aria-label="Escolher candidato"></div>
+  <main class="split" id="split">
+    <section class="pane" id="pane-lula" aria-label="Linha do tempo de Lula"></section>
+    <section class="pane" id="pane-flavio" aria-label="Linha do tempo de Flávio Bolsonaro"></section>
+  </main>
+  <footer id="foot"></footer>
+</div>
+<script>
+const DATA = {lula: {
+  "nome": "Lula",
+  "nome_completo": "Luiz Inácio Lula da Silva",
+  "nascimento": "1945-10-27",
+  "partido_atual": "PT (Partido dos Trabalhadores)",
+  "cargo_atual": "Presidente da República (mandato 2023-2026); candidato à reeleição em 2026",
+  "foto": {
+    "arquivo": "lula.jpg",
+    "autor": "Palácio do Planalto (Foto oficial do Presidente da República, 2023)",
+    "licenca": "CC BY 2.0",
+    "fonte_url": "https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(2023%E2%80%932027).jpg"
+  },
+  "eventos": [
+    {
+      "data": "2026-09-23",
+      "titulo": "Notícia-crime no STF sobre relação com Vorcaro",
+      "descricao": "A campanha de Flávio Bolsonaro pediu ao STF investigação de Lula por corrupção passiva e advocacia administrativa, citando reunião com o ex-banqueiro Daniel Vorcaro (Banco Master) no Palácio do Planalto em dezembro de 2024, fora da agenda oficial, e mensagem segundo a qual Lula teria recebido um uísque do banqueiro. O pedido foi dirigido ao ministro André Mendonça, com solicitação de que a PGR instaure inquérito.",
+      "categoria": "controversia",
+      "status": "pedido protocolado em 23/09/2026; sem decisão divulgada sobre abertura de investigação até 05/10/2026",
+      "resposta": "A Secom afirmou que Lula não recebeu presente, desconhece o suposto arranjo e teve apenas uma reunião com Vorcaro, em dezembro de 2024.",
+      "fonte": {
+        "nome": "Correio Braziliense",
+        "url": "https://www.correiobraziliense.com.br/politica/2026/09/7507140-flavio-apresenta-noticia-crime-contra-lula-por-relacao-com-vorcaro.html"
+      },
+      "titulo_simples": "Pedido ao Supremo para investigar Lula",
+      "texto_simples": "A campanha de Flávio pediu ao Supremo para investigar Lula. O pedido cita uma reunião de Lula com o ex-banqueiro Daniel Vorcaro. A reunião foi no Palácio do Planalto, fora da agenda oficial. Uma mensagem diz que Lula teria ganhado um uísque de Vorcaro. A campanha acusa Lula de corrupção e de favorecer interesse privado.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão divulgada sobre investigar. O pedido foi feito em 23 de setembro.",
+      "resposta_simples": "O governo disse que Lula não recebeu presente. Disse que ele não sabe do suposto acordo. E que Lula só teve uma reunião com Vorcaro, em dezembro de 2024."
+    },
+    {
+      "data": "2026-09",
+      "titulo": "TSE admite ação sobre uso da estrutura do governo",
+      "descricao": "Flávio Bolsonaro propôs ação de investigação judicial eleitoral contra Lula e Alckmin por suposto abuso de poder político e de autoridade com uso da estrutura administrativa e institucional do governo federal e de outros entes públicos em benefício eleitoral. Em 28/09/2026 o corregedor-geral eleitoral em exercício, ministro Ricardo Villas Bôas Cueva, admitiu a ação e deu cinco dias para a apresentação de defesa.",
+      "categoria": "controversia",
+      "status": "ação de investigação judicial eleitoral em tramitação no TSE, sem julgamento de mérito até 05/10/2026",
+      "fonte": {
+        "nome": "Tribunal Superior Eleitoral",
+        "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/tse-pede-informacoes-complementares-antes-de-analisar-acao-de-flavio-bolsonaro-contra-lula-e-alckmin"
+      },
+      "titulo_simples": "Justiça Eleitoral aceita processo contra Lula",
+      "texto_simples": "Flávio Bolsonaro abriu um processo contra Lula e Alckmin. Em 28 de setembro de 2026, a Justiça Eleitoral aceitou o processo. Os dois ganharam cinco dias para se defender. Flávio acusa os dois de abuso de poder. Ele alega que usaram o governo e órgãos públicos para ganhar votos.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final."
+    },
+    {
+      "data": "2026-07",
+      "titulo": "TRE-SP multa por propaganda eleitoral antecipada",
+      "descricao": "A pedido do partido Missão, juiz auxiliar do TRE-SP aplicou multa de R$ 15 mil por entender que, em evento em São Paulo em 19/05/2026 transmitido pelo canal da Presidência no YouTube, Lula pediu votos para Simone Tebet e Marina Silva antes do período de campanha.",
+      "categoria": "controversia",
+      "status": "multa aplicada em decisão de julho de 2026, sujeita a recurso ao TRE-SP e ao TSE",
+      "resposta": "A defesa afirmou que a fala teve caráter institucional e não continha pedido explícito de voto.",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/tre-sp-multa-lula-por-propaganda-eleitoral-antecipada-cabe-recurso"
+      },
+      "titulo_simples": "Lula multado em 15 mil reais por propaganda",
+      "texto_simples": "Em maio de 2026, Lula falou num evento em São Paulo. O canal da Presidência no YouTube mostrou o evento. A Justiça Eleitoral de São Paulo multou Lula em 15 mil reais. Para o juiz, ele pediu votos para Simone Tebet e Marina Silva. O partido Missão acusou Lula de pedir votos antes da campanha.",
+      "status_simples": "Até 5 de outubro de 2026, cabia pedido para rever a decisão. A multa foi dada em julho de 2026.",
+      "resposta_simples": "A defesa disse que Lula falou no papel de presidente. E que ele não pediu voto de forma clara."
+    },
+    {
+      "data": "2026-02-13",
+      "titulo": "Auxílio Gás do Povo",
+      "descricao": "Lei converte a MP 1.313/2025, renomeia o Auxílio Gás dos Brasileiros para Auxílio Gás do Povo, cria novas modalidades de operacionalização e institui o Programa Nacional de Acesso ao Cozimento.",
+      "categoria": "programa_social",
+      "marco_legal": "MP 1.313/2025; Lei 15.348/2026",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15348.htm"
+      },
+      "publico": "Famílias de baixa renda inscritas no CadÚnico",
+      "abrangencia": "Nacional",
+      "valores": [
+        "familia",
+        "pobreza"
+      ],
+      "titulo_simples": "Auxílio Gás do Povo: ajuda com o gás de cozinha",
+      "texto_simples": "Lula assinou uma lei que mudou o nome do Auxílio Gás. Agora ele se chama Auxílio Gás do Povo. A lei criou novos jeitos de o programa funcionar. Também criou um programa nacional para ajudar as famílias a cozinhar.",
+      "publico_simples": "Famílias com pouco dinheiro no Cadastro Único",
+      "para_que_serve": "Programas de auxílio gás servem para ajudar famílias pobres a ter como cozinhar em casa."
+    },
+    {
+      "data": "2026-02",
+      "titulo": "Ações no TSE sobre desfile de carnaval em sua homenagem",
+      "descricao": "Novo e Missão representaram ao TSE por suposta propaganda antecipada no desfile da Acadêmicos de Niterói, no Carnaval de 2026, cujo enredo tratava da trajetória de Lula. O plenário do TSE, seguindo a relatora Estela Aranha, negou por unanimidade as liminares para barrar o desfile, por não ver, naquela análise inicial, elemento concreto de campanha antecipada.",
+      "categoria": "controversia",
+      "status": "liminares negadas por unanimidade pelo plenário do TSE em fevereiro de 2026",
+      "fonte": {
+        "nome": "Tribunal Superior Eleitoral",
+        "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Fevereiro/tse-nega-liminares-em-acoes-sobre-desfile-de-escola-de-samba-em-homenagem-ao-presidente-lula"
+      },
+      "titulo_simples": "Desfile sobre Lula: Justiça Eleitoral não barra",
+      "texto_simples": "Uma escola de samba de Niterói contou a vida de Lula. O desfile foi no Carnaval de 2026. Dois partidos pediram à Justiça Eleitoral para barrar o desfile. Todos os juízes do tribunal negaram o pedido de decisão rápida. Eles não viram, naquele momento, sinal concreto de campanha. Os partidos Novo e Missão alegaram propaganda de campanha antes da hora.",
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro. Nela, todos os juízes negaram a decisão rápida."
+    },
+    {
+      "data": "2025-11-26",
+      "titulo": "Isenção de IR para renda até R$ 5 mil",
+      "descricao": "Lei concede, a partir de 2026, redução do IRPF que zera o imposto mensal para rendimentos tributáveis de até R$ 5.000, com redução parcial até R$ 7.350, e institui tributação mínima para altas rendas.",
+      "categoria": "economia",
+      "marco_legal": "Lei 15.270/2025",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15270.htm"
+      },
+      "publico": "Contribuintes com renda tributável de até R$ 7.350 por mês",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Sem Imposto de Renda para quem ganha até 5 mil",
+      "texto_simples": "Lula assinou uma lei que diminui o Imposto de Renda. Desde 2026, quem ganha até 5 mil por mês não paga. Quem ganha até 7 mil e 350 reais paga menos. A lei também cria um imposto mínimo para quem ganha muito.",
+      "publico_simples": "Quem ganha até 7.350 reais por mês",
+      "para_que_serve": "Leis de Imposto de Renda servem para definir quanto cada pessoa paga, de acordo com quanto ganha."
+    },
+    {
+      "data": "2025-07",
+      "titulo": "Brasil fora do Mapa da Fome da ONU",
+      "descricao": "Relatório SOFI 2025 da FAO e agências da ONU aponta menos de 2,5% da população brasileira em subalimentação no triênio 2022-2024, critério para saída do Mapa da Fome.",
+      "categoria": "programa_social",
+      "fonte": {
+        "nome": "Nações Unidas Brasil",
+        "url": "https://brasil.un.org/pt-br/299851-artigo-brasil-voltou-sair-do-mapa-da-fome"
+      },
+      "publico": "População em geral (indicador de subalimentação)",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Brasil sai do Mapa da Fome das Nações Unidas",
+      "texto_simples": "Um relatório das Nações Unidas mediu a fome no Brasil. Menos de 2,5% dos brasileiros não comiam o suficiente. Isso foi entre 2022 e 2024. Abaixo desse número, o país sai do Mapa da Fome.",
+      "publico_simples": "Toda a população do país",
+      "para_que_serve": "Medições da fome servem para mostrar quantas pessoas não comem o suficiente em cada país."
+    },
+    {
+      "data": "2025-05-30",
+      "titulo": "Programa Agora Tem Especialistas",
+      "descricao": "Medida provisória institui o Programa Agora Tem Especialistas, voltado à atenção especializada no SUS; convertida em lei em 7 de outubro de 2025.",
+      "categoria": "saude",
+      "marco_legal": "MP 1.301/2025; Lei 15.233/2025",
+      "fonte": {
+        "nome": "Planalto - Legislação (Lei 15.233/2025)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15233.htm"
+      },
+      "publico": "Usuários do SUS que precisam de atendimento especializado",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Atendimento com especialista na saúde pública",
+      "texto_simples": "O governo Lula criou o programa Agora Tem Especialistas. O programa é voltado ao atendimento com especialistas no SUS.",
+      "publico_simples": "Quem usa o SUS e precisa de especialista",
+      "para_que_serve": "Programas de especialistas servem para que pacientes consigam consultas e exames com médicos especialistas."
+    },
+    {
+      "data": "2025-01-16",
+      "titulo": "Regulamentação da reforma tributária",
+      "descricao": "Lei complementar institui o IBS, a CBS e o Imposto Seletivo e cria o Comitê Gestor do IBS, regulamentando a Emenda Constitucional 132/2023.",
+      "categoria": "economia",
+      "marco_legal": "Lei Complementar 214/2025",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+      },
+      "publico": "Consumidores e empresas (tributação sobre o consumo)",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Novas regras dos impostos sobre o que se compra",
+      "texto_simples": "Lula assinou a lei com as regras da reforma dos impostos. A lei criou três novos impostos sobre o que se compra. A reforma veio de uma mudança na Constituição.",
+      "publico_simples": "Quem compra e as empresas",
+      "para_que_serve": "Reformas de impostos servem para mudar as regras de como os impostos são cobrados."
+    },
+    {
+      "data": "2024-11-18",
+      "titulo": "Aliança Global contra a Fome e a Pobreza",
+      "descricao": "Proposta pela presidência brasileira do G20, a aliança é lançada na Cúpula de Líderes do G20 no Rio de Janeiro com 148 membros fundadores, entre eles 82 países.",
+      "categoria": "programa_social",
+      "fonte": {
+        "nome": "Global Alliance against Hunger and Poverty",
+        "url": "https://globalallianceagainsthungerandpoverty.org/new/world-leaders-launch-the-global-alliance-against-hunger-and-poverty-2/"
+      },
+      "publico": "Países e organizações que aderiram à aliança",
+      "abrangencia": "Internacional",
+      "valores": [
+        "soberania",
+        "pobreza"
+      ],
+      "titulo_simples": "Aliança de países contra a fome e a pobreza",
+      "texto_simples": "O Brasil comandava o grupo das maiores economias do mundo. O Brasil propôs uma aliança contra a fome e a pobreza. Ela foi lançada no Rio de Janeiro, com 148 membros. Entre eles, havia 82 países.",
+      "publico_simples": "Países e organizações da aliança",
+      "para_que_serve": "Alianças entre países servem para que vários governos trabalhem juntos contra a fome e a pobreza."
+    },
+    {
+      "data": "2024-01-16",
+      "titulo": "Criação do Pé-de-Meia",
+      "descricao": "Lei institui incentivo financeiro-educacional, na modalidade de poupança, para estudantes de baixa renda do ensino médio público inscritos no CadÚnico.",
+      "categoria": "educacao",
+      "marco_legal": "Lei 14.818/2024",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14818.htm"
+      },
+      "publico": "Estudantes de baixa renda do ensino médio público inscritos no CadÚnico",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Poupança para aluno pobre do ensino médio",
+      "texto_simples": "Lula assinou a lei que criou o Pé-de-Meia. É um dinheiro em forma de poupança para o estudante. Vale para alunos de família com pouco dinheiro, no ensino médio público. O aluno precisa estar no Cadastro Único do governo.",
+      "publico_simples": "Alunos do ensino médio com pouco dinheiro",
+      "para_que_serve": "Programas de poupança para estudantes servem para incentivar os jovens a terminar a escola."
+    },
+    {
+      "data": "2023-11-13",
+      "titulo": "Atualização da Lei de Cotas",
+      "descricao": "Lei altera a Lei 12.711/2012 sobre o acesso de estudantes pretos, pardos, indígenas, quilombolas, pessoas com deficiência e egressos de escola pública às instituições federais de ensino.",
+      "categoria": "educacao",
+      "marco_legal": "Lei 14.723/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14723.htm"
+      },
+      "publico": "Estudantes pretos, pardos, indígenas, quilombolas, com deficiência e de escola pública",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Vagas reservadas em escolas e faculdades federais",
+      "texto_simples": "Lula assinou mudanças na Lei de Cotas. Cotas são vagas reservadas em universidades e escolas federais. Valem para pretos, pardos, indígenas, quilombolas e pessoas com deficiência. Valem também para quem estudou em escola pública.",
+      "publico_simples": "Estudantes dos grupos que têm cotas",
+      "para_que_serve": "Leis de cotas servem para reservar vagas no ensino a grupos que têm menos acesso a ele."
+    },
+    {
+      "data": "2023-08-31",
+      "titulo": "Plano Brasil Sem Fome",
+      "descricao": "Decreto institui o Plano Brasil Sem Fome, com a finalidade de promover a segurança alimentar e nutricional.",
+      "categoria": "programa_social",
+      "marco_legal": "Decreto 11.679/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11679.htm"
+      },
+      "publico": "Pessoas em insegurança alimentar",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Plano Brasil Sem Fome: combate à fome",
+      "texto_simples": "O presidente Lula assinou uma ordem criando o Plano Brasil Sem Fome. O objetivo é que todos tenham comida boa todo dia.",
+      "publico_simples": "Quem não tem comida todo dia",
+      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia."
+    },
+    {
+      "data": "2023-08-30",
+      "titulo": "Novo arcabouço fiscal",
+      "descricao": "Lei complementar institui o regime fiscal sustentável, com fundamento na Emenda Constitucional 126/2022.",
+      "categoria": "economia",
+      "marco_legal": "Lei Complementar 200/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp200.htm"
+      },
+      "publico": "Contas públicas da União",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Novas regras para os gastos do governo",
+      "texto_simples": "Lula assinou uma lei com novas regras de gastos do governo. As regras valem para as contas do governo federal. A lei se baseia numa mudança na Constituição.",
+      "publico_simples": "Contas do governo federal",
+      "para_que_serve": "Regras de gastos do governo servem para equilibrar o que ele gasta com o que recebe de impostos."
+    },
+    {
+      "data": "2023-08-28",
+      "titulo": "Política de valorização do salário mínimo",
+      "descricao": "Lei define o salário mínimo a partir de maio de 2023 e estabelece política de valorização permanente a partir de 2024; também altera a tabela do IRPF.",
+      "categoria": "economia",
+      "marco_legal": "Lei 14.663/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14663.htm"
+      },
+      "publico": "Trabalhadores e beneficiários com renda vinculada ao salário mínimo",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Regra para aumentar o salário mínimo",
+      "texto_simples": "Lula assinou uma lei sobre o salário mínimo. A lei definiu o valor do mínimo desde maio de 2023. Também criou uma regra fixa de aumento a partir de 2024. A lei mudou ainda a tabela do Imposto de Renda.",
+      "publico_simples": "Quem tem renda ligada ao salário mínimo",
+      "para_que_serve": "Leis de salário mínimo servem para definir o menor valor que um trabalhador pode receber."
+    },
+    {
+      "data": "2023-08-11",
+      "titulo": "Lançamento do Novo PAC",
+      "descricao": "Decreto institui o Novo Programa de Aceleração do Crescimento, seu Comitê Gestor e Grupo Executivo.",
+      "categoria": "economia",
+      "marco_legal": "Decreto 11.632/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/D11632.htm"
+      },
+      "publico": "Obras de infraestrutura em todo o país",
+      "abrangencia": "Nacional",
+      "valores": [
+        "soberania"
+      ],
+      "titulo_simples": "Novo programa de obras públicas pelo país",
+      "texto_simples": "O presidente Lula assinou uma ordem criando o Novo PAC. É um novo programa de obras públicas.",
+      "publico_simples": "Obras públicas em todo o país",
+      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa."
+    },
+    {
+      "data": "2023-07-31",
+      "titulo": "Programa Escola em Tempo Integral",
+      "descricao": "Lei institui o Programa Escola em Tempo Integral.",
+      "categoria": "educacao",
+      "marco_legal": "Lei 14.640/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14640.htm"
+      },
+      "publico": "Estudantes da educação básica pública",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Mais horas por dia na escola pública",
+      "texto_simples": "Lula assinou a lei que criou o Programa Escola em Tempo Integral. Na escola de tempo integral, o aluno fica mais horas por dia.",
+      "publico_simples": "Alunos de escola pública",
+      "para_que_serve": "Programas de escola em tempo integral servem para que os alunos passem mais horas estudando."
+    },
+    {
+      "data": "2023-07-03",
+      "titulo": "Lei de igualdade salarial",
+      "descricao": "Sanção da lei que dispõe sobre igualdade salarial e de critérios remuneratórios entre mulheres e homens e altera a CLT.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.611/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14611.htm"
+      },
+      "publico": "Trabalhadoras e trabalhadores com carteira assinada",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Salário igual para mulheres e homens",
+      "texto_simples": "Lula assinou a lei de igualdade salarial. A lei trata de salário igual entre mulheres e homens. Ela mudou as regras de quem trabalha com carteira assinada.",
+      "publico_simples": "Quem trabalha com carteira assinada",
+      "para_que_serve": "Leis de igualdade salarial servem para que mulheres e homens ganhem igual pelo mesmo trabalho."
+    },
+    {
+      "data": "2023-06-05",
+      "titulo": "Desenrola Brasil",
+      "descricao": "Medida provisória institui o Programa Emergencial de Renegociação de Dívidas de Pessoas Físicas Inadimplentes; o programa foi disciplinado em lei em 3 de outubro de 2023.",
+      "categoria": "economia",
+      "marco_legal": "MP 1.176/2023; Lei 14.690/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação (Lei 14.690/2023)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14690.htm"
+      },
+      "publico": "Pessoas físicas com dívidas em atraso",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Ajuda para fazer acordo de dívida atrasada",
+      "texto_simples": "O governo Lula criou o Desenrola Brasil. É um programa para renegociar dívidas atrasadas. Renegociar é fazer um novo acordo para pagar. Vale para pessoas, não para empresas.",
+      "publico_simples": "Pessoas com dívidas atrasadas",
+      "para_que_serve": "Programas de renegociação servem para ajudar quem está devendo a fazer acordo e pagar a dívida."
+    },
+    {
+      "data": "2023-03-20",
+      "titulo": "Mais Médicos reformulado",
+      "descricao": "Medida provisória institui a Estratégia Nacional de Formação de Especialistas para a Saúde no âmbito do Programa Mais Médicos e altera suas regras; convertida em lei em 14 de julho de 2023.",
+      "categoria": "saude",
+      "marco_legal": "MP 1.165/2023; Lei 14.621/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação (Lei 14.621/2023)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14621.htm"
+      },
+      "publico": "Usuários do SUS e médicos participantes do programa",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Mais Médicos muda e passa a formar especialistas",
+      "texto_simples": "O governo Lula mudou as regras do Mais Médicos. O programa passou a ter um plano para formar especialistas em saúde.",
+      "publico_simples": "Quem usa o SUS e médicos do programa",
+      "para_que_serve": "Programas que levam médicos servem para garantir atendimento onde faltam profissionais de saúde."
+    },
+    {
+      "data": "2023-03-02",
+      "titulo": "Novo Bolsa Família",
+      "descricao": "Medida provisória institui novamente o Programa Bolsa Família, com nova estrutura de benefícios por composição familiar. Convertida em lei em 19 de junho de 2023.",
+      "categoria": "programa_social",
+      "marco_legal": "MP 1.164/2023; Lei 14.601/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação (Lei 14.601/2023)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm"
+      },
+      "publico": "Famílias em situação de pobreza inscritas no CadÚnico",
+      "abrangencia": "Nacional",
+      "valores": [
+        "familia",
+        "pobreza"
+      ],
+      "titulo_simples": "Bolsa Família volta com novo jeito de calcular",
+      "texto_simples": "O governo Lula criou de novo o Bolsa Família. O valor passou a depender de quem faz parte da família. Ele é para famílias pobres do Cadastro Único do governo.",
+      "publico_simples": "Famílias pobres no Cadastro Único",
+      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida."
+    },
+    {
+      "data": "2023-02-14",
+      "titulo": "Retomada do Minha Casa, Minha Vida",
+      "descricao": "Medida provisória recria o Programa Minha Casa, Minha Vida, convertida em lei em 13 de julho de 2023.",
+      "categoria": "moradia",
+      "marco_legal": "MP 1.162/2023; Lei 14.620/2023",
+      "fonte": {
+        "nome": "Planalto - Legislação (Lei 14.620/2023)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14620.htm"
+      },
+      "publico": "Famílias de baixa e média renda, urbanas e rurais",
+      "abrangencia": "Nacional",
+      "valores": [
+        "familia",
+        "pobreza"
+      ],
+      "titulo_simples": "Volta do Minha Casa, Minha Vida",
+      "texto_simples": "O governo Lula criou de novo o Minha Casa, Minha Vida. É um programa de moradia.",
+      "publico_simples": "Famílias de renda baixa ou média",
+      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar."
+    },
+    {
+      "data": "2010-07-20",
+      "titulo": "Estatuto da Igualdade Racial",
+      "descricao": "Sanção do Estatuto da Igualdade Racial.",
+      "categoria": "lei",
+      "marco_legal": "Lei 12.288/2010",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12288.htm"
+      },
+      "publico": "População negra",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Lei de igualdade para a população negra",
+      "texto_simples": "Lula assinou o Estatuto da Igualdade Racial. É uma lei voltada à população negra.",
+      "publico_simples": "A população negra do país",
+      "para_que_serve": "Leis de igualdade racial servem para combater a discriminação por cor e garantir direitos iguais a todos."
+    },
+    {
+      "data": "2009-06-16",
+      "titulo": "Alimentação escolar e agricultura familiar",
+      "descricao": "Lei do Programa Nacional de Alimentação Escolar (PNAE) determina que no mínimo 30% dos recursos repassados pelo FNDE sejam usados na compra de alimentos da agricultura familiar.",
+      "categoria": "educacao",
+      "marco_legal": "Lei 11.947/2009, art. 14",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11947.htm"
+      },
+      "publico": "Estudantes da rede pública e agricultores familiares",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Merenda com comida de pequenos agricultores",
+      "texto_simples": "Lula assinou a lei da merenda das escolas públicas. A lei manda comprar comida de pequenos agricultores com parte do dinheiro. São pelo menos 30 de cada 100 reais. Esses agricultores trabalham com a família.",
+      "publico_simples": "Alunos de escola pública e pequenos agricultores",
+      "para_que_serve": "Programas de merenda servem para alimentar os alunos enquanto estão na escola."
+    },
+    {
+      "data": "2009-03-25",
+      "titulo": "Criação do Minha Casa, Minha Vida",
+      "descricao": "Medida provisória cria o Programa Minha Casa, Minha Vida, de habitação, e trata de regularização fundiária urbana. Foi convertida em lei em 7 de julho de 2009.",
+      "categoria": "moradia",
+      "marco_legal": "MP 459/2009; Lei 11.977/2009",
+      "fonte": {
+        "nome": "Planalto - Legislação (MP 459/2009)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/mpv/459.htm"
+      },
+      "publico": "Famílias de baixa renda",
+      "abrangencia": "Nacional",
+      "valores": [
+        "familia",
+        "pobreza"
+      ],
+      "titulo_simples": "Minha Casa, Minha Vida: ajuda para ter casa",
+      "texto_simples": "O governo Lula criou o Minha Casa, Minha Vida. É um programa de moradia. Também tratou de dar papel da casa a quem já mora nela.",
+      "publico_simples": "Famílias com pouco dinheiro",
+      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar."
+    },
+    {
+      "data": "2008-12-29",
+      "titulo": "Criação dos Institutos Federais",
+      "descricao": "Lei institui a Rede Federal de Educação Profissional, Científica e Tecnológica e cria os Institutos Federais de Educação, Ciência e Tecnologia.",
+      "categoria": "educacao",
+      "marco_legal": "Lei 11.892/2008",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11892.htm"
+      },
+      "publico": "Estudantes de educação profissional, científica e tecnológica",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Novas escolas federais para ensinar uma profissão",
+      "texto_simples": "Lula assinou a lei que criou os Institutos Federais. São escolas de ensino profissional, ciência e tecnologia. Ensino profissional é o que prepara para uma profissão.",
+      "publico_simples": "Estudantes que querem aprender uma profissão",
+      "para_que_serve": "Escolas de ensino profissional servem para preparar as pessoas para trabalhar numa profissão."
+    },
+    {
+      "data": "2008-12-19",
+      "titulo": "Criação do Microempreendedor Individual",
+      "descricao": "Lei complementar altera o Simples Nacional (LC 123/2006) e cria a figura do Microempreendedor Individual (MEI).",
+      "categoria": "economia",
+      "marco_legal": "Lei Complementar 128/2008",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp128.htm"
+      },
+      "publico": "Trabalhadores por conta própria e pequenos empreendedores",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Criação do Microempreendedor Individual",
+      "texto_simples": "Lula assinou uma lei que mudou o Simples Nacional. A lei criou o Microempreendedor Individual, o MEI. Ele é para quem trabalha por conta própria e pequenos empreendedores.",
+      "publico_simples": "Quem trabalha por conta própria",
+      "para_que_serve": "Leis de registro simples servem para ajudar quem trabalha por conta própria a ter negócio legalizado."
+    },
+    {
+      "data": "2008-07-16",
+      "titulo": "Piso salarial nacional do magistério",
+      "descricao": "Lei institui o piso salarial profissional nacional para os profissionais do magistério público da educação básica.",
+      "categoria": "educacao",
+      "marco_legal": "Lei 11.738/2008",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11738.htm"
+      },
+      "publico": "Professores da educação básica pública",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Piso de salário para professor de escola pública",
+      "texto_simples": "Lula assinou a lei do piso salarial nacional dos professores. Piso é o menor salário que pode ser pago. Vale para professores de escola pública, da creche ao ensino médio.",
+      "publico_simples": "Professores de escola pública",
+      "para_que_serve": "Leis de piso salarial servem para garantir um salário mínimo para uma profissão."
+    },
+    {
+      "data": "2007-06-20",
+      "titulo": "Regulamentação do Fundeb",
+      "descricao": "Lei regulamenta o Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação (Fundeb).",
+      "categoria": "educacao",
+      "marco_legal": "Lei 11.494/2007",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11494.htm"
+      },
+      "publico": "Redes públicas de educação básica",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Dinheiro para escolas públicas e professores",
+      "texto_simples": "Lula assinou a lei que definiu as regras do Fundeb. O Fundeb é um fundo de dinheiro para a educação básica. Isso vai da creche ao ensino médio. Ele também serve para valorizar quem trabalha na educação.",
+      "publico_simples": "Escolas públicas, da creche ao ensino médio",
+      "para_que_serve": "Fundos da educação servem para juntar dinheiro e repartir entre as escolas públicas e quem trabalha nelas."
+    },
+    {
+      "data": "2007-04-24",
+      "titulo": "Plano de Metas da educação e Reuni",
+      "descricao": "Decretos instituem o Plano de Metas Compromisso Todos pela Educação e o Programa de Apoio a Planos de Reestruturação e Expansão das Universidades Federais (Reuni).",
+      "categoria": "educacao",
+      "marco_legal": "Decretos 6.094/2007 e 6.096/2007",
+      "fonte": {
+        "nome": "Planalto - Legislação (Decreto 6.096/2007)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6096.htm"
+      },
+      "publico": "Redes públicas de educação básica e universidades federais",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Metas para escolas e crescimento das universidades",
+      "texto_simples": "O presidente Lula assinou duas ordens sobre educação. Uma criou um plano de metas para as escolas públicas. A outra apoia planos para reorganizar e aumentar as universidades federais.",
+      "publico_simples": "Escolas públicas e universidades federais",
+      "para_que_serve": "Planos de metas para o ensino servem para melhorar as escolas e abrir mais vagas nas universidades."
+    },
+    {
+      "data": "2007-01-22",
+      "titulo": "Lançamento do PAC",
+      "descricao": "Decreto institui o Programa de Aceleração do Crescimento (PAC) e seu Comitê Gestor, voltado a investimentos em infraestrutura.",
+      "categoria": "economia",
+      "marco_legal": "Decreto 6.025/2007",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6025.htm"
+      },
+      "publico": "Obras de infraestrutura em todo o país",
+      "abrangencia": "Nacional",
+      "valores": [
+        "soberania"
+      ],
+      "titulo_simples": "Programa de obras públicas pelo país",
+      "texto_simples": "O presidente Lula assinou uma ordem criando o PAC. O PAC é um programa de investimento em obras públicas.",
+      "publico_simples": "Obras públicas em todo o país",
+      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa."
+    },
+    {
+      "data": "2006-12-14",
+      "titulo": "Simples Nacional",
+      "descricao": "Lei complementar institui o Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte, que cria o regime tributário Simples Nacional.",
+      "categoria": "economia",
+      "marco_legal": "Lei Complementar 123/2006",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm"
+      },
+      "publico": "Microempresas e empresas de pequeno porte",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Jeito próprio de pequena empresa pagar imposto",
+      "texto_simples": "Lula assinou a lei das micro e pequenas empresas. A lei criou o Simples Nacional. É um jeito próprio dessas empresas pagarem impostos.",
+      "publico_simples": "Micro e pequenas empresas",
+      "para_que_serve": "Regras de imposto para pequenas empresas servem para facilitar o pagamento e diminuir a papelada."
+    },
+    {
+      "data": "2006-09-15",
+      "titulo": "Lei Orgânica de Segurança Alimentar",
+      "descricao": "Lei cria o Sistema Nacional de Segurança Alimentar e Nutricional (Sisan) com vistas a assegurar o direito humano à alimentação adequada.",
+      "categoria": "lei",
+      "marco_legal": "Lei 11.346/2006",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11346.htm"
+      },
+      "publico": "População em geral (direito à alimentação adequada)",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Lei do direito de todos a comer bem",
+      "texto_simples": "Lula assinou uma lei sobre o direito à comida. A lei criou um sistema nacional sobre alimentação. O objetivo é garantir a todos o direito de comer bem.",
+      "publico_simples": "Toda a população do país",
+      "para_que_serve": "Leis sobre o direito à comida servem para organizar o governo para que todos comam bem."
+    },
+    {
+      "data": "2006-08-07",
+      "titulo": "Lei Maria da Penha sancionada",
+      "descricao": "Sanção da lei que cria mecanismos para coibir a violência doméstica e familiar contra a mulher.",
+      "categoria": "lei",
+      "marco_legal": "Lei 11.340/2006",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm"
+      },
+      "publico": "Mulheres em situação de violência doméstica e familiar",
+      "abrangencia": "Nacional",
+      "valores": [
+        "familia",
+        "seguranca"
+      ],
+      "titulo_simples": "Proteção para mulher que sofre violência em casa",
+      "texto_simples": "Lula assinou a Lei Maria da Penha. A lei cria formas de combater a violência contra a mulher. Vale para a violência dentro de casa e na família.",
+      "publico_simples": "Mulheres que sofrem violência em casa",
+      "para_que_serve": "Leis contra a violência em casa servem para proteger mulheres que sofrem violência na família."
+    },
+    {
+      "data": "2006-07-24",
+      "titulo": "Lei da Agricultura Familiar",
+      "descricao": "Lei estabelece as diretrizes para a formulação da Política Nacional da Agricultura Familiar e Empreendimentos Familiares Rurais.",
+      "categoria": "lei",
+      "marco_legal": "Lei 11.326/2006",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11326.htm"
+      },
+      "publico": "Agricultores familiares e empreendimentos familiares rurais",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Lei para os pequenos agricultores",
+      "texto_simples": "Lula assinou a lei dos pequenos agricultores que trabalham com a família. A lei traz as bases de um plano do governo para eles. Vale também para pequenos negócios de famílias no campo.",
+      "publico_simples": "Pequenos agricultores que trabalham com a família",
+      "para_que_serve": "Leis para pequenos agricultores servem para orientar a ajuda do governo a quem produz no campo."
+    },
+    {
+      "data": "2005-01-13",
+      "titulo": "Criação do ProUni",
+      "descricao": "Lei institui o Programa Universidade para Todos (ProUni), que concede bolsas em instituições privadas de ensino superior.",
+      "categoria": "educacao",
+      "marco_legal": "Lei 11.096/2005",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11096.htm"
+      },
+      "publico": "Estudantes de baixa renda no ensino superior privado",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Bolsa de estudo em faculdade particular",
+      "texto_simples": "Lula assinou a lei que criou o ProUni. O programa dá bolsas de estudo em faculdades particulares.",
+      "publico_simples": "Estudantes de família com pouco dinheiro",
+      "para_que_serve": "Programas de bolsa de estudo servem para ajudar quem tem pouco dinheiro a fazer faculdade."
+    },
+    {
+      "data": "2004-05-13",
+      "titulo": "Ministério do Desenvolvimento Social",
+      "descricao": "Lei resultante da conversão da MP 163/2004 reorganiza a estrutura ministerial e inclui o Ministério do Desenvolvimento Social e Combate à Fome entre os ministérios.",
+      "categoria": "programa_social",
+      "marco_legal": "Lei 10.869/2004",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.869.htm"
+      },
+      "publico": "Estrutura do governo federal",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Lei inclui ministério de combate à fome",
+      "texto_simples": "Lula assinou uma lei que reorganizou os ministérios. A lei incluiu o Ministério do Desenvolvimento Social e Combate à Fome.",
+      "publico_simples": "A organização do governo federal",
+      "para_que_serve": "Leis sobre ministérios servem para dividir as tarefas do governo e dizer quem cuida de quê."
+    },
+    {
+      "data": "2004-04-13",
+      "titulo": "Farmácia Popular",
+      "descricao": "Lei autoriza a Fiocruz a disponibilizar medicamentos mediante ressarcimento, base legal do Programa Farmácia Popular do Brasil.",
+      "categoria": "saude",
+      "marco_legal": "Lei 10.858/2004",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.858.htm"
+      },
+      "publico": "População em geral (acesso a medicamentos)",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Farmácia Popular: ajuda para conseguir remédios",
+      "texto_simples": "Lula assinou uma lei sobre remédios. A lei deixou a Fiocruz, órgão de saúde do governo, oferecer remédios. A Fiocruz recebe de volta o custo dos remédios. Essa lei é a base da Farmácia Popular.",
+      "publico_simples": "Toda a população que precisa de remédio",
+      "para_que_serve": "Programas de remédios servem para ajudar as pessoas a conseguir os remédios de que precisam."
+    },
+    {
+      "data": "2003-11-11",
+      "titulo": "Programa Luz para Todos",
+      "descricao": "Decreto institui o Programa Nacional de Universalização do Acesso e Uso da Energia Elétrica (Luz para Todos), voltado principalmente a domicílios rurais.",
+      "categoria": "programa_social",
+      "marco_legal": "Decreto 4.873/2003",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/decreto/2003/d4873.htm"
+      },
+      "publico": "Domicílios sem energia elétrica, principalmente rurais",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Luz elétrica para casas que não tinham",
+      "texto_simples": "O presidente Lula assinou uma ordem criando o Luz para Todos. O objetivo é levar luz elétrica para todo mundo. O foco principal são as casas do campo.",
+      "publico_simples": "Casas sem luz, principalmente no campo",
+      "para_que_serve": "Programas de energia servem para levar luz elétrica às casas que ainda não têm."
+    },
+    {
+      "data": "2003-10-20",
+      "titulo": "Criação do Bolsa Família",
+      "descricao": "Medida provisória cria o Programa Bolsa Família, de transferência de renda com condicionalidades, unificando programas anteriores. A MP foi convertida em lei em 9 de janeiro de 2004.",
+      "categoria": "programa_social",
+      "marco_legal": "MP 132/2003; Lei 10.836/2004",
+      "fonte": {
+        "nome": "Planalto - Legislação (MP 132/2003)",
+        "url": "https://www.planalto.gov.br/ccivil_03/mpv/antigas_2003/132.htm"
+      },
+      "publico": "Famílias em situação de pobreza e extrema pobreza",
+      "abrangencia": "Nacional",
+      "valores": [
+        "familia",
+        "pobreza"
+      ],
+      "titulo_simples": "Bolsa Família: dinheiro para famílias pobres",
+      "texto_simples": "O governo Lula criou o Bolsa Família. O programa dá dinheiro para famílias pobres. Em troca, a família precisa cumprir algumas regras. Ele juntou num só vários programas que já existiam.",
+      "publico_simples": "Famílias pobres e muito pobres",
+      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida."
+    },
+    {
+      "data": "2003-10-01",
+      "titulo": "Estatuto do Idoso sancionado",
+      "descricao": "Sanção do Estatuto do Idoso, que regula direitos das pessoas com 60 anos ou mais (hoje denominado Estatuto da Pessoa Idosa).",
+      "categoria": "lei",
+      "marco_legal": "Lei 10.741/2003",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm"
+      },
+      "publico": "Pessoas com 60 anos ou mais",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Direitos para quem tem 60 anos ou mais",
+      "texto_simples": "Lula assinou o Estatuto do Idoso. A lei trata dos direitos de quem tem 60 anos ou mais. Hoje ela se chama Estatuto da Pessoa Idosa.",
+      "publico_simples": "Quem tem 60 anos ou mais",
+      "para_que_serve": "Leis para idosos servem para proteger as pessoas mais velhas e garantir respeito a elas."
+    },
+    {
+      "data": "2003-07-02",
+      "titulo": "Programa de Aquisição de Alimentos (PAA)",
+      "descricao": "Lei institui o PAA, que compra produtos da agricultura familiar para distribuição a pessoas em insegurança alimentar e formação de estoques.",
+      "categoria": "programa_social",
+      "marco_legal": "Lei 10.696/2003, art. 19",
+      "fonte": {
+        "nome": "Planalto - Legislação",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.696.htm"
+      },
+      "publico": "Agricultores familiares e pessoas em insegurança alimentar",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Governo compra comida de pequenos agricultores",
+      "texto_simples": "Lula assinou a lei que criou este programa. O governo compra comida de pequenos agricultores que trabalham com a família. Parte vai para quem não tem comida todo dia. Outra parte fica guardada como reserva.",
+      "publico_simples": "Pequenos agricultores e quem não tem comida",
+      "para_que_serve": "Programas de compra de comida servem para alimentar quem precisa e ajudar pequenos produtores."
+    },
+    {
+      "data": "2003-01",
+      "titulo": "Lançamento do Fome Zero",
+      "descricao": "O governo cria o Gabinete do Ministro Extraordinário de Segurança Alimentar e Combate à Fome para coordenar o Fome Zero. Em junho, a Lei 10.689 cria o Programa Nacional de Acesso à Alimentação (Cartão Alimentação).",
+      "categoria": "programa_social",
+      "marco_legal": "MP 103/2003, convertida na Lei 10.683/2003 (art. 26); Lei 10.689/2003",
+      "fonte": {
+        "nome": "Planalto - Legislação (Lei 10.683/2003)",
+        "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.683.htm"
+      },
+      "publico": "Pessoas em insegurança alimentar",
+      "abrangencia": "Nacional",
+      "valores": [
+        "pobreza"
+      ],
+      "titulo_simples": "Fome Zero: governo contra a fome",
+      "texto_simples": "O governo Lula criou o Fome Zero para combater a fome. Um ministro especial cuidava do programa. Depois, Lula assinou a lei do Cartão Alimentação.",
+      "publico_simples": "Quem não tem comida todo dia",
+      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia."
+    }
+  ]
+}, flavio: {
+  "nome": "Flávio Bolsonaro",
+  "nome_completo": "Flávio Nantes Bolsonaro",
+  "nascimento": "1981-04-30",
+  "partido_atual": "PL (Partido Liberal)",
+  "cargo_atual": "Senador pelo Rio de Janeiro (mandato 2019-2027) e candidato à Presidência da República em 2026",
+  "foto": {
+    "arquivo": "flavio.jpg",
+    "autor": "Agência Senado",
+    "licenca": "Atribuição - Agência Senado (Attribution-AgenciaSenadoBr)",
+    "fonte_url": "https://commons.wikimedia.org/wiki/File:Foto_oficial_do_senador_Fl%C3%A1vio_Bolsonaro_(v._AgSen).jpg"
+  },
+  "eventos": [
+    {
+      "data": "2026-09-01",
+      "titulo": "TSE rejeita multa por vídeo de Bolsonaro feito com IA",
+      "descricao": "O PT pediu ao TSE remoção e multa por propaganda antecipada e uso de deepfake na exibição, na convenção do PL, de vídeo que recriava com inteligência artificial a imagem e a voz de Jair Bolsonaro. O TSE rejeitou o pedido por 4 votos a 3, por entender que a exibição em convenção partidária não configurou propaganda eleitoral irregular.",
+      "categoria": "controversia",
+      "status": "representação rejeitada pelo TSE em 01/09/2026",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/tse-rejeita-acao-para-derrubar-imagem-de-bolsonaro-feita-por-ia"
+      },
+      "titulo_simples": "Vídeo que imita Bolsonaro: Justiça não dá multa",
+      "texto_simples": "Na convenção do PL, foi mostrado um vídeo de Jair Bolsonaro. Convenção é a reunião em que o partido escolhe candidatos. O vídeo imitava a imagem e a voz dele com inteligência artificial. Por 4 votos a 3, os juízes negaram o pedido do PT. Para a maioria, mostrar o vídeo na convenção não foi propaganda proibida. O PT alegou propaganda antes da hora e uso de montagem falsa.",
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de 1º de setembro. Nela, a Justiça Eleitoral negou o pedido do PT."
+    },
+    {
+      "data": "2026-09",
+      "titulo": "TSE admite ação sobre rede de 'collabs' no Instagram",
+      "descricao": "A Coligação Brasil Pronto pra Mais propôs ação de investigação judicial eleitoral contra Flávio, Alfredo Gaspar e Mario Frias por suposto uso indevido dos meios de comunicação e abuso de poder econômico e político por meio de uma rede de publicações em coautoria (collabs) no Instagram. O corregedor-geral eleitoral em exercício, ministro Ricardo Villas Bôas Cueva, deu andamento à ação e pediu informações ao Facebook e à Shopee sobre os perfis investigados.",
+      "categoria": "controversia",
+      "status": "ação de investigação judicial eleitoral em tramitação no TSE, sem julgamento de mérito até 05/10/2026",
+      "fonte": {
+        "nome": "Tribunal Superior Eleitoral",
+        "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/corregedoria-geral-eleitoral-solicita-informacoes-ao-facebook-e-a-shopee-sobre-perfis-investigados"
+      },
+      "titulo_simples": "Justiça Eleitoral aceita processo contra Flávio",
+      "texto_simples": "O grupo de partidos Brasil Pronto pra Mais abriu um processo. O processo é contra Flávio, Alfredo Gaspar e Mario Frias. A Justiça Eleitoral deu andamento ao processo. Ela pediu ao Facebook e à Shopee dados dos perfis investigados. O caso é sobre uma rede de posts em parceria no Instagram. O grupo alega abuso de poder e mau uso da comunicação.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final."
+    },
+    {
+      "data": "2026-07-13",
+      "titulo": "Carta de Bolsonaro em live: Moraes suspende visitas",
+      "descricao": "Em 11/07/2026, publicou nas redes sociais carta do pai, Jair Bolsonaro, em apoio à sua pré-candidatura, embora o ex-presidente estivesse proibido de usar redes sociais, inclusive por meio de terceiros. Em 13/07 o ministro Alexandre de Moraes (STF) suspendeu por 90 dias suas visitas ao pai e enviou o caso ao Ministério Público Eleitoral para as medidas cabíveis.",
+      "categoria": "controversia",
+      "status": "suspensão de visitas mantida em agosto de 2026; caso enviado ao MP Eleitoral, sem decisão de mérito divulgada até 05/10/2026",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/moraes-suspende-visitas-de-flavio-bolsonaro-na-prisao-domiciliar"
+      },
+      "titulo_simples": "Moraes suspende visitas de Flávio ao pai",
+      "texto_simples": "Em julho de 2026, Flávio postou uma carta do pai, Jair Bolsonaro. Na carta, o pai apoiava Flávio como futuro candidato. O ministro Moraes, do Supremo, suspendeu as visitas de Flávio ao pai. A suspensão é de 90 dias. Ele também mandou o caso para quem acusa na Justiça Eleitoral. Para Moraes, o pai não podia usar redes, nem por outra pessoa.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final divulgada. A suspensão das visitas foi mantida em agosto."
+    },
+    {
+      "data": "2026-07",
+      "titulo": "TSE manda remover vídeo que associa Lula a facções",
+      "descricao": "A Federação Brasil da Esperança (PT, PCdoB e PV) representou ao TSE contra vídeo publicado por Flávio que associava Lula ao PCC e ao CV, alegando propaganda antecipada negativa. Após liminar negada em 26/07, o plenário do TSE determinou por 5 votos a 2 a remoção do vídeo, por entender que houve propaganda antecipada e associação falsa do presidente a organizações criminosas.",
+      "categoria": "controversia",
+      "status": "remoção determinada pelo plenário do TSE em agosto de 2026",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/tse-determina-remocao-de-video-que-associa-lula-ao-pcc-e-ao-cv"
+      },
+      "titulo_simples": "Justiça Eleitoral manda tirar vídeo de Flávio",
+      "texto_simples": "Flávio publicou um vídeo ligando Lula ao PCC e ao Comando Vermelho. Os partidos PT, PCdoB e PV levaram o caso à Justiça Eleitoral. Por 5 votos a 2, os juízes mandaram tirar o vídeo. Para a maioria, houve propaganda antes da hora. E o vídeo ligou Lula a facções criminosas de forma falsa. Os partidos alegaram propaganda negativa antes da época de campanha.",
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de agosto. Nela, os juízes mandaram tirar o vídeo do ar."
+    },
+    {
+      "data": "2026-05-29",
+      "titulo": "Representações por atuação junto ao governo dos EUA",
+      "descricao": "Após reunião com Donald Trump em Washington, em 26/05/2026, na qual pediu a classificação de PCC e CV como organizações terroristas, deputados do PSOL e da Rede (29/05) e a Associação Brasileira de Juristas pela Democracia (01/06) representaram à PGR por suposto atentado à soberania nacional. Em 30/06 o PT acionou a PGR e o Ministério Público Eleitoral após carta do secretário de Estado Marco Rubio que agradece a oferta de pôr uma equipe de transição à disposição dos EUA.",
+      "categoria": "controversia",
+      "status": "representações protocoladas; sem decisão pública de abertura de investigação até 05/10/2026",
+      "resposta": "A campanha afirmou que a representação é tentativa da esquerda de usar o Judiciário como extensão de seu projeto político e que o senador buscou cooperação internacional contra o crime organizado.",
+      "fonte": {
+        "nome": "Correio Braziliense",
+        "url": "https://www.correiobraziliense.com.br/politica/2026/06/7432269-juristas-pedem-a-pgr-investigacao-de-flavio-por-atentado-a-soberania.html"
+      },
+      "titulo_simples": "Pedidos de investigação após reunião com Trump",
+      "texto_simples": "Em maio de 2026, Flávio se encontrou com Donald Trump em Washington. Ele pediu que o PCC e o Comando Vermelho fossem considerados terroristas. Deputados pediram investigação à Procuradoria-Geral, que pode acusar na Justiça. Eram deputados do PSOL e da Rede, e uma associação de juristas. Depois de uma carta do governo americano, o PT também fez pedidos. Deputados e juristas alegam ataque à soberania, a independência do Brasil.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão pública sobre investigar.",
+      "resposta_simples": "A campanha disse que o pedido é uma tentativa da esquerda. Segundo ela, a esquerda quer usar a Justiça para seu projeto político. Disse que Flávio buscou ajuda de fora contra o crime organizado."
+    },
+    {
+      "data": "2026-05-11",
+      "titulo": "Lei sobre presídio federal para quem mata policial",
+      "descricao": "Um dos relatores no Senado do PL 5.391/2020, que prevê o recolhimento em presídios federais de segurança máxima de presos por homicídio qualificado contra agentes de segurança. Sancionado e publicado em 12/05/2026.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei 15.407/2026",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/05/12/sancionado-o-uso-de-presidios-federais-para-assassinos-de-agentes-de-seguranca"
+      },
+      "publico": "Presos por homicídio qualificado contra agentes de segurança",
+      "abrangencia": "Nacional",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Prisão federal para quem mata agente de segurança",
+      "texto_simples": "Flávio foi um dos que cuidaram do texto da lei no Senado. A lei trata de presos por homicídio qualificado contra agentes de segurança. Homicídio qualificado é um assassinato que a lei considera mais grave. Esses presos devem ir para presídios federais de segurança máxima.",
+      "publico_simples": "Presos por matar agentes de segurança",
+      "para_que_serve": "Leis sobre presídios de segurança máxima servem para definir quais presos ficam em prisões mais vigiadas."
+    },
+    {
+      "data": "2026-05",
+      "titulo": "Caso Dark Horse: recursos de Vorcaro e inquérito no STF",
+      "descricao": "Após a divulgação, em maio de 2026, de áudios e mensagens de tratativas com o ex-banqueiro Daniel Vorcaro (Banco Master) sobre o financiamento do filme Dark Horse, o ministro Alexandre de Moraes (STF) enviou à PGR pedido de investigação sobre os recursos. Em 22/07/2026 o ministro André Mendonça (STF) autorizou, a pedido da PF e com aval da PGR, inquérito sobre suspeita de lavagem de dinheiro, evasão de divisas e corrupção; a PF aponta pedido de cerca de R$ 131 milhões, com cerca de R$ 60 milhões repassados, parte por meio de um fundo nos Estados Unidos.",
+      "categoria": "controversia",
+      "status": "inquérito em andamento no STF (relator André Mendonça)",
+      "resposta": "Nega irregularidades e afirma que não há nada de errado em buscar recursos privados para financiar o filme sobre o pai.",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/mendonca-incluiu-flavio-bolsonaro-como-investigado-no-caso-dark-horse"
+      },
+      "titulo_simples": "Investigação sobre dinheiro de Vorcaro para filme",
+      "texto_simples": "Em maio de 2026, foram divulgadas conversas com o ex-banqueiro Daniel Vorcaro. As conversas eram sobre dinheiro para o filme Dark Horse. Em julho, o Supremo autorizou uma investigação pedida pela Polícia Federal. Segundo a polícia, foram pedidos cerca de 131 milhões de reais. Cerca de 60 milhões foram repassados, parte por um fundo americano. A Polícia Federal suspeita de corrupção, lavagem e envio ilegal de dinheiro.",
+      "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. O caso está com o ministro André Mendonça, do Supremo.",
+      "resposta_simples": "Flávio nega ter feito algo errado. Ele diz que buscar dinheiro privado para o filme não é errado. O filme é sobre o pai dele."
+    },
+    {
+      "data": "2026-04",
+      "titulo": "Inquérito no STF por suposta calúnia contra Lula",
+      "descricao": "O ministro Alexandre de Moraes (STF) abriu inquérito, a pedido da PF e com aval da PGR, sobre postagem de 03/01/2026 no X em que escreveu que \"Lula será delatado\" e citou tráfico internacional de drogas e armas, lavagem de dinheiro e eleições fraudadas. Em junho de 2026 a PF concluiu haver indícios de calúnia; a pedido do procurador-geral Paulo Gonet, o caso voltou à PF para que ele fosse ouvido.",
+      "categoria": "controversia",
+      "status": "inquérito em andamento no STF (relator Alexandre de Moraes); manifestação escrita entregue em 28/07/2026; sem denúncia da PGR divulgada até 05/10/2026",
+      "resposta": "Afirmou que a postagem não atribuiu crimes a Lula, nem de forma expressa nem implícita.",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/em-manifestacao-escrita-flavio-bolsonaro-nega-ter-caluniado-lula"
+      },
+      "titulo_simples": "Investigação por suposta calúnia contra Lula",
+      "texto_simples": "Em janeiro de 2026, Flávio postou que \"Lula será delatado\". Na postagem, citou tráfico de drogas e armas e lavagem de dinheiro. Também falou em eleições fraudadas. O ministro Alexandre de Moraes, do Supremo, abriu uma investigação. Em junho, a Polícia Federal viu sinais de calúnia. A Polícia Federal suspeita que ele acusou Lula falsamente de crimes.",
+      "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. Nenhuma acusação na Justiça tinha sido divulgada.",
+      "resposta_simples": "Flávio disse que a postagem não acusou Lula de crimes. Nem de forma direta, nem de forma indireta."
+    },
+    {
+      "data": "2024-09-18",
+      "titulo": "Nova Lei Geral do Turismo",
+      "descricao": "Relator do PL 1.829/2019, aprovado no Senado em 05/06/2024 na forma de substitutivo, que atualiza a legislação do turismo. O texto foi sancionado como a nova Lei Geral do Turismo.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.978/2024",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2024/06/05/aprovada-atualizacao-da-lei-geral-do-turismo-texto-retorna-para-a-camara"
+      },
+      "publico": "Setor de turismo",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Novas regras para o turismo",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei atualiza as regras do turismo no país. Ela virou a nova Lei Geral do Turismo.",
+      "publico_simples": "Quem trabalha com turismo",
+      "para_que_serve": "Leis de turismo servem para organizar o setor e definir regras para empresas e turistas."
+    },
+    {
+      "data": "2024-04-11",
+      "titulo": "Lei que restringe as saídas temporárias de presos",
+      "descricao": "Relator no Senado do PL 2.253/2022, aprovado em 20/02/2024 por 62 votos a 2, que restringe a saída temporária, prevê exame criminológico para progressão de regime e trata da monitoração eletrônica. Sancionado com vetos.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei 14.843/2024",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2024/02/20/senado-aprova-restricao-as-saidinhas-de-presos-texto-volta-para-a-camara"
+      },
+      "publico": "Pessoas presas no sistema prisional",
+      "abrangencia": "Nacional",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Lei limita a saída temporária de presos",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei limita a saída temporária, a chamada saidinha. Para passar a uma pena mais leve, o preso passa por avaliação. A lei também trata do uso de tornozeleira eletrônica.",
+      "publico_simples": "Pessoas presas no país",
+      "para_que_serve": "Leis sobre cumprimento de pena servem para definir como o preso cumpre a pena e quando pode sair."
+    },
+    {
+      "data": "2022-09-02",
+      "titulo": "Lei do teletrabalho e do auxílio-alimentação",
+      "descricao": "Relator no Senado da MP 1.108/2022, aprovada em 03/08/2022, que regulamenta o teletrabalho e altera regras do auxílio-alimentação. Sancionada com vetos.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.442/2022",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2022/08/03/aprovada-mp-que-regulamenta-teletrabalho-e-muda-auxilio-alimentacao"
+      },
+      "publico": "Trabalhadores em teletrabalho e que recebem auxílio-alimentação",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Trabalho a distância e auxílio-alimentação",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei definiu regras para o trabalho feito a distância. Também mudou regras do auxílio-alimentação. Alguns trechos da lei foram barrados.",
+      "publico_simples": "Quem trabalha a distância ou tem auxílio-alimentação",
+      "para_que_serve": "Leis sobre trabalho a distância servem para definir direitos e deveres de quem trabalha fora da empresa."
+    },
+    {
+      "data": "2022-03-08",
+      "titulo": "Lei das assembleias virtuais em condomínios",
+      "descricao": "Relator no Plenário do Senado do PL 548/2019, aprovado em 15/02/2022, que permite assembleias e votações virtuais ou híbridas em condomínios e reuniões virtuais de organizações da sociedade civil. Sancionado como lei.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.309/2022",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2022/02/15/Assembleias-virtuais-em-condominios-seguem-a-sancao"
+      },
+      "publico": "Condomínios e organizações da sociedade civil",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Reunião de condomínio pela internet",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei permite assembleias e votações de condomínio pela internet. Também podem ser mistas: parte presencial, parte pela internet. Vale ainda para reuniões de entidades sem fins lucrativos.",
+      "publico_simples": "Condomínios e entidades sem fins lucrativos",
+      "para_que_serve": "Leis sobre reuniões pela internet servem para que as pessoas decidam juntas sem estar no mesmo lugar."
+    },
+    {
+      "data": "2020-10-19",
+      "titulo": "Caso das \"rachadinhas\" na Alerj",
+      "descricao": "O Ministério Público do Rio de Janeiro o denunciou, com Fabrício Queiroz e outras 15 pessoas, por peculato, lavagem de dinheiro e organização criminosa em suposto esquema de devolução de salários de assessores em seu gabinete na Alerj entre 2007 e 2018. Após o STJ e o STF anularem provas, o TJ-RJ rejeitou a denúncia em 16/05/2022, a pedido do próprio MP-RJ; em 26/02/2025 o ministro Gilmar Mendes (STF) rejeitou dois recursos do MP-RJ no caso.",
+      "categoria": "controversia",
+      "status": "denúncia rejeitada pelo TJ-RJ em 16/05/2022; recursos do MP-RJ rejeitados no STF em 26/02/2025",
+      "resposta": "A defesa afirmou que a denúncia não tinha sustentação e apontou falhas processuais e quebra ilegal de sigilo.",
+      "fonte": {
+        "nome": "Supremo Tribunal Federal",
+        "url": "https://noticias.stf.jus.br/postsnoticias/stf-rejeita-dois-recursos-do-ministerio-publico-do-rj-no-caso-das-rachadinhas/"
+      },
+      "titulo_simples": "Caso das rachadinhas na Assembleia do Rio",
+      "texto_simples": "O Ministério Público do Rio (quem acusa na Justiça) acusou Flávio. Mais 16 pessoas foram acusadas, entre elas Fabrício Queiroz. Depois, o Supremo e outro tribunal superior anularam provas. A Justiça do Rio rejeitou a acusação, como pediu o Ministério Público. Depois, o Supremo negou dois pedidos do Ministério Público. O Ministério Público alegava devolução de salários de assessores no gabinete dele.",
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro de 2025. Nela, o Supremo negou os pedidos do Ministério Público.",
+      "resposta_simples": "A defesa disse que a acusação não tinha base. Também apontou erros no processo e acesso ilegal a dados protegidos."
+    },
+    {
+      "data": "2020-09-23",
+      "titulo": "Lei sobre assinaturas eletrônicas e receitas",
+      "descricao": "Relator no Plenário do Senado, em 01/09/2020, da MP 983/2020, que trata de assinaturas eletrônicas em comunicações com entes públicos e em questões de saúde e de licenças de softwares públicos. Convertida em lei com vetos parciais.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.063/2020",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/142535"
+      },
+      "publico": "Cidadãos e órgãos públicos em comunicações com o poder público",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Assinatura eletrônica para falar com o governo",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei trata de assinatura eletrônica em contatos com o governo. Também trata de assuntos de saúde e programas de computador do governo. Alguns trechos da lei foram barrados.",
+      "publico_simples": "Pessoas e órgãos que falam com o governo",
+      "para_que_serve": "Leis de assinatura eletrônica servem para que papéis assinados pela internet tenham valor."
+    },
+    {
+      "data": "2019-11-19",
+      "titulo": "Lei autoriza criação da NAV Brasil",
+      "descricao": "Relator na comissão mista da MP 866/2018, que autoriza a criação da empresa pública NAV Brasil Serviços de Navegação Aérea S.A. A MP foi aprovada pelo Senado em 26/09/2019 e convertida em lei.",
+      "categoria": "lei",
+      "marco_legal": "Lei 13.903/2019",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/135031"
+      },
+      "publico": "Serviços de navegação aérea (estrutura do governo federal)",
+      "abrangencia": "Nacional",
+      "valores": [
+        "soberania"
+      ],
+      "titulo_simples": "Empresa pública para serviços de navegação aérea",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei autoriza criar a NAV Brasil, uma empresa pública. Ela cuida de serviços de navegação aérea. A lei vale para todo o país.",
+      "publico_simples": "Serviços de navegação aérea do governo",
+      "para_que_serve": "Leis sobre navegação aérea servem para organizar os serviços que dão segurança aos voos."
+    },
+    {
+      "data": "2019-04-29",
+      "titulo": "Lei de apoio psicológico a policiais",
+      "descricao": "É sancionada lei estadual da qual é o primeiro autor, que institui programa de acompanhamento psicológico para policiais, bombeiros, agentes penitenciários e do Degase e seus familiares vítimas de traumas no exercício da função.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 8.386/2019 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/4a72d52a364bb0d7832583ef006ea93b?OpenDocument"
+      },
+      "publico": "Policiais, bombeiros, agentes penitenciários e do Degase e seus familiares",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia",
+        "seguranca"
+      ],
+      "titulo_simples": "Apoio psicológico para policiais e suas famílias",
+      "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. A lei cria apoio psicológico para policiais, bombeiros e guardas de presídio. Vale também para as famílias, em casos de trauma no trabalho.",
+      "publico_simples": "Policiais, bombeiros, guardas e suas famílias",
+      "para_que_serve": "Programas de apoio psicológico a agentes de segurança servem para cuidar da saúde mental deles."
+    },
+    {
+      "data": "2018-11-30",
+      "titulo": "Lei permite nome do bebê na certidão de natimorto",
+      "descricao": "Lei estadual da qual é coautor determina que os cartórios do Rio de Janeiro expeçam a certidão de óbito de natimorto com nome e prenome do bebê.",
+      "categoria": "assistencia",
+      "marco_legal": "Lei estadual 8.185/2018 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/e5bdbd6b25114b5b03258359005f1169?OpenDocument"
+      },
+      "publico": "Famílias de bebês natimortos",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Bebê que nasce sem vida ganha nome na certidão",
+      "texto_simples": "Flávio foi um dos autores desta lei. Ela vale só no estado do Rio. Os cartórios devem pôr o nome do bebê que nasce sem vida. O nome vai na certidão de óbito.",
+      "publico_simples": "Famílias de bebês que nasceram sem vida",
+      "para_que_serve": "Leis sobre bebês que nascem sem vida servem para respeitar a família e registrar o nome."
+    },
+    {
+      "data": "2018-03-02",
+      "titulo": "Lei autoriza programa de recifes artificiais",
+      "descricao": "Lei estadual de sua autoria autoriza o poder público a criar o Programa Estadual de Criação de Recifes Artificiais, denominado \"Costa Viva\".",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 7.877/2018 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/d5e8bbe982b65fcc832582480057a7af?OpenDocument"
+      },
+      "publico": "Litoral fluminense (ambiente marinho)",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Recifes artificiais no litoral do Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei permite ao governo do estado criar o programa \"Costa Viva\". O programa é para criar recifes artificiais no mar. São estruturas no fundo do mar que abrigam peixes e outros bichos.",
+      "publico_simples": "O mar do litoral do Rio",
+      "para_que_serve": "Programas de recifes artificiais servem para criar abrigo para peixes e outros seres do mar."
+    },
+    {
+      "data": "2017-09-22",
+      "titulo": "Lei cria programa para animais perdidos",
+      "descricao": "Lei estadual de sua autoria dispõe sobre o programa \"Encontre seu Amigo\", de divulgação na internet de fotos e informações sobre animais perdidos ou abandonados no Rio de Janeiro.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 7.693/2017 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5d0d62ba260a1e32832581a7005fca71?OpenDocument"
+      },
+      "publico": "Tutores de animais perdidos ou abandonados",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Fotos na internet para achar animal perdido",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata do programa \"Encontre seu Amigo\". O programa põe na internet fotos de animais perdidos ou abandonados.",
+      "publico_simples": "Donos de animais perdidos ou abandonados",
+      "para_que_serve": "Programas de busca de animais servem para ajudar as pessoas a encontrar animais perdidos."
+    },
+    {
+      "data": "2016-10-31",
+      "titulo": "Lei prevê multa por trote a serviços de emergência",
+      "descricao": "Lei estadual de sua autoria prevê multa pelo acionamento indevido dos serviços telefônicos de emergência (remoções, resgates, incêndios e ocorrências policiais) e revoga a Lei 5.784/2010.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei estadual 7.478/2016 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/159007a40fd4f0a98325805e00597c1e?OpenDocument"
+      },
+      "publico": "Serviços telefônicos de emergência",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Multa para trote nos telefones de emergência",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei prevê multa para quem liga sem motivo à emergência. Vale para ligações de remoção, resgate, incêndio e polícia.",
+      "publico_simples": "Telefones de emergência do estado",
+      "para_que_serve": "Leis contra trotes servem para deixar os telefones de emergência livres para quem precisa de ajuda."
+    },
+    {
+      "data": "2016-10-18",
+      "titulo": "Lei reduz jornada de pais de pessoas com deficiência",
+      "descricao": "Lei estadual da qual é o primeiro autor autoriza o Executivo a reduzir a jornada de servidores públicos ou militares responsáveis legais por pessoa com deficiência que requeira atenção permanente.",
+      "categoria": "assistencia",
+      "marco_legal": "Lei estadual 7.454/2016 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/bbfbb39bce93e9fc83258051005b964c?OpenDocument"
+      },
+      "publico": "Servidores estaduais responsáveis por pessoa com deficiência",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Menos horas para quem cuida de pessoa com deficiência",
+      "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. O governo do estado pode reduzir as horas de funcionários e militares. São os responsáveis por pessoa com deficiência que precisa de cuidado sempre.",
+      "publico_simples": "Funcionários do estado que cuidam de pessoa com deficiência",
+      "para_que_serve": "Leis de jornada menor para cuidadores servem para dar tempo a quem cuida de alguém dependente."
+    },
+    {
+      "data": "2014-10-14",
+      "titulo": "Lei sobre serviços funerários em desastres",
+      "descricao": "Lei estadual de sua autoria dispõe sobre serviços funerários em situações de desastres atendidos pela Defesa Civil no Estado do Rio de Janeiro.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 6.907/2014 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5b13a75a806ed8f183257d74006044f3?OpenDocument"
+      },
+      "publico": "Famílias de vítimas de desastres",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Serviço funerário em desastres no estado do Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata dos serviços funerários, como velório e enterro. Vale para desastres atendidos pela Defesa Civil no estado.",
+      "publico_simples": "Famílias de vítimas de desastres",
+      "para_que_serve": "Leis sobre enterro em desastres servem para organizar o atendimento às famílias que perderam alguém."
+    },
+    {
+      "data": "2014-05-22",
+      "titulo": "Lei veda cargo público a condenado por pedofilia",
+      "descricao": "Lei estadual de sua autoria impede a investidura em cargo público no Estado do Rio de Janeiro de condenados, com trânsito em julgado, por abuso sexual contra menor.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei estadual 6.785/2014 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/a77aa3d6454d6b4883257ce1006a6945?OpenDocument"
+      },
+      "publico": "Candidatos a cargo público estadual",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Sem emprego público a condenado por abuso de menor",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Condenados por abuso sexual de menor não podem ter cargo público. Vale só para condenação definitiva, sem chance de pedir revisão. Vale para cargos no governo do estado.",
+      "publico_simples": "Quem quer cargo público no estado do Rio",
+      "para_que_serve": "Leis que barram condenados por abuso de menores servem para proteger crianças e adolescentes."
+    },
+    {
+      "data": "2013-11-22",
+      "titulo": "Lei obriga farmácias a informar sobre genéricos",
+      "descricao": "Lei estadual da qual é o primeiro autor obriga farmácias e drogarias a informar clientes sobre medicamentos genéricos e equivalentes, remédios proibidos pela Anvisa e prioridades de atendimento.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 6.594/2013 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/73c7ad12d0b510d083257c30005abfe8?OpenDocument"
+      },
+      "publico": "Clientes de farmácias e drogarias",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Farmácia deve avisar sobre remédio genérico",
+      "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. Farmácias devem informar sobre genéricos e remédios proibidos pela Vigilância Sanitária. Também devem informar quem tem prioridade no atendimento.",
+      "publico_simples": "Clientes de farmácias e drogarias",
+      "para_que_serve": "Leis de informação ao consumidor servem para que as pessoas saibam o que compram e escolham melhor."
+    },
+    {
+      "data": "2013-11-07",
+      "titulo": "Lei inclui dentistas no controle de infecção hospitalar",
+      "descricao": "Lei estadual de sua autoria prevê a participação permanente de cirurgiões-dentistas nas atividades de prevenção e controle de infecção hospitalar em hospitais e maternidades com internação.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 6.580/2013 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/584ea8e60854605883257c1d0058b37b?OpenDocument"
+      },
+      "publico": "Pacientes de hospitais e maternidades",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Dentistas no combate à infecção em hospitais",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Dentistas devem participar sempre do controle de infecção hospitalar. Infecção hospitalar é a que o paciente pega no hospital. Vale para hospitais e maternidades que internam pacientes.",
+      "publico_simples": "Pacientes de hospitais e maternidades",
+      "para_que_serve": "Leis de controle de infecção hospitalar servem para proteger pacientes de doenças pegas no hospital."
+    },
+    {
+      "data": "2011-09-12",
+      "titulo": "Lei cria semana de prevenção a desastres",
+      "descricao": "Lei estadual de sua autoria institui a Semana Estadual para Conscientização e Prevenção contra Desastres associados a fenômenos naturais e à ocupação urbana, na última semana de agosto.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 6.037/2011 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/e76b90fda282cc958325790b005b7743?OpenDocument"
+      },
+      "publico": "População em geral (prevenção de desastres)",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Semana para prevenir desastres no estado do Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei cria uma semana para prevenir desastres e alertar a população. Ela acontece na última semana de agosto. Trata de desastres da natureza e da ocupação das cidades.",
+      "publico_simples": "Toda a população do estado do Rio",
+      "para_que_serve": "Campanhas de prevenção servem para ensinar a população a evitar riscos e agir em emergências."
+    },
+    {
+      "data": "2011-04-04",
+      "titulo": "Lei garante acesso a motivo de reprovação psicológica",
+      "descricao": "Lei estadual de sua autoria assegura ao candidato a cargo ou emprego na administração pública estadual o acesso aos motivos de sua reprovação em exame psicológico.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 5.938/2011 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5da79ec4ccb52c47832578680071af1f?OpenDocument"
+      },
+      "publico": "Candidatos a concurso público estadual",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Reprovado em teste psicológico pode saber o motivo",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Vale para quem tenta um emprego no governo do estado. Quem for reprovado no exame psicológico tem direito de saber o motivo.",
+      "publico_simples": "Quem faz concurso público no estado do Rio",
+      "para_que_serve": "Leis de transparência em concursos servem para o candidato saber por que foi aprovado ou reprovado."
+    },
+    {
+      "data": "2006-12-08",
+      "titulo": "Lei sobre laqueadura e vasectomia gratuitas",
+      "descricao": "Lei estadual de sua autoria dispõe sobre a realização gratuita de laqueadura e vasectomia nos estabelecimentos de saúde vinculados ao Estado do Rio de Janeiro.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 4.916/2006 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/e364ec91f38f5bd383257242006868a6?OpenDocument"
+      },
+      "publico": "Usuários da rede estadual de saúde",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Cirurgia grátis para não ter mais filhos no Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata de laqueadura e vasectomia grátis. São cirurgias para não ter mais filhos, na mulher e no homem. Vale para a rede de saúde do governo do estado.",
+      "publico_simples": "Quem usa a saúde do estado do Rio",
+      "para_que_serve": "Leis de planejamento familiar servem para que as pessoas decidam se e quando querem ter filhos."
+    },
+    {
+      "data": "2004-06-21",
+      "titulo": "Lei garante matrícula a filhos de agentes mortos",
+      "descricao": "Lei estadual de sua autoria trata da matrícula, em escolas estaduais, de filhos de policiais, bombeiros militares e agentes penitenciários mortos em serviço.",
+      "categoria": "educacao",
+      "marco_legal": "Lei estadual 4.359/2004 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5aacd46ba577c4f983256ebb006214b9?OpenDocument"
+      },
+      "publico": "Filhos de policiais, bombeiros e agentes penitenciários mortos em serviço",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia",
+        "seguranca"
+      ],
+      "titulo_simples": "Vaga na escola para filhos de agentes mortos",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata da matrícula em escolas do estado. Vale para filhos de policiais, bombeiros e guardas de presídio. O pai ou a mãe precisa ter morrido em serviço.",
+      "publico_simples": "Filhos de agentes de segurança mortos em serviço",
+      "para_que_serve": "Leis para famílias de agentes mortos servem para amparar quem perdeu um parente na segurança pública."
+    },
+    {
+      "data": "2003-12-29",
+      "titulo": "Lei dispensa certidão de crédito para servidor",
+      "descricao": "Lei estadual de sua autoria dispensa a exigência de certidão negativa emitida por entidades de proteção ao crédito para ingresso no serviço público estadual do Rio de Janeiro.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 4.250/2003 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/1f9608d4396e67de83256e0c0067bbf5?OpenDocument"
+      },
+      "publico": "Candidatos ao serviço público estadual",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Emprego público no Rio sem exigir nome limpo",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Para virar funcionário público do estado, não precisa provar nome limpo. O papel de nome limpo vem de empresas que registram dívidas.",
+      "publico_simples": "Quem quer trabalhar para o governo do Rio",
+      "para_que_serve": "Leis sobre a entrada no emprego público servem para definir o que pode ser exigido do candidato."
+    }
+  ]
+}};
+const CAT = {eleicao:"eleição",programa_social:"programa social",saude:"saúde",educacao:"educação",seguranca:"segurança",assistencia:"ajuda social"};
+const MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+function fmtData(s){
+  const p = String(s).split("-");
+  if (p.length === 1) return p[0];
+  if (p.length === 2) return MESES[+p[1]-1] + " de " + p[0];
+  return (+p[2]) + " de " + MESES[+p[1]-1] + " de " + p[0];
+}
+function el(tag, cls, text){
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+const FILTROS = [
+  {id:"todos", nome:"Tudo", crit:""},
+  {id:"familia", nome:"Família", crit:"Leis que ajudam a família: dinheiro para a casa, filhos, moradia, cuidar de quem depende de alguém, decidir ter ou não filhos e violência dentro de casa."},
+  {id:"soberania", nome:"Soberania do país", crit:"Soberania é o país mandar nas próprias coisas. Aqui entram leis sobre a relação do Brasil com outros países e sobre áreas importantes do país: defesa, aviões, grandes obras e energia."},
+  {id:"seguranca", nome:"Segurança", crit:"Leis sobre polícia, cadeia, crimes e proteção contra violência."},
+  {id:"pobreza", nome:"Combate à pobreza", crit:"Leis que dão dinheiro, combatem a fome ou ajudam quem ganha pouco a ter casa, luz e o básico."},
+  {id:"controversia", nome:"Casos na Justiça", crit:"Casos dos últimos dois anos em que o próprio candidato virou alvo da Justiça, da polícia ou de outro órgão do governo. Também entram casos antigos que tiveram novidade nesse tempo. E dois pedidos de investigação que ainda não andaram: Vorcaro (Lula) e Estados Unidos (Flávio). Estar aqui não quer dizer que a pessoa é culpada. Cada item diz em que pé está o caso."}
+];
+const ABR = {"Nacional":"Vale no Brasil todo","Estadual (RJ)":"Vale só no estado do Rio","Internacional":"Acordo entre países"};
+let filtroAtual = "todos";
+const refs = {};
+function passa(ev, f){
+  if (f === "todos") return true;
+  if (f === "controversia") return ev.categoria === "controversia";
+  return ev.categoria !== "controversia" && Array.isArray(ev.valores) && ev.valores.indexOf(f) >= 0;
+}
+function n1(n, um, varios){ return n + " " + (n === 1 ? um : varios); }
+function plural(n, um, varios){ return n + " " + (n === 1 ? um : varios); }
+function render(key){
+  const d = DATA[key], pane = document.getElementById("pane-" + key);
+  const id = el("header", "id");
+  const img = el("img"); img.src = d.foto.arquivo; img.alt = "Retrato oficial de " + d.nome_completo;
+  id.appendChild(img);
+  const t = el("div");
+  t.appendChild(el("h2", null, d.nome));
+  t.appendChild(el("p", "full", d.nome_completo));
+  t.appendChild(el("p", "meta", d.partido_atual + " · " + d.cargo_atual));
+  const n = {}, leis = d.eventos.filter(function(e){ return e.categoria !== "controversia"; });
+  leis.forEach(function(e){ n[e.abrangencia] = (n[e.abrangencia] || 0) + 1; });
+  const partes = [n1(leis.length, "lei ou programa", "leis e programas")];
+  if (n["Nacional"]) partes.push(n["Nacional"] === 1 ? "1 vale no Brasil todo" : n["Nacional"] + " valem no Brasil todo");
+  if (n["Estadual (RJ)"]) partes.push(n["Estadual (RJ)"] + " só no estado do Rio");
+  if (n["Internacional"]) partes.push(plural(n["Internacional"], "acordo entre países", "acordos entre países"));
+  const nc = d.eventos.length - leis.length;
+  if (nc) partes.push(plural(nc, "caso na Justiça", "casos na Justiça"));  t.appendChild(el("p", "meta", partes.join(" · ")));
+  const cnt = el("p", "meta cnt"); t.appendChild(cnt);
+  id.appendChild(t);
+  pane.appendChild(id);
+  const sc = el("div", "scroll"); sc.tabIndex = 0;
+  sc.setAttribute("role", "region"); sc.setAttribute("aria-label", "Acontecimentos de " + d.nome);
+  pane.appendChild(sc);
+  refs[key] = {sc: sc, cnt: cnt, tabCnt: null};
+  pane.setAttribute("role", "tabpanel"); pane.setAttribute("aria-labelledby", "tab-" + key);
+}
+function atualiza(key){
+  const d = DATA[key], r = refs[key], f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
+  const lista = d.eventos.filter(function(e){ return passa(e, filtroAtual); });
+  r.cnt.textContent = filtroAtual === "todos" ? "" : plural(lista.length, "item neste filtro", "itens neste filtro");
+  r.cnt.style.display = filtroAtual === "todos" ? "none" : "";
+  if (r.tabCnt) r.tabCnt.textContent = plural(lista.length, "item", "itens");
+  r.sc.textContent = ""; r.sc.scrollTop = 0;
+  if (!lista.length){
+    r.sc.appendChild(el("p", "empty", "Nenhum item deste candidato entra em " + f.nome + "."));
+    return;
+  }
+  const ol = el("ol");
+  lista.forEach(function(ev){
+    const li = el("li", "ev");
+    const tm = el("time", null, fmtData(ev.data)); tm.dateTime = ev.data;
+    li.appendChild(tm);
+    li.appendChild(el("h3", null, ev.titulo_simples || ev.titulo));
+    li.appendChild(el("p", null, ev.texto_simples || ev.descricao));
+    const tg = el("div", "tags");
+    if (ev.categoria === "controversia"){
+      tg.appendChild(el("span", "tag ctrv", "Caso na Justiça"));
+    } else {
+      tg.appendChild(el("span", "tag", CAT[ev.categoria] || ev.categoria.replace(/_/g, " ")));
+      if (ev.abrangencia) tg.appendChild(el("span", "tag abr abr-" + ev.abrangencia.split(" ")[0].toLowerCase(), ABR[ev.abrangencia] || ev.abrangencia));
+    }
+    li.appendChild(tg);
+    function linha(cls, rotulo, txt){
+      if (!txt) return;
+      const p = el("p", cls); p.appendChild(el("b", null, rotulo + " ")); p.appendChild(document.createTextNode(txt)); li.appendChild(p);
+    }
+    linha("pub", "Para quem é:", ev.publico_simples || ev.publico);
+    linha("pub", "Para que serve:", ev.para_que_serve);
+    linha("st", "Em que pé está:", ev.status_simples || ev.status);
+    linha("st", "O que o candidato diz:", ev.resposta_simples || ev.resposta);
+    linha("law", "Lei:", ev.marco_legal);
+    const src = el("p", "src"); src.appendChild(el("b", null, "De onde veio a informação: "));
+    const a = el("a", null, ev.fonte.nome);
+    a.href = ev.fonte.url; a.target = "_blank"; a.rel = "noopener";
+    src.appendChild(a);
+    li.appendChild(src);    ol.appendChild(li);
+  });
+  r.sc.appendChild(ol);
+}
+function aplica(){
+  Array.prototype.forEach.call(document.querySelectorAll("#filters button"), function(b){
+    b.setAttribute("aria-pressed", String(b.dataset.f === filtroAtual));
+  });
+  const f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
+  document.getElementById("crit").textContent = f.crit;
+  atualiza("lula"); atualiza("flavio");
+}
+render("lula"); render("flavio");
+let ativo = "lula";
+const mq = window.matchMedia("(max-width:700px)");
+function mostra(key, rolar){
+  ativo = key;
+  ["lula","flavio"].forEach(function(k){
+    document.getElementById("pane-" + k).classList.toggle("off", k !== key);
+    const tb = document.getElementById("tab-" + k);
+    tb.setAttribute("aria-selected", String(k === key)); tb.tabIndex = k === key ? 0 : -1;
+  });
+  if (rolar && mq.matches){
+    const app = document.getElementById("app"), alvo = document.getElementById("split").offsetTop - document.getElementById("tabs").offsetHeight;
+    if (app.scrollTop > alvo) app.scrollTop = alvo;
+  }
+}
+["lula","flavio"].forEach(function(k){
+  const d = DATA[k], b = el("button", "tab"); b.type = "button"; b.id = "tab-" + k;
+  b.setAttribute("role", "tab"); b.setAttribute("aria-controls", "pane-" + k);
+  const im = el("img"); im.src = d.foto.arquivo; im.alt = ""; b.appendChild(im);
+  const sp = el("span"); sp.appendChild(el("span", "tn", d.nome));
+  const c = el("span", "tc"); sp.appendChild(c); b.appendChild(sp);
+  refs[k].tabCnt = c;
+  b.addEventListener("click", function(){ mostra(k, true); });
+  b.addEventListener("keydown", function(e){
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft"){ const o = k === "lula" ? "flavio" : "lula"; mostra(o, true); document.getElementById("tab-" + o).focus(); }
+  });
+  document.getElementById("tabs").appendChild(b);
+});
+(function(){
+  let x0 = null, y0 = 0;
+  const sp = document.getElementById("split");
+  sp.addEventListener("touchstart", function(e){ x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+  sp.addEventListener("touchend", function(e){
+    if (x0 === null || !mq.matches) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > 2 * Math.abs(dy)) mostra(dx < 0 ? "flavio" : "lula", true);
+  }, {passive:true});
+})();
+mostra("lula", false);FILTROS.forEach(function(f){
+  const b = el("button", null, f.nome); b.type = "button"; b.dataset.f = f.id;
+  b.addEventListener("click", function(){ filtroAtual = f.id; aplica(); });
+  document.getElementById("filters").appendChild(b);
+});
+aplica();
+(function(){
+  const f = document.getElementById("foot");
+  f.appendChild(el("p", null, "As informações são públicas. Cada item diz de onde veio. Atualizado em 5 de outubro de 2026. As regras são as mesmas para os dois: entram leis e programas que já valem e casos na Justiça, do mais novo para o mais antigo. Projetos que ainda não viraram lei não entram. Quem fez esta página separou os itens por tema seguindo as regras de cada botão. A lei e a fonte de cada item ficam para quem quiser conferir."));
+  const p = el("p", null, "Fotos: ");
+  ["lula","flavio"].forEach(function(k, i){
+    const d = DATA[k];
+    if (i) p.appendChild(document.createTextNode(" · "));
+    p.appendChild(document.createTextNode(d.nome + ", " + d.foto.autor + ", " + d.foto.licenca + " ("));
+    const a = el("a", null, "fonte"); a.href = d.foto.fonte_url; a.target = "_blank"; a.rel = "noopener";
+    p.appendChild(a); p.appendChild(document.createTextNode(")"));
+  });
+  f.appendChild(p);
+})();
+</script>
+
+</body>
+</html>

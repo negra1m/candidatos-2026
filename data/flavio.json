@@ -1,0 +1,863 @@
+{
+  "nome": "Flávio Bolsonaro",
+  "nome_completo": "Flávio Nantes Bolsonaro",
+  "nascimento": "1981-04-30",
+  "partido_atual": "PL (Partido Liberal)",
+  "cargo_atual": "Senador pelo Rio de Janeiro (mandato 2019-2027) e candidato à Presidência da República em 2026",
+  "foto": {
+    "arquivo": "flavio.jpg",
+    "autor": "Agência Senado",
+    "licenca": "Atribuição - Agência Senado (Attribution-AgenciaSenadoBr)",
+    "fonte_url": "https://commons.wikimedia.org/wiki/File:Foto_oficial_do_senador_Fl%C3%A1vio_Bolsonaro_(v._AgSen).jpg"
+  },
+  "eventos": [
+    {
+      "data": "1981-04-30",
+      "titulo": "Nascimento em Resende (RJ)",
+      "descricao": "Nasce Flávio Nantes Bolsonaro, em Resende (RJ). É bacharel em Direito pela Universidade Cândido Mendes, com especialização em políticas públicas (Iuperj) e em empreendedorismo (FGV).",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - perfil do parlamentar",
+        "url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/5894"
+      }
+    },
+    {
+      "data": "2002-10",
+      "titulo": "Eleito deputado estadual no Rio de Janeiro",
+      "descricao": "É eleito deputado estadual pela primeira vez. Assume na legislatura 2003-2007 da Alerj como o deputado mais jovem da Casa.",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Alerj - perfil do deputado",
+        "url": "https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/275?Legislatura=18"
+      }
+    },
+    {
+      "data": "2003",
+      "titulo": "Preside a Comissão de Segurança Pública da Alerj",
+      "descricao": "Na legislatura 2003-2007, preside a Comissão Permanente de Segurança Pública e Assuntos de Polícia e a Comissão Permanente de Legislação Constitucional Complementar e Códigos da Alerj.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Alerj - perfil do deputado",
+        "url": "https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/275?Legislatura=18"
+      }
+    },
+    {
+      "data": "2003-12-29",
+      "titulo": "Lei dispensa certidão de crédito para servidor",
+      "descricao": "Lei estadual de sua autoria dispensa a exigência de certidão negativa emitida por entidades de proteção ao crédito para ingresso no serviço público estadual do Rio de Janeiro.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 4.250/2003 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/1f9608d4396e67de83256e0c0067bbf5?OpenDocument"
+      },
+      "publico": "Candidatos ao serviço público estadual",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Emprego público no Rio sem exigir nome limpo",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Para virar funcionário público do estado, não precisa provar nome limpo. O papel de nome limpo vem de empresas que registram dívidas.",
+      "publico_simples": "Quem quer trabalhar para o governo do Rio",
+      "para_que_serve": "Leis sobre a entrada no emprego público servem para definir o que pode ser exigido do candidato."
+    },
+    {
+      "data": "2004-06-21",
+      "titulo": "Lei garante matrícula a filhos de agentes mortos",
+      "descricao": "Lei estadual de sua autoria trata da matrícula, em escolas estaduais, de filhos de policiais, bombeiros militares e agentes penitenciários mortos em serviço.",
+      "categoria": "educacao",
+      "marco_legal": "Lei estadual 4.359/2004 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5aacd46ba577c4f983256ebb006214b9?OpenDocument"
+      },
+      "publico": "Filhos de policiais, bombeiros e agentes penitenciários mortos em serviço",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia",
+        "seguranca"
+      ],
+      "titulo_simples": "Vaga na escola para filhos de agentes mortos",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata da matrícula em escolas do estado. Vale para filhos de policiais, bombeiros e guardas de presídio. O pai ou a mãe precisa ter morrido em serviço.",
+      "publico_simples": "Filhos de agentes de segurança mortos em serviço",
+      "para_que_serve": "Leis para famílias de agentes mortos servem para amparar quem perdeu um parente na segurança pública."
+    },
+    {
+      "data": "2006-10",
+      "titulo": "Reeleito deputado estadual",
+      "descricao": "É reeleito para o segundo mandato na Alerj (legislatura 2007-2011).",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/filho-mais-velho-de-bolsonaro-flavio-disputa-presidencia-pelo-pl"
+      }
+    },
+    {
+      "data": "2006-12-08",
+      "titulo": "Lei sobre laqueadura e vasectomia gratuitas",
+      "descricao": "Lei estadual de sua autoria dispõe sobre a realização gratuita de laqueadura e vasectomia nos estabelecimentos de saúde vinculados ao Estado do Rio de Janeiro.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 4.916/2006 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/e364ec91f38f5bd383257242006868a6?OpenDocument"
+      },
+      "publico": "Usuários da rede estadual de saúde",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Cirurgia grátis para não ter mais filhos no Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata de laqueadura e vasectomia grátis. São cirurgias para não ter mais filhos, na mulher e no homem. Vale para a rede de saúde do governo do estado.",
+      "publico_simples": "Quem usa a saúde do estado do Rio",
+      "para_que_serve": "Leis de planejamento familiar servem para que as pessoas decidam se e quando querem ter filhos."
+    },
+    {
+      "data": "2007",
+      "titulo": "Preside comissões de Defesa Civil e Planejamento Familiar",
+      "descricao": "Na legislatura 2007-2011, preside a Comissão Permanente de Defesa Civil e a Comissão Especial de Planejamento Familiar da Alerj, e é vice-presidente da Comissão de Segurança Pública.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Alerj - perfil do deputado",
+        "url": "https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/275?Legislatura=18"
+      }
+    },
+    {
+      "data": "2010-10",
+      "titulo": "Reeleito para o terceiro mandato estadual",
+      "descricao": "É reeleito deputado estadual para a legislatura 2011-2015.",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/filho-mais-velho-de-bolsonaro-flavio-disputa-presidencia-pelo-pl"
+      }
+    },
+    {
+      "data": "2011-04-04",
+      "titulo": "Lei garante acesso a motivo de reprovação psicológica",
+      "descricao": "Lei estadual de sua autoria assegura ao candidato a cargo ou emprego na administração pública estadual o acesso aos motivos de sua reprovação em exame psicológico.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 5.938/2011 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5da79ec4ccb52c47832578680071af1f?OpenDocument"
+      },
+      "publico": "Candidatos a concurso público estadual",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Reprovado em teste psicológico pode saber o motivo",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Vale para quem tenta um emprego no governo do estado. Quem for reprovado no exame psicológico tem direito de saber o motivo.",
+      "publico_simples": "Quem faz concurso público no estado do Rio",
+      "para_que_serve": "Leis de transparência em concursos servem para o candidato saber por que foi aprovado ou reprovado."
+    },
+    {
+      "data": "2011-09-12",
+      "titulo": "Lei cria semana de prevenção a desastres",
+      "descricao": "Lei estadual de sua autoria institui a Semana Estadual para Conscientização e Prevenção contra Desastres associados a fenômenos naturais e à ocupação urbana, na última semana de agosto.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 6.037/2011 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/e76b90fda282cc958325790b005b7743?OpenDocument"
+      },
+      "publico": "População em geral (prevenção de desastres)",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Semana para prevenir desastres no estado do Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei cria uma semana para prevenir desastres e alertar a população. Ela acontece na última semana de agosto. Trata de desastres da natureza e da ocupação das cidades.",
+      "publico_simples": "Toda a população do estado do Rio",
+      "para_que_serve": "Campanhas de prevenção servem para ensinar a população a evitar riscos e agir em emergências."
+    },
+    {
+      "data": "2013-11-07",
+      "titulo": "Lei inclui dentistas no controle de infecção hospitalar",
+      "descricao": "Lei estadual de sua autoria prevê a participação permanente de cirurgiões-dentistas nas atividades de prevenção e controle de infecção hospitalar em hospitais e maternidades com internação.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 6.580/2013 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/584ea8e60854605883257c1d0058b37b?OpenDocument"
+      },
+      "publico": "Pacientes de hospitais e maternidades",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Dentistas no combate à infecção em hospitais",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Dentistas devem participar sempre do controle de infecção hospitalar. Infecção hospitalar é a que o paciente pega no hospital. Vale para hospitais e maternidades que internam pacientes.",
+      "publico_simples": "Pacientes de hospitais e maternidades",
+      "para_que_serve": "Leis de controle de infecção hospitalar servem para proteger pacientes de doenças pegas no hospital."
+    },
+    {
+      "data": "2013-11-22",
+      "titulo": "Lei obriga farmácias a informar sobre genéricos",
+      "descricao": "Lei estadual da qual é o primeiro autor obriga farmácias e drogarias a informar clientes sobre medicamentos genéricos e equivalentes, remédios proibidos pela Anvisa e prioridades de atendimento.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 6.594/2013 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/73c7ad12d0b510d083257c30005abfe8?OpenDocument"
+      },
+      "publico": "Clientes de farmácias e drogarias",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Farmácia deve avisar sobre remédio genérico",
+      "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. Farmácias devem informar sobre genéricos e remédios proibidos pela Vigilância Sanitária. Também devem informar quem tem prioridade no atendimento.",
+      "publico_simples": "Clientes de farmácias e drogarias",
+      "para_que_serve": "Leis de informação ao consumidor servem para que as pessoas saibam o que compram e escolham melhor."
+    },
+    {
+      "data": "2014-05-22",
+      "titulo": "Lei veda cargo público a condenado por pedofilia",
+      "descricao": "Lei estadual de sua autoria impede a investidura em cargo público no Estado do Rio de Janeiro de condenados, com trânsito em julgado, por abuso sexual contra menor.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei estadual 6.785/2014 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/a77aa3d6454d6b4883257ce1006a6945?OpenDocument"
+      },
+      "publico": "Candidatos a cargo público estadual",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Sem emprego público a condenado por abuso de menor",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Condenados por abuso sexual de menor não podem ter cargo público. Vale só para condenação definitiva, sem chance de pedir revisão. Vale para cargos no governo do estado.",
+      "publico_simples": "Quem quer cargo público no estado do Rio",
+      "para_que_serve": "Leis que barram condenados por abuso de menores servem para proteger crianças e adolescentes."
+    },
+    {
+      "data": "2014-10",
+      "titulo": "Reeleito para o quarto mandato estadual",
+      "descricao": "É reeleito deputado estadual para a legislatura 2015-2019, seu quarto mandato consecutivo na Alerj.",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/filho-mais-velho-de-bolsonaro-flavio-disputa-presidencia-pelo-pl"
+      }
+    },
+    {
+      "data": "2014-10-14",
+      "titulo": "Lei sobre serviços funerários em desastres",
+      "descricao": "Lei estadual de sua autoria dispõe sobre serviços funerários em situações de desastres atendidos pela Defesa Civil no Estado do Rio de Janeiro.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 6.907/2014 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5b13a75a806ed8f183257d74006044f3?OpenDocument"
+      },
+      "publico": "Famílias de vítimas de desastres",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Serviço funerário em desastres no estado do Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata dos serviços funerários, como velório e enterro. Vale para desastres atendidos pela Defesa Civil no estado.",
+      "publico_simples": "Famílias de vítimas de desastres",
+      "para_que_serve": "Leis sobre enterro em desastres servem para organizar o atendimento às famílias que perderam alguém."
+    },
+    {
+      "data": "2016-03-21",
+      "titulo": "Filia-se ao PSC",
+      "descricao": "Deixa o PP e passa a integrar o PSC na Alerj.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Alerj - perfil do deputado",
+        "url": "https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/275?Legislatura=18"
+      }
+    },
+    {
+      "data": "2016-10-02",
+      "titulo": "Candidato à Prefeitura do Rio pelo PSC",
+      "descricao": "Disputa a Prefeitura do Rio de Janeiro pelo PSC e termina o 1º turno em quarto lugar, com 14% dos votos válidos.",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2016-10/crivella-e-freixo-vao-para-o-segundo-turno-no-rio-de-janeiro"
+      }
+    },
+    {
+      "data": "2016-10-18",
+      "titulo": "Lei reduz jornada de pais de pessoas com deficiência",
+      "descricao": "Lei estadual da qual é o primeiro autor autoriza o Executivo a reduzir a jornada de servidores públicos ou militares responsáveis legais por pessoa com deficiência que requeira atenção permanente.",
+      "categoria": "assistencia",
+      "marco_legal": "Lei estadual 7.454/2016 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/bbfbb39bce93e9fc83258051005b964c?OpenDocument"
+      },
+      "publico": "Servidores estaduais responsáveis por pessoa com deficiência",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Menos horas para quem cuida de pessoa com deficiência",
+      "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. O governo do estado pode reduzir as horas de funcionários e militares. São os responsáveis por pessoa com deficiência que precisa de cuidado sempre.",
+      "publico_simples": "Funcionários do estado que cuidam de pessoa com deficiência",
+      "para_que_serve": "Leis de jornada menor para cuidadores servem para dar tempo a quem cuida de alguém dependente."
+    },
+    {
+      "data": "2016-10-31",
+      "titulo": "Lei prevê multa por trote a serviços de emergência",
+      "descricao": "Lei estadual de sua autoria prevê multa pelo acionamento indevido dos serviços telefônicos de emergência (remoções, resgates, incêndios e ocorrências policiais) e revoga a Lei 5.784/2010.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei estadual 7.478/2016 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/159007a40fd4f0a98325805e00597c1e?OpenDocument"
+      },
+      "publico": "Serviços telefônicos de emergência",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Multa para trote nos telefones de emergência",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei prevê multa para quem liga sem motivo à emergência. Vale para ligações de remoção, resgate, incêndio e polícia.",
+      "publico_simples": "Telefones de emergência do estado",
+      "para_que_serve": "Leis contra trotes servem para deixar os telefones de emergência livres para quem precisa de ajuda."
+    },
+    {
+      "data": "2017-09-22",
+      "titulo": "Lei cria programa para animais perdidos",
+      "descricao": "Lei estadual de sua autoria dispõe sobre o programa \"Encontre seu Amigo\", de divulgação na internet de fotos e informações sobre animais perdidos ou abandonados no Rio de Janeiro.",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 7.693/2017 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/5d0d62ba260a1e32832581a7005fca71?OpenDocument"
+      },
+      "publico": "Tutores de animais perdidos ou abandonados",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Fotos na internet para achar animal perdido",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata do programa \"Encontre seu Amigo\". O programa põe na internet fotos de animais perdidos ou abandonados.",
+      "publico_simples": "Donos de animais perdidos ou abandonados",
+      "para_que_serve": "Programas de busca de animais servem para ajudar as pessoas a encontrar animais perdidos."
+    },
+    {
+      "data": "2018-03-02",
+      "titulo": "Lei autoriza programa de recifes artificiais",
+      "descricao": "Lei estadual de sua autoria autoriza o poder público a criar o Programa Estadual de Criação de Recifes Artificiais, denominado \"Costa Viva\".",
+      "categoria": "lei",
+      "marco_legal": "Lei estadual 7.877/2018 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/d5e8bbe982b65fcc832582480057a7af?OpenDocument"
+      },
+      "publico": "Litoral fluminense (ambiente marinho)",
+      "abrangencia": "Estadual (RJ)",
+      "titulo_simples": "Recifes artificiais no litoral do Rio",
+      "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei permite ao governo do estado criar o programa \"Costa Viva\". O programa é para criar recifes artificiais no mar. São estruturas no fundo do mar que abrigam peixes e outros bichos.",
+      "publico_simples": "O mar do litoral do Rio",
+      "para_que_serve": "Programas de recifes artificiais servem para criar abrigo para peixes e outros seres do mar."
+    },
+    {
+      "data": "2018-05-07",
+      "titulo": "Filia-se ao PSL",
+      "descricao": "Deixa o PSC e passa a integrar o PSL.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Alerj - perfil do deputado",
+        "url": "https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/275?Legislatura=18"
+      }
+    },
+    {
+      "data": "2018-10-07",
+      "titulo": "Eleito senador pelo Rio de Janeiro",
+      "descricao": "É eleito senador pelo PSL como o mais votado do estado, com 31,36% dos votos válidos (cerca de 4,37 milhões de votos).",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2018-10/flavio-bolsonaro-e-arolde-de-oliveira-sao-eleitos-para-senado-pelo-rj"
+      }
+    },
+    {
+      "data": "2018-11-30",
+      "titulo": "Lei permite nome do bebê na certidão de natimorto",
+      "descricao": "Lei estadual da qual é coautor determina que os cartórios do Rio de Janeiro expeçam a certidão de óbito de natimorto com nome e prenome do bebê.",
+      "categoria": "assistencia",
+      "marco_legal": "Lei estadual 8.185/2018 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/e5bdbd6b25114b5b03258359005f1169?OpenDocument"
+      },
+      "publico": "Famílias de bebês natimortos",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia"
+      ],
+      "titulo_simples": "Bebê que nasce sem vida ganha nome na certidão",
+      "texto_simples": "Flávio foi um dos autores desta lei. Ela vale só no estado do Rio. Os cartórios devem pôr o nome do bebê que nasce sem vida. O nome vai na certidão de óbito.",
+      "publico_simples": "Famílias de bebês que nasceram sem vida",
+      "para_que_serve": "Leis sobre bebês que nascem sem vida servem para respeitar a família e registrar o nome."
+    },
+    {
+      "data": "2019-02-01",
+      "titulo": "Toma posse no Senado Federal",
+      "descricao": "Inicia o mandato de senador (2019-2027). Em 6 de fevereiro de 2019 é eleito 3º secretário da Mesa Diretora do Senado, cargo que ocupa até dezembro de 2020.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - Dados Abertos (mandatos e cargos)",
+        "url": "https://legis.senado.leg.br/dadosabertos/senador/5894/cargos"
+      }
+    },
+    {
+      "data": "2019-03-26",
+      "titulo": "Apresenta PEC da maioridade penal aos 16 anos",
+      "descricao": "Apresenta proposta de emenda à Constituição que reduz a maioridade penal para 16 anos. A matéria segue em tramitação no Senado, aguardando designação de relator.",
+      "categoria": "seguranca",
+      "marco_legal": "PEC 32/2019",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/135977"
+      }
+    },
+    {
+      "data": "2019-04-05",
+      "titulo": "Projeto inclui educação financeira na educação básica",
+      "descricao": "Apresenta projeto que altera a LDB para incluir empreendedorismo, matemática financeira, educação moral e cívica e OSPB entre os temas transversais obrigatórios da educação básica. Em tramitação no Senado.",
+      "categoria": "educacao",
+      "marco_legal": "PL 2170/2019",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/136251"
+      }
+    },
+    {
+      "data": "2019-04-29",
+      "titulo": "Lei de apoio psicológico a policiais",
+      "descricao": "É sancionada lei estadual da qual é o primeiro autor, que institui programa de acompanhamento psicológico para policiais, bombeiros, agentes penitenciários e do Degase e seus familiares vítimas de traumas no exercício da função.",
+      "categoria": "saude",
+      "marco_legal": "Lei estadual 8.386/2019 (RJ)",
+      "fonte": {
+        "nome": "Alerj - Legislação estadual",
+        "url": "https://alerjln1.alerj.rj.gov.br/contlei.nsf/c8aa0900025feef6032564ec0060dfff/4a72d52a364bb0d7832583ef006ea93b?OpenDocument"
+      },
+      "publico": "Policiais, bombeiros, agentes penitenciários e do Degase e seus familiares",
+      "abrangencia": "Estadual (RJ)",
+      "valores": [
+        "familia",
+        "seguranca"
+      ],
+      "titulo_simples": "Apoio psicológico para policiais e suas famílias",
+      "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. A lei cria apoio psicológico para policiais, bombeiros e guardas de presídio. Vale também para as famílias, em casos de trauma no trabalho.",
+      "publico_simples": "Policiais, bombeiros, guardas e suas famílias",
+      "para_que_serve": "Programas de apoio psicológico a agentes de segurança servem para cuidar da saúde mental deles."
+    },
+    {
+      "data": "2019-11-19",
+      "titulo": "Deixa o PSL",
+      "descricao": "Desfilia-se do PSL e passa a atuar no Senado sem partido.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - Dados Abertos (filiações)",
+        "url": "https://legis.senado.leg.br/dadosabertos/senador/5894/filiacoes"
+      }
+    },
+    {
+      "data": "2019-11-19",
+      "titulo": "Lei autoriza criação da NAV Brasil",
+      "descricao": "Relator na comissão mista da MP 866/2018, que autoriza a criação da empresa pública NAV Brasil Serviços de Navegação Aérea S.A. A MP foi aprovada pelo Senado em 26/09/2019 e convertida em lei.",
+      "categoria": "lei",
+      "marco_legal": "Lei 13.903/2019",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/135031"
+      },
+      "publico": "Serviços de navegação aérea (estrutura do governo federal)",
+      "abrangencia": "Nacional",
+      "valores": [
+        "soberania"
+      ],
+      "titulo_simples": "Empresa pública para serviços de navegação aérea",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei autoriza criar a NAV Brasil, uma empresa pública. Ela cuida de serviços de navegação aérea. A lei vale para todo o país.",
+      "publico_simples": "Serviços de navegação aérea do governo",
+      "para_que_serve": "Leis sobre navegação aérea servem para organizar os serviços que dão segurança aos voos."
+    },
+    {
+      "data": "2020-09-23",
+      "titulo": "Lei sobre assinaturas eletrônicas e receitas",
+      "descricao": "Relator no Plenário do Senado, em 01/09/2020, da MP 983/2020, que trata de assinaturas eletrônicas em comunicações com entes públicos e em questões de saúde e de licenças de softwares públicos. Convertida em lei com vetos parciais.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.063/2020",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/142535"
+      },
+      "publico": "Cidadãos e órgãos públicos em comunicações com o poder público",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Assinatura eletrônica para falar com o governo",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei trata de assinatura eletrônica em contatos com o governo. Também trata de assuntos de saúde e programas de computador do governo. Alguns trechos da lei foram barrados.",
+      "publico_simples": "Pessoas e órgãos que falam com o governo",
+      "para_que_serve": "Leis de assinatura eletrônica servem para que papéis assinados pela internet tenham valor."
+    },
+    {
+      "data": "2020-10-19",
+      "titulo": "Caso das \"rachadinhas\" na Alerj",
+      "descricao": "O Ministério Público do Rio de Janeiro o denunciou, com Fabrício Queiroz e outras 15 pessoas, por peculato, lavagem de dinheiro e organização criminosa em suposto esquema de devolução de salários de assessores em seu gabinete na Alerj entre 2007 e 2018. Após o STJ e o STF anularem provas, o TJ-RJ rejeitou a denúncia em 16/05/2022, a pedido do próprio MP-RJ; em 26/02/2025 o ministro Gilmar Mendes (STF) rejeitou dois recursos do MP-RJ no caso.",
+      "categoria": "controversia",
+      "status": "denúncia rejeitada pelo TJ-RJ em 16/05/2022; recursos do MP-RJ rejeitados no STF em 26/02/2025",
+      "resposta": "A defesa afirmou que a denúncia não tinha sustentação e apontou falhas processuais e quebra ilegal de sigilo.",
+      "fonte": {
+        "nome": "Supremo Tribunal Federal",
+        "url": "https://noticias.stf.jus.br/postsnoticias/stf-rejeita-dois-recursos-do-ministerio-publico-do-rj-no-caso-das-rachadinhas/"
+      },
+      "titulo_simples": "Caso das rachadinhas na Assembleia do Rio",
+      "texto_simples": "O Ministério Público do Rio (quem acusa na Justiça) acusou Flávio. Mais 16 pessoas foram acusadas, entre elas Fabrício Queiroz. Depois, o Supremo e outro tribunal superior anularam provas. A Justiça do Rio rejeitou a acusação, como pediu o Ministério Público. Depois, o Supremo negou dois pedidos do Ministério Público. O Ministério Público alegava devolução de salários de assessores no gabinete dele.",
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro de 2025. Nela, o Supremo negou os pedidos do Ministério Público.",
+      "resposta_simples": "A defesa disse que a acusação não tinha base. Também apontou erros no processo e acesso ilegal a dados protegidos."
+    },
+    {
+      "data": "2021-05-31",
+      "titulo": "Filia-se ao Patriota e assume a liderança",
+      "descricao": "Filia-se ao Patriota e, a partir de 4 de junho de 2021, exerce a liderança do partido no Senado, até novembro de 2021.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - Dados Abertos (lideranças)",
+        "url": "https://legis.senado.leg.br/dadosabertos/senador/5894/liderancas"
+      }
+    },
+    {
+      "data": "2021-11-30",
+      "titulo": "Filia-se ao PL",
+      "descricao": "Deixa o Patriota e filia-se ao Partido Liberal (PL).",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - Dados Abertos (filiações)",
+        "url": "https://legis.senado.leg.br/dadosabertos/senador/5894/filiacoes"
+      }
+    },
+    {
+      "data": "2022-03-08",
+      "titulo": "Lei das assembleias virtuais em condomínios",
+      "descricao": "Relator no Plenário do Senado do PL 548/2019, aprovado em 15/02/2022, que permite assembleias e votações virtuais ou híbridas em condomínios e reuniões virtuais de organizações da sociedade civil. Sancionado como lei.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.309/2022",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2022/02/15/Assembleias-virtuais-em-condominios-seguem-a-sancao"
+      },
+      "publico": "Condomínios e organizações da sociedade civil",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Reunião de condomínio pela internet",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei permite assembleias e votações de condomínio pela internet. Também podem ser mistas: parte presencial, parte pela internet. Vale ainda para reuniões de entidades sem fins lucrativos.",
+      "publico_simples": "Condomínios e entidades sem fins lucrativos",
+      "para_que_serve": "Leis sobre reuniões pela internet servem para que as pessoas decidam juntas sem estar no mesmo lugar."
+    },
+    {
+      "data": "2022-06-10",
+      "titulo": "Líder do PL no Senado",
+      "descricao": "Assume a liderança do PL no Senado Federal, função que exerce até janeiro de 2023 e novamente em fevereiro de 2023.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - Dados Abertos (lideranças)",
+        "url": "https://legis.senado.leg.br/dadosabertos/senador/5894/liderancas"
+      }
+    },
+    {
+      "data": "2022-09-02",
+      "titulo": "Lei do teletrabalho e do auxílio-alimentação",
+      "descricao": "Relator no Senado da MP 1.108/2022, aprovada em 03/08/2022, que regulamenta o teletrabalho e altera regras do auxílio-alimentação. Sancionada com vetos.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.442/2022",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2022/08/03/aprovada-mp-que-regulamenta-teletrabalho-e-muda-auxilio-alimentacao"
+      },
+      "publico": "Trabalhadores em teletrabalho e que recebem auxílio-alimentação",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Trabalho a distância e auxílio-alimentação",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei definiu regras para o trabalho feito a distância. Também mudou regras do auxílio-alimentação. Alguns trechos da lei foram barrados.",
+      "publico_simples": "Quem trabalha a distância ou tem auxílio-alimentação",
+      "para_que_serve": "Leis sobre trabalho a distância servem para definir direitos e deveres de quem trabalha fora da empresa."
+    },
+    {
+      "data": "2023-04-05",
+      "titulo": "Líder da Minoria no Congresso Nacional",
+      "descricao": "É designado líder da Minoria no Congresso Nacional, função que exerce até fevereiro de 2025. Em março de 2025 passa a vice-líder.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - Dados Abertos (lideranças)",
+        "url": "https://legis.senado.leg.br/dadosabertos/senador/5894/liderancas"
+      }
+    },
+    {
+      "data": "2024-04-11",
+      "titulo": "Lei que restringe as saídas temporárias de presos",
+      "descricao": "Relator no Senado do PL 2.253/2022, aprovado em 20/02/2024 por 62 votos a 2, que restringe a saída temporária, prevê exame criminológico para progressão de regime e trata da monitoração eletrônica. Sancionado com vetos.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei 14.843/2024",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2024/02/20/senado-aprova-restricao-as-saidinhas-de-presos-texto-volta-para-a-camara"
+      },
+      "publico": "Pessoas presas no sistema prisional",
+      "abrangencia": "Nacional",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Lei limita a saída temporária de presos",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei limita a saída temporária, a chamada saidinha. Para passar a uma pena mais leve, o preso passa por avaliação. A lei também trata do uso de tornozeleira eletrônica.",
+      "publico_simples": "Pessoas presas no país",
+      "para_que_serve": "Leis sobre cumprimento de pena servem para definir como o preso cumpre a pena e quando pode sair."
+    },
+    {
+      "data": "2024-05-15",
+      "titulo": "Senado aprova recursos de loteria para a ABBR",
+      "descricao": "O Plenário aprova projeto de sua autoria que destina a renda de um concurso anual da Loteca à Associação Brasileira Beneficente de Reabilitação (ABBR), que atende pessoas com deficiência física. Remetido à Câmara.",
+      "categoria": "assistencia",
+      "marco_legal": "PL 3071/2019",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2024/05/15/vai-a-camara-projeto-que-destina-recursos-de-loteria-para-associacao-de-reabilitacao"
+      }
+    },
+    {
+      "data": "2024-09-18",
+      "titulo": "Nova Lei Geral do Turismo",
+      "descricao": "Relator do PL 1.829/2019, aprovado no Senado em 05/06/2024 na forma de substitutivo, que atualiza a legislação do turismo. O texto foi sancionado como a nova Lei Geral do Turismo.",
+      "categoria": "lei",
+      "marco_legal": "Lei 14.978/2024",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2024/06/05/aprovada-atualizacao-da-lei-geral-do-turismo-texto-retorna-para-a-camara"
+      },
+      "publico": "Setor de turismo",
+      "abrangencia": "Nacional",
+      "titulo_simples": "Novas regras para o turismo",
+      "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei atualiza as regras do turismo no país. Ela virou a nova Lei Geral do Turismo.",
+      "publico_simples": "Quem trabalha com turismo",
+      "para_que_serve": "Leis de turismo servem para organizar o setor e definir regras para empresas e turistas."
+    },
+    {
+      "data": "2025-02-19",
+      "titulo": "Presidente da Comissão de Segurança Pública",
+      "descricao": "Assume a presidência da Comissão de Segurança Pública (CSP) do Senado Federal.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Senado Federal - Dados Abertos (cargos)",
+        "url": "https://legis.senado.leg.br/dadosabertos/senador/5894/cargos"
+      }
+    },
+    {
+      "data": "2025-04-29",
+      "titulo": "Projeto de devolução de descontos a aposentados",
+      "descricao": "Apresenta projeto que dispõe sobre a devolução de descontos não autorizados de mensalidades associativas em benefícios previdenciários. Pronto para a pauta em comissão.",
+      "categoria": "assistencia",
+      "marco_legal": "PL 1950/2025",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/168298"
+      }
+    },
+    {
+      "data": "2025-08-13",
+      "titulo": "Projeto de exames para diagnóstico de autismo no SUS",
+      "descricao": "Apresenta projeto que torna obrigatória a cobertura integral e prioritária, no SUS, de exames especializados para identificação precoce do Transtorno do Espectro Autista (TEA). Em tramitação.",
+      "categoria": "saude",
+      "marco_legal": "PL 3980/2025",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/169904"
+      }
+    },
+    {
+      "data": "2025-10-08",
+      "titulo": "CCJ aprova relatório sobre internação de adolescentes",
+      "descricao": "Como relator do PL 1.473/2025, tem substitutivo aprovado na CCJ (20 votos a 1) que amplia o tempo máximo de internação de adolescentes infratores de três para cinco anos, podendo chegar a dez em casos graves.",
+      "categoria": "seguranca",
+      "marco_legal": "PL 1473/2025",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2025/10/08/regras-mais-rigidas-para-adolescentes-que-cometeram-infracoes-aprovadas-na-ccj"
+      }
+    },
+    {
+      "data": "2025-10-14",
+      "titulo": "Projeto de centros-dia para pessoas idosas",
+      "descricao": "Apresenta projeto que altera a Loas e o Estatuto da Pessoa Idosa para determinar a instalação de centros-dia para pessoas idosas atendidas pelo Suas. Em tramitação, com relator designado.",
+      "categoria": "assistencia",
+      "marco_legal": "PL 5115/2025",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/170925"
+      }
+    },
+    {
+      "data": "2025-12-05",
+      "titulo": "Anuncia pré-candidatura à Presidência",
+      "descricao": "Anuncia nas redes sociais que será pré-candidato à Presidência da República em 2026, com o apoio do pai, o ex-presidente Jair Bolsonaro.",
+      "categoria": "carreira",
+      "fonte": {
+        "nome": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2025/12/6/flavio-bolsonaro-enters-brazils-2026-presidential-race-with-fathers-nod"
+      }
+    },
+    {
+      "data": "2026-03-09",
+      "titulo": "Projeto de pronto atendimento à saúde da mulher",
+      "descricao": "Apresenta projeto que institui a Política Nacional de Unidades de Pronto Atendimento à Mulher (UPAM), para atendimento especializado à saúde da mulher no SUS. Aguardando audiência pública.",
+      "categoria": "saude",
+      "marco_legal": "PL 1019/2026",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/172949"
+      }
+    },
+    {
+      "data": "2026-03-25",
+      "titulo": "Projeto de medidas protetivas pela polícia",
+      "descricao": "Apresenta projeto que altera a Lei Maria da Penha para autorizar a autoridade policial a conceder, de imediato, medidas protetivas de urgência, com controle judicial posterior. Aguardando despacho.",
+      "categoria": "seguranca",
+      "marco_legal": "PL 1400/2026",
+      "fonte": {
+        "nome": "Senado Federal - ficha da matéria",
+        "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/173320"
+      }
+    },
+    {
+      "data": "2026-04",
+      "titulo": "Inquérito no STF por suposta calúnia contra Lula",
+      "descricao": "O ministro Alexandre de Moraes (STF) abriu inquérito, a pedido da PF e com aval da PGR, sobre postagem de 03/01/2026 no X em que escreveu que \"Lula será delatado\" e citou tráfico internacional de drogas e armas, lavagem de dinheiro e eleições fraudadas. Em junho de 2026 a PF concluiu haver indícios de calúnia; a pedido do procurador-geral Paulo Gonet, o caso voltou à PF para que ele fosse ouvido.",
+      "categoria": "controversia",
+      "status": "inquérito em andamento no STF (relator Alexandre de Moraes); manifestação escrita entregue em 28/07/2026; sem denúncia da PGR divulgada até 05/10/2026",
+      "resposta": "Afirmou que a postagem não atribuiu crimes a Lula, nem de forma expressa nem implícita.",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/em-manifestacao-escrita-flavio-bolsonaro-nega-ter-caluniado-lula"
+      },
+      "titulo_simples": "Investigação por suposta calúnia contra Lula",
+      "texto_simples": "Em janeiro de 2026, Flávio postou que \"Lula será delatado\". Na postagem, citou tráfico de drogas e armas e lavagem de dinheiro. Também falou em eleições fraudadas. O ministro Alexandre de Moraes, do Supremo, abriu uma investigação. Em junho, a Polícia Federal viu sinais de calúnia. A Polícia Federal suspeita que ele acusou Lula falsamente de crimes.",
+      "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. Nenhuma acusação na Justiça tinha sido divulgada.",
+      "resposta_simples": "Flávio disse que a postagem não acusou Lula de crimes. Nem de forma direta, nem de forma indireta."
+    },
+    {
+      "data": "2026-05-11",
+      "titulo": "Lei sobre presídio federal para quem mata policial",
+      "descricao": "Um dos relatores no Senado do PL 5.391/2020, que prevê o recolhimento em presídios federais de segurança máxima de presos por homicídio qualificado contra agentes de segurança. Sancionado e publicado em 12/05/2026.",
+      "categoria": "seguranca",
+      "marco_legal": "Lei 15.407/2026",
+      "fonte": {
+        "nome": "Agência Senado",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/05/12/sancionado-o-uso-de-presidios-federais-para-assassinos-de-agentes-de-seguranca"
+      },
+      "publico": "Presos por homicídio qualificado contra agentes de segurança",
+      "abrangencia": "Nacional",
+      "valores": [
+        "seguranca"
+      ],
+      "titulo_simples": "Prisão federal para quem mata agente de segurança",
+      "texto_simples": "Flávio foi um dos que cuidaram do texto da lei no Senado. A lei trata de presos por homicídio qualificado contra agentes de segurança. Homicídio qualificado é um assassinato que a lei considera mais grave. Esses presos devem ir para presídios federais de segurança máxima.",
+      "publico_simples": "Presos por matar agentes de segurança",
+      "para_que_serve": "Leis sobre presídios de segurança máxima servem para definir quais presos ficam em prisões mais vigiadas."
+    },
+    {
+      "data": "2026-05",
+      "titulo": "Caso Dark Horse: recursos de Vorcaro e inquérito no STF",
+      "descricao": "Após a divulgação, em maio de 2026, de áudios e mensagens de tratativas com o ex-banqueiro Daniel Vorcaro (Banco Master) sobre o financiamento do filme Dark Horse, o ministro Alexandre de Moraes (STF) enviou à PGR pedido de investigação sobre os recursos. Em 22/07/2026 o ministro André Mendonça (STF) autorizou, a pedido da PF e com aval da PGR, inquérito sobre suspeita de lavagem de dinheiro, evasão de divisas e corrupção; a PF aponta pedido de cerca de R$ 131 milhões, com cerca de R$ 60 milhões repassados, parte por meio de um fundo nos Estados Unidos.",
+      "categoria": "controversia",
+      "status": "inquérito em andamento no STF (relator André Mendonça)",
+      "resposta": "Nega irregularidades e afirma que não há nada de errado em buscar recursos privados para financiar o filme sobre o pai.",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/mendonca-incluiu-flavio-bolsonaro-como-investigado-no-caso-dark-horse"
+      },
+      "titulo_simples": "Investigação sobre dinheiro de Vorcaro para filme",
+      "texto_simples": "Em maio de 2026, foram divulgadas conversas com o ex-banqueiro Daniel Vorcaro. As conversas eram sobre dinheiro para o filme Dark Horse. Em julho, o Supremo autorizou uma investigação pedida pela Polícia Federal. Segundo a polícia, foram pedidos cerca de 131 milhões de reais. Cerca de 60 milhões foram repassados, parte por um fundo americano. A Polícia Federal suspeita de corrupção, lavagem e envio ilegal de dinheiro.",
+      "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. O caso está com o ministro André Mendonça, do Supremo.",
+      "resposta_simples": "Flávio nega ter feito algo errado. Ele diz que buscar dinheiro privado para o filme não é errado. O filme é sobre o pai dele."
+    },
+    {
+      "data": "2026-05-29",
+      "titulo": "Representações por atuação junto ao governo dos EUA",
+      "descricao": "Após reunião com Donald Trump em Washington, em 26/05/2026, na qual pediu a classificação de PCC e CV como organizações terroristas, deputados do PSOL e da Rede (29/05) e a Associação Brasileira de Juristas pela Democracia (01/06) representaram à PGR por suposto atentado à soberania nacional. Em 30/06 o PT acionou a PGR e o Ministério Público Eleitoral após carta do secretário de Estado Marco Rubio que agradece a oferta de pôr uma equipe de transição à disposição dos EUA.",
+      "categoria": "controversia",
+      "status": "representações protocoladas; sem decisão pública de abertura de investigação até 05/10/2026",
+      "resposta": "A campanha afirmou que a representação é tentativa da esquerda de usar o Judiciário como extensão de seu projeto político e que o senador buscou cooperação internacional contra o crime organizado.",
+      "fonte": {
+        "nome": "Correio Braziliense",
+        "url": "https://www.correiobraziliense.com.br/politica/2026/06/7432269-juristas-pedem-a-pgr-investigacao-de-flavio-por-atentado-a-soberania.html"
+      },
+      "titulo_simples": "Pedidos de investigação após reunião com Trump",
+      "texto_simples": "Em maio de 2026, Flávio se encontrou com Donald Trump em Washington. Ele pediu que o PCC e o Comando Vermelho fossem considerados terroristas. Deputados pediram investigação à Procuradoria-Geral, que pode acusar na Justiça. Eram deputados do PSOL e da Rede, e uma associação de juristas. Depois de uma carta do governo americano, o PT também fez pedidos. Deputados e juristas alegam ataque à soberania, a independência do Brasil.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão pública sobre investigar.",
+      "resposta_simples": "A campanha disse que o pedido é uma tentativa da esquerda. Segundo ela, a esquerda quer usar a Justiça para seu projeto político. Disse que Flávio buscou ajuda de fora contra o crime organizado."
+    },
+    {
+      "data": "2026-07-13",
+      "titulo": "Carta de Bolsonaro em live: Moraes suspende visitas",
+      "descricao": "Em 11/07/2026, publicou nas redes sociais carta do pai, Jair Bolsonaro, em apoio à sua pré-candidatura, embora o ex-presidente estivesse proibido de usar redes sociais, inclusive por meio de terceiros. Em 13/07 o ministro Alexandre de Moraes (STF) suspendeu por 90 dias suas visitas ao pai e enviou o caso ao Ministério Público Eleitoral para as medidas cabíveis.",
+      "categoria": "controversia",
+      "status": "suspensão de visitas mantida em agosto de 2026; caso enviado ao MP Eleitoral, sem decisão de mérito divulgada até 05/10/2026",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/moraes-suspende-visitas-de-flavio-bolsonaro-na-prisao-domiciliar"
+      },
+      "titulo_simples": "Moraes suspende visitas de Flávio ao pai",
+      "texto_simples": "Em julho de 2026, Flávio postou uma carta do pai, Jair Bolsonaro. Na carta, o pai apoiava Flávio como futuro candidato. O ministro Moraes, do Supremo, suspendeu as visitas de Flávio ao pai. A suspensão é de 90 dias. Ele também mandou o caso para quem acusa na Justiça Eleitoral. Para Moraes, o pai não podia usar redes, nem por outra pessoa.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final divulgada. A suspensão das visitas foi mantida em agosto."
+    },
+    {
+      "data": "2026-07",
+      "titulo": "TSE manda remover vídeo que associa Lula a facções",
+      "descricao": "A Federação Brasil da Esperança (PT, PCdoB e PV) representou ao TSE contra vídeo publicado por Flávio que associava Lula ao PCC e ao CV, alegando propaganda antecipada negativa. Após liminar negada em 26/07, o plenário do TSE determinou por 5 votos a 2 a remoção do vídeo, por entender que houve propaganda antecipada e associação falsa do presidente a organizações criminosas.",
+      "categoria": "controversia",
+      "status": "remoção determinada pelo plenário do TSE em agosto de 2026",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/tse-determina-remocao-de-video-que-associa-lula-ao-pcc-e-ao-cv"
+      },
+      "titulo_simples": "Justiça Eleitoral manda tirar vídeo de Flávio",
+      "texto_simples": "Flávio publicou um vídeo ligando Lula ao PCC e ao Comando Vermelho. Os partidos PT, PCdoB e PV levaram o caso à Justiça Eleitoral. Por 5 votos a 2, os juízes mandaram tirar o vídeo. Para a maioria, houve propaganda antes da hora. E o vídeo ligou Lula a facções criminosas de forma falsa. Os partidos alegaram propaganda negativa antes da época de campanha.",
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de agosto. Nela, os juízes mandaram tirar o vídeo do ar."
+    },
+    {
+      "data": "2026-07-25",
+      "titulo": "PL oficializa candidatura à Presidência",
+      "descricao": "Convenção nacional do PL, em São Paulo, oficializa sua candidatura à Presidência da República.",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/pl-oficializa-candidatura-de-flavio-bolsonaro-presidencia"
+      }
+    },
+    {
+      "data": "2026-08",
+      "titulo": "Candidatura registrada no TSE com Alfredo Gaspar de vice",
+      "descricao": "A candidatura é registrada no TSE (registro nº 280002551544/2026), tendo como vice o deputado federal Alfredo Gaspar (PL-AL).",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/filho-mais-velho-de-bolsonaro-flavio-disputa-presidencia-pelo-pl"
+      }
+    },
+    {
+      "data": "2026-09-01",
+      "titulo": "TSE rejeita multa por vídeo de Bolsonaro feito com IA",
+      "descricao": "O PT pediu ao TSE remoção e multa por propaganda antecipada e uso de deepfake na exibição, na convenção do PL, de vídeo que recriava com inteligência artificial a imagem e a voz de Jair Bolsonaro. O TSE rejeitou o pedido por 4 votos a 3, por entender que a exibição em convenção partidária não configurou propaganda eleitoral irregular.",
+      "categoria": "controversia",
+      "status": "representação rejeitada pelo TSE em 01/09/2026",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/tse-rejeita-acao-para-derrubar-imagem-de-bolsonaro-feita-por-ia"
+      },
+      "titulo_simples": "Vídeo que imita Bolsonaro: Justiça não dá multa",
+      "texto_simples": "Na convenção do PL, foi mostrado um vídeo de Jair Bolsonaro. Convenção é a reunião em que o partido escolhe candidatos. O vídeo imitava a imagem e a voz dele com inteligência artificial. Por 4 votos a 3, os juízes negaram o pedido do PT. Para a maioria, mostrar o vídeo na convenção não foi propaganda proibida. O PT alegou propaganda antes da hora e uso de montagem falsa.",
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de 1º de setembro. Nela, a Justiça Eleitoral negou o pedido do PT."
+    },
+    {
+      "data": "2026-09",
+      "titulo": "TSE admite ação sobre rede de 'collabs' no Instagram",
+      "descricao": "A Coligação Brasil Pronto pra Mais propôs ação de investigação judicial eleitoral contra Flávio, Alfredo Gaspar e Mario Frias por suposto uso indevido dos meios de comunicação e abuso de poder econômico e político por meio de uma rede de publicações em coautoria (collabs) no Instagram. O corregedor-geral eleitoral em exercício, ministro Ricardo Villas Bôas Cueva, deu andamento à ação e pediu informações ao Facebook e à Shopee sobre os perfis investigados.",
+      "categoria": "controversia",
+      "status": "ação de investigação judicial eleitoral em tramitação no TSE, sem julgamento de mérito até 05/10/2026",
+      "fonte": {
+        "nome": "Tribunal Superior Eleitoral",
+        "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Setembro/corregedoria-geral-eleitoral-solicita-informacoes-ao-facebook-e-a-shopee-sobre-perfis-investigados"
+      },
+      "titulo_simples": "Justiça Eleitoral aceita processo contra Flávio",
+      "texto_simples": "O grupo de partidos Brasil Pronto pra Mais abriu um processo. O processo é contra Flávio, Alfredo Gaspar e Mario Frias. A Justiça Eleitoral deu andamento ao processo. Ela pediu ao Facebook e à Shopee dados dos perfis investigados. O caso é sobre uma rede de posts em parceria no Instagram. O grupo alega abuso de poder e mau uso da comunicação.",
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final."
+    },
+    {
+      "data": "2026-10-04",
+      "titulo": "1º turno: vai ao 2º turno em primeiro lugar",
+      "descricao": "Termina o 1º turno em primeiro lugar, com 47,03% dos votos válidos (56.103.033 votos), segundo dados do TSE com 99,99% das urnas totalizadas. Disputa o 2º turno com Lula (PT) em 25 de outubro.",
+      "categoria": "eleicao",
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-09/flavio-e-lula-vao-disputar-2o-turno-para-presidente-da-republica"
+      }
+    }
+  ]
+}
