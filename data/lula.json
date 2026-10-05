@@ -149,7 +149,8 @@
       "titulo_simples": "Fome Zero: governo contra a fome",
       "texto_simples": "O governo Lula criou o Fome Zero para combater a fome. Um ministro especial cuidava do programa. Depois, Lula assinou a lei do Cartão Alimentação.",
       "publico_simples": "Quem não tem comida todo dia",
-      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia."
+      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2003-01-01",
@@ -179,7 +180,8 @@
       "titulo_simples": "Governo compra comida de pequenos agricultores",
       "texto_simples": "Lula assinou a lei que criou este programa. O governo compra comida de pequenos agricultores que trabalham com a família. Parte vai para quem não tem comida todo dia. Outra parte fica guardada como reserva.",
       "publico_simples": "Pequenos agricultores e quem não tem comida",
-      "para_que_serve": "Programas de compra de comida servem para alimentar quem precisa e ajudar pequenos produtores."
+      "para_que_serve": "Programas de compra de comida servem para alimentar quem precisa e ajudar pequenos produtores.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2003-10-01",
@@ -196,7 +198,8 @@
       "titulo_simples": "Direitos para quem tem 60 anos ou mais",
       "texto_simples": "Lula assinou o Estatuto do Idoso. A lei trata dos direitos de quem tem 60 anos ou mais. Hoje ela se chama Estatuto da Pessoa Idosa.",
       "publico_simples": "Quem tem 60 anos ou mais",
-      "para_que_serve": "Leis para idosos servem para proteger as pessoas mais velhas e garantir respeito a elas."
+      "para_que_serve": "Leis para idosos servem para proteger as pessoas mais velhas e garantir respeito a elas.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2003-10-20",
@@ -217,7 +220,8 @@
       "titulo_simples": "Bolsa Família: dinheiro para famílias pobres",
       "texto_simples": "O governo Lula criou o Bolsa Família. O programa dá dinheiro para famílias pobres. Em troca, a família precisa cumprir algumas regras. Ele juntou num só vários programas que já existiam.",
       "publico_simples": "Famílias pobres e muito pobres",
-      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida."
+      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida.",
+      "assunto": "Ajuda em dinheiro"
     },
     {
       "data": "2003-11-11",
@@ -237,7 +241,8 @@
       "titulo_simples": "Luz elétrica para casas que não tinham",
       "texto_simples": "O presidente Lula assinou uma ordem criando o Luz para Todos. O objetivo é levar luz elétrica para todo mundo. O foco principal são as casas do campo.",
       "publico_simples": "Casas sem luz, principalmente no campo",
-      "para_que_serve": "Programas de energia servem para levar luz elétrica às casas que ainda não têm."
+      "para_que_serve": "Programas de energia servem para levar luz elétrica às casas que ainda não têm.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2004-04-13",
@@ -254,7 +259,8 @@
       "titulo_simples": "Farmácia Popular: ajuda para conseguir remédios",
       "texto_simples": "Lula assinou uma lei sobre remédios. A lei deixou a Fiocruz, órgão de saúde do governo, oferecer remédios. A Fiocruz recebe de volta o custo dos remédios. Essa lei é a base da Farmácia Popular.",
       "publico_simples": "Toda a população que precisa de remédio",
-      "para_que_serve": "Programas de remédios servem para ajudar as pessoas a conseguir os remédios de que precisam."
+      "para_que_serve": "Programas de remédios servem para ajudar as pessoas a conseguir os remédios de que precisam.",
+      "assunto": "Saúde"
     },
     {
       "data": "2004-05-13",
@@ -274,7 +280,8 @@
       "titulo_simples": "Lei inclui ministério de combate à fome",
       "texto_simples": "Lula assinou uma lei que reorganizou os ministérios. A lei incluiu o Ministério do Desenvolvimento Social e Combate à Fome.",
       "publico_simples": "A organização do governo federal",
-      "para_que_serve": "Leis sobre ministérios servem para dividir as tarefas do governo e dizer quem cuida de quê."
+      "para_que_serve": "Leis sobre ministérios servem para dividir as tarefas do governo e dizer quem cuida de quê.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2005-01-13",
@@ -291,7 +298,8 @@
       "titulo_simples": "Bolsa de estudo em faculdade particular",
       "texto_simples": "Lula assinou a lei que criou o ProUni. O programa dá bolsas de estudo em faculdades particulares.",
       "publico_simples": "Estudantes de família com pouco dinheiro",
-      "para_que_serve": "Programas de bolsa de estudo servem para ajudar quem tem pouco dinheiro a fazer faculdade."
+      "para_que_serve": "Programas de bolsa de estudo servem para ajudar quem tem pouco dinheiro a fazer faculdade.",
+      "assunto": "Educação"
     },
     {
       "data": "2006-07-24",
@@ -308,7 +316,8 @@
       "titulo_simples": "Lei para os pequenos agricultores",
       "texto_simples": "Lula assinou a lei dos pequenos agricultores que trabalham com a família. A lei traz as bases de um plano do governo para eles. Vale também para pequenos negócios de famílias no campo.",
       "publico_simples": "Pequenos agricultores que trabalham com a família",
-      "para_que_serve": "Leis para pequenos agricultores servem para orientar a ajuda do governo a quem produz no campo."
+      "para_que_serve": "Leis para pequenos agricultores servem para orientar a ajuda do governo a quem produz no campo.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2006-08-07",
@@ -329,7 +338,8 @@
       "titulo_simples": "Proteção para mulher que sofre violência em casa",
       "texto_simples": "Lula assinou a Lei Maria da Penha. A lei cria formas de combater a violência contra a mulher. Vale para a violência dentro de casa e na família.",
       "publico_simples": "Mulheres que sofrem violência em casa",
-      "para_que_serve": "Leis contra a violência em casa servem para proteger mulheres que sofrem violência na família."
+      "para_que_serve": "Leis contra a violência em casa servem para proteger mulheres que sofrem violência na família.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2006-09-15",
@@ -349,7 +359,8 @@
       "titulo_simples": "Lei do direito de todos a comer bem",
       "texto_simples": "Lula assinou uma lei sobre o direito à comida. A lei criou um sistema nacional sobre alimentação. O objetivo é garantir a todos o direito de comer bem.",
       "publico_simples": "Toda a população do país",
-      "para_que_serve": "Leis sobre o direito à comida servem para organizar o governo para que todos comam bem."
+      "para_que_serve": "Leis sobre o direito à comida servem para organizar o governo para que todos comam bem.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2006-10-29",
@@ -376,7 +387,8 @@
       "titulo_simples": "Jeito próprio de pequena empresa pagar imposto",
       "texto_simples": "Lula assinou a lei das micro e pequenas empresas. A lei criou o Simples Nacional. É um jeito próprio dessas empresas pagarem impostos.",
       "publico_simples": "Micro e pequenas empresas",
-      "para_que_serve": "Regras de imposto para pequenas empresas servem para facilitar o pagamento e diminuir a papelada."
+      "para_que_serve": "Regras de imposto para pequenas empresas servem para facilitar o pagamento e diminuir a papelada.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2007-01-22",
@@ -396,7 +408,8 @@
       "titulo_simples": "Programa de obras públicas pelo país",
       "texto_simples": "O presidente Lula assinou uma ordem criando o PAC. O PAC é um programa de investimento em obras públicas.",
       "publico_simples": "Obras públicas em todo o país",
-      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa."
+      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2007-04-24",
@@ -413,7 +426,8 @@
       "titulo_simples": "Metas para escolas e crescimento das universidades",
       "texto_simples": "O presidente Lula assinou duas ordens sobre educação. Uma criou um plano de metas para as escolas públicas. A outra apoia planos para reorganizar e aumentar as universidades federais.",
       "publico_simples": "Escolas públicas e universidades federais",
-      "para_que_serve": "Planos de metas para o ensino servem para melhorar as escolas e abrir mais vagas nas universidades."
+      "para_que_serve": "Planos de metas para o ensino servem para melhorar as escolas e abrir mais vagas nas universidades.",
+      "assunto": "Educação"
     },
     {
       "data": "2007-06-20",
@@ -430,7 +444,8 @@
       "titulo_simples": "Dinheiro para escolas públicas e professores",
       "texto_simples": "Lula assinou a lei que definiu as regras do Fundeb. O Fundeb é um fundo de dinheiro para a educação básica. Isso vai da creche ao ensino médio. Ele também serve para valorizar quem trabalha na educação.",
       "publico_simples": "Escolas públicas, da creche ao ensino médio",
-      "para_que_serve": "Fundos da educação servem para juntar dinheiro e repartir entre as escolas públicas e quem trabalha nelas."
+      "para_que_serve": "Fundos da educação servem para juntar dinheiro e repartir entre as escolas públicas e quem trabalha nelas.",
+      "assunto": "Educação"
     },
     {
       "data": "2008-07-16",
@@ -447,7 +462,8 @@
       "titulo_simples": "Piso de salário para professor de escola pública",
       "texto_simples": "Lula assinou a lei do piso salarial nacional dos professores. Piso é o menor salário que pode ser pago. Vale para professores de escola pública, da creche ao ensino médio.",
       "publico_simples": "Professores de escola pública",
-      "para_que_serve": "Leis de piso salarial servem para garantir um salário mínimo para uma profissão."
+      "para_que_serve": "Leis de piso salarial servem para garantir um salário mínimo para uma profissão.",
+      "assunto": "Educação"
     },
     {
       "data": "2008-12-19",
@@ -464,7 +480,8 @@
       "titulo_simples": "Criação do Microempreendedor Individual",
       "texto_simples": "Lula assinou uma lei que mudou o Simples Nacional. A lei criou o Microempreendedor Individual, o MEI. Ele é para quem trabalha por conta própria e pequenos empreendedores.",
       "publico_simples": "Quem trabalha por conta própria",
-      "para_que_serve": "Leis de registro simples servem para ajudar quem trabalha por conta própria a ter negócio legalizado."
+      "para_que_serve": "Leis de registro simples servem para ajudar quem trabalha por conta própria a ter negócio legalizado.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2008-12-29",
@@ -481,7 +498,8 @@
       "titulo_simples": "Novas escolas federais para ensinar uma profissão",
       "texto_simples": "Lula assinou a lei que criou os Institutos Federais. São escolas de ensino profissional, ciência e tecnologia. Ensino profissional é o que prepara para uma profissão.",
       "publico_simples": "Estudantes que querem aprender uma profissão",
-      "para_que_serve": "Escolas de ensino profissional servem para preparar as pessoas para trabalhar numa profissão."
+      "para_que_serve": "Escolas de ensino profissional servem para preparar as pessoas para trabalhar numa profissão.",
+      "assunto": "Educação"
     },
     {
       "data": "2009-03-25",
@@ -502,7 +520,8 @@
       "titulo_simples": "Minha Casa, Minha Vida: ajuda para ter casa",
       "texto_simples": "O governo Lula criou o Minha Casa, Minha Vida. É um programa de moradia. Também tratou de dar papel da casa a quem já mora nela.",
       "publico_simples": "Famílias com pouco dinheiro",
-      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar."
+      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar.",
+      "assunto": "Moradia"
     },
     {
       "data": "2009-06-16",
@@ -522,7 +541,8 @@
       "titulo_simples": "Merenda com comida de pequenos agricultores",
       "texto_simples": "Lula assinou a lei da merenda das escolas públicas. A lei manda comprar comida de pequenos agricultores com parte do dinheiro. São pelo menos 30 de cada 100 reais. Esses agricultores trabalham com a família.",
       "publico_simples": "Alunos de escola pública e pequenos agricultores",
-      "para_que_serve": "Programas de merenda servem para alimentar os alunos enquanto estão na escola."
+      "para_que_serve": "Programas de merenda servem para alimentar os alunos enquanto estão na escola.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2010-07-20",
@@ -539,7 +559,8 @@
       "titulo_simples": "Lei de igualdade para a população negra",
       "texto_simples": "Lula assinou o Estatuto da Igualdade Racial. É uma lei voltada à população negra.",
       "publico_simples": "A população negra do país",
-      "para_que_serve": "Leis de igualdade racial servem para combater a discriminação por cor e garantir direitos iguais a todos."
+      "para_que_serve": "Leis de igualdade racial servem para combater a discriminação por cor e garantir direitos iguais a todos.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2022-10-30",
@@ -580,7 +601,8 @@
       "titulo_simples": "Volta do Minha Casa, Minha Vida",
       "texto_simples": "O governo Lula criou de novo o Minha Casa, Minha Vida. É um programa de moradia.",
       "publico_simples": "Famílias de renda baixa ou média",
-      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar."
+      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar.",
+      "assunto": "Moradia"
     },
     {
       "data": "2023-03-02",
@@ -601,7 +623,8 @@
       "titulo_simples": "Bolsa Família volta com novo jeito de calcular",
       "texto_simples": "O governo Lula criou de novo o Bolsa Família. O valor passou a depender de quem faz parte da família. Ele é para famílias pobres do Cadastro Único do governo.",
       "publico_simples": "Famílias pobres no Cadastro Único",
-      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida."
+      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida.",
+      "assunto": "Ajuda em dinheiro"
     },
     {
       "data": "2023-03-20",
@@ -618,7 +641,8 @@
       "titulo_simples": "Mais Médicos muda e passa a formar especialistas",
       "texto_simples": "O governo Lula mudou as regras do Mais Médicos. O programa passou a ter um plano para formar especialistas em saúde.",
       "publico_simples": "Quem usa o SUS e médicos do programa",
-      "para_que_serve": "Programas que levam médicos servem para garantir atendimento onde faltam profissionais de saúde."
+      "para_que_serve": "Programas que levam médicos servem para garantir atendimento onde faltam profissionais de saúde.",
+      "assunto": "Saúde"
     },
     {
       "data": "2023-06-05",
@@ -635,7 +659,8 @@
       "titulo_simples": "Ajuda para fazer acordo de dívida atrasada",
       "texto_simples": "O governo Lula criou o Desenrola Brasil. É um programa para renegociar dívidas atrasadas. Renegociar é fazer um novo acordo para pagar. Vale para pessoas, não para empresas.",
       "publico_simples": "Pessoas com dívidas atrasadas",
-      "para_que_serve": "Programas de renegociação servem para ajudar quem está devendo a fazer acordo e pagar a dívida."
+      "para_que_serve": "Programas de renegociação servem para ajudar quem está devendo a fazer acordo e pagar a dívida.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2023-07-03",
@@ -652,7 +677,8 @@
       "titulo_simples": "Salário igual para mulheres e homens",
       "texto_simples": "Lula assinou a lei de igualdade salarial. A lei trata de salário igual entre mulheres e homens. Ela mudou as regras de quem trabalha com carteira assinada.",
       "publico_simples": "Quem trabalha com carteira assinada",
-      "para_que_serve": "Leis de igualdade salarial servem para que mulheres e homens ganhem igual pelo mesmo trabalho."
+      "para_que_serve": "Leis de igualdade salarial servem para que mulheres e homens ganhem igual pelo mesmo trabalho.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2023-07-31",
@@ -669,7 +695,8 @@
       "titulo_simples": "Mais horas por dia na escola pública",
       "texto_simples": "Lula assinou a lei que criou o Programa Escola em Tempo Integral. Na escola de tempo integral, o aluno fica mais horas por dia.",
       "publico_simples": "Alunos de escola pública",
-      "para_que_serve": "Programas de escola em tempo integral servem para que os alunos passem mais horas estudando."
+      "para_que_serve": "Programas de escola em tempo integral servem para que os alunos passem mais horas estudando.",
+      "assunto": "Educação"
     },
     {
       "data": "2023-08-11",
@@ -689,7 +716,8 @@
       "titulo_simples": "Novo programa de obras públicas pelo país",
       "texto_simples": "O presidente Lula assinou uma ordem criando o Novo PAC. É um novo programa de obras públicas.",
       "publico_simples": "Obras públicas em todo o país",
-      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa."
+      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2023-08-28",
@@ -709,7 +737,8 @@
       "titulo_simples": "Regra para aumentar o salário mínimo",
       "texto_simples": "Lula assinou uma lei sobre o salário mínimo. A lei definiu o valor do mínimo desde maio de 2023. Também criou uma regra fixa de aumento a partir de 2024. A lei mudou ainda a tabela do Imposto de Renda.",
       "publico_simples": "Quem tem renda ligada ao salário mínimo",
-      "para_que_serve": "Leis de salário mínimo servem para definir o menor valor que um trabalhador pode receber."
+      "para_que_serve": "Leis de salário mínimo servem para definir o menor valor que um trabalhador pode receber.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2023-08-30",
@@ -726,7 +755,8 @@
       "titulo_simples": "Novas regras para os gastos do governo",
       "texto_simples": "Lula assinou uma lei com novas regras de gastos do governo. As regras valem para as contas do governo federal. A lei se baseia numa mudança na Constituição.",
       "publico_simples": "Contas do governo federal",
-      "para_que_serve": "Regras de gastos do governo servem para equilibrar o que ele gasta com o que recebe de impostos."
+      "para_que_serve": "Regras de gastos do governo servem para equilibrar o que ele gasta com o que recebe de impostos.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2023-08-31",
@@ -746,7 +776,8 @@
       "titulo_simples": "Plano Brasil Sem Fome: combate à fome",
       "texto_simples": "O presidente Lula assinou uma ordem criando o Plano Brasil Sem Fome. O objetivo é que todos tenham comida boa todo dia.",
       "publico_simples": "Quem não tem comida todo dia",
-      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia."
+      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2023-11-13",
@@ -763,7 +794,8 @@
       "titulo_simples": "Vagas reservadas em escolas e faculdades federais",
       "texto_simples": "Lula assinou mudanças na Lei de Cotas. Cotas são vagas reservadas em universidades e escolas federais. Valem para pretos, pardos, indígenas, quilombolas e pessoas com deficiência. Valem também para quem estudou em escola pública.",
       "publico_simples": "Estudantes dos grupos que têm cotas",
-      "para_que_serve": "Leis de cotas servem para reservar vagas no ensino a grupos que têm menos acesso a ele."
+      "para_que_serve": "Leis de cotas servem para reservar vagas no ensino a grupos que têm menos acesso a ele.",
+      "assunto": "Educação"
     },
     {
       "data": "2024-01-16",
@@ -783,7 +815,8 @@
       "titulo_simples": "Poupança para aluno pobre do ensino médio",
       "texto_simples": "Lula assinou a lei que criou o Pé-de-Meia. É um dinheiro em forma de poupança para o estudante. Vale para alunos de família com pouco dinheiro, no ensino médio público. O aluno precisa estar no Cadastro Único do governo.",
       "publico_simples": "Alunos do ensino médio com pouco dinheiro",
-      "para_que_serve": "Programas de poupança para estudantes servem para incentivar os jovens a terminar a escola."
+      "para_que_serve": "Programas de poupança para estudantes servem para incentivar os jovens a terminar a escola.",
+      "assunto": "Educação"
     },
     {
       "data": "2024-11-18",
@@ -803,7 +836,8 @@
       "titulo_simples": "Aliança de países contra a fome e a pobreza",
       "texto_simples": "O Brasil comandava o grupo das maiores economias do mundo. O Brasil propôs uma aliança contra a fome e a pobreza. Ela foi lançada no Rio de Janeiro, com 148 membros. Entre eles, havia 82 países.",
       "publico_simples": "Países e organizações da aliança",
-      "para_que_serve": "Alianças entre países servem para que vários governos trabalhem juntos contra a fome e a pobreza."
+      "para_que_serve": "Alianças entre países servem para que vários governos trabalhem juntos contra a fome e a pobreza.",
+      "assunto": "Relação com outros países"
     },
     {
       "data": "2025-01-16",
@@ -820,7 +854,8 @@
       "titulo_simples": "Novas regras dos impostos sobre o que se compra",
       "texto_simples": "Lula assinou a lei com as regras da reforma dos impostos. A lei criou três novos impostos sobre o que se compra. A reforma veio de uma mudança na Constituição.",
       "publico_simples": "Quem compra e as empresas",
-      "para_que_serve": "Reformas de impostos servem para mudar as regras de como os impostos são cobrados."
+      "para_que_serve": "Reformas de impostos servem para mudar as regras de como os impostos são cobrados.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2025-05-30",
@@ -837,7 +872,8 @@
       "titulo_simples": "Atendimento com especialista na saúde pública",
       "texto_simples": "O governo Lula criou o programa Agora Tem Especialistas. O programa é voltado ao atendimento com especialistas no SUS.",
       "publico_simples": "Quem usa o SUS e precisa de especialista",
-      "para_que_serve": "Programas de especialistas servem para que pacientes consigam consultas e exames com médicos especialistas."
+      "para_que_serve": "Programas de especialistas servem para que pacientes consigam consultas e exames com médicos especialistas.",
+      "assunto": "Saúde"
     },
     {
       "data": "2025-07",
@@ -856,7 +892,8 @@
       "titulo_simples": "Brasil sai do Mapa da Fome das Nações Unidas",
       "texto_simples": "Um relatório das Nações Unidas mediu a fome no Brasil. Menos de 2,5% dos brasileiros não comiam o suficiente. Isso foi entre 2022 e 2024. Abaixo desse número, o país sai do Mapa da Fome.",
       "publico_simples": "Toda a população do país",
-      "para_que_serve": "Medições da fome servem para mostrar quantas pessoas não comem o suficiente em cada país."
+      "para_que_serve": "Medições da fome servem para mostrar quantas pessoas não comem o suficiente em cada país.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2025-11-26",
@@ -873,7 +910,8 @@
       "titulo_simples": "Sem Imposto de Renda para quem ganha até 5 mil",
       "texto_simples": "Lula assinou uma lei que diminui o Imposto de Renda. Desde 2026, quem ganha até 5 mil por mês não paga. Quem ganha até 7 mil e 350 reais paga menos. A lei também cria um imposto mínimo para quem ganha muito.",
       "publico_simples": "Quem ganha até 7.350 reais por mês",
-      "para_que_serve": "Leis de Imposto de Renda servem para definir quanto cada pessoa paga, de acordo com quanto ganha."
+      "para_que_serve": "Leis de Imposto de Renda servem para definir quanto cada pessoa paga, de acordo com quanto ganha.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2026-02",
@@ -887,7 +925,8 @@
       },
       "titulo_simples": "Desfile sobre Lula: Justiça Eleitoral não barra",
       "texto_simples": "Uma escola de samba de Niterói contou a vida de Lula. O desfile foi no Carnaval de 2026. Dois partidos pediram à Justiça Eleitoral para barrar o desfile. Todos os juízes do tribunal negaram o pedido de decisão rápida. Eles não viram, naquele momento, sinal concreto de campanha. Os partidos Novo e Missão alegaram propaganda de campanha antes da hora.",
-      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro. Nela, todos os juízes negaram a decisão rápida."
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro. Nela, todos os juízes negaram a decisão rápida.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-02-13",
@@ -908,7 +947,8 @@
       "titulo_simples": "Auxílio Gás do Povo: ajuda com o gás de cozinha",
       "texto_simples": "Lula assinou uma lei que mudou o nome do Auxílio Gás. Agora ele se chama Auxílio Gás do Povo. A lei criou novos jeitos de o programa funcionar. Também criou um programa nacional para ajudar as famílias a cozinhar.",
       "publico_simples": "Famílias com pouco dinheiro no Cadastro Único",
-      "para_que_serve": "Programas de auxílio gás servem para ajudar famílias pobres a ter como cozinhar em casa."
+      "para_que_serve": "Programas de auxílio gás servem para ajudar famílias pobres a ter como cozinhar em casa.",
+      "assunto": "Ajuda em dinheiro"
     },
     {
       "data": "2026-07",
@@ -924,7 +964,8 @@
       "titulo_simples": "Lula multado em 15 mil reais por propaganda",
       "texto_simples": "Em maio de 2026, Lula falou num evento em São Paulo. O canal da Presidência no YouTube mostrou o evento. A Justiça Eleitoral de São Paulo multou Lula em 15 mil reais. Para o juiz, ele pediu votos para Simone Tebet e Marina Silva. O partido Missão acusou Lula de pedir votos antes da campanha.",
       "status_simples": "Até 5 de outubro de 2026, cabia pedido para rever a decisão. A multa foi dada em julho de 2026.",
-      "resposta_simples": "A defesa disse que Lula falou no papel de presidente. E que ele não pediu voto de forma clara."
+      "resposta_simples": "A defesa disse que Lula falou no papel de presidente. E que ele não pediu voto de forma clara.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-09",
@@ -938,7 +979,8 @@
       },
       "titulo_simples": "Justiça Eleitoral aceita processo contra Lula",
       "texto_simples": "Flávio Bolsonaro abriu um processo contra Lula e Alckmin. Em 28 de setembro de 2026, a Justiça Eleitoral aceitou o processo. Os dois ganharam cinco dias para se defender. Flávio acusa os dois de abuso de poder. Ele alega que usaram o governo e órgãos públicos para ganhar votos.",
-      "status_simples": "Até 5 de outubro de 2026, não havia decisão final."
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-09-23",
@@ -954,7 +996,8 @@
       "titulo_simples": "Pedido ao Supremo para investigar Lula",
       "texto_simples": "A campanha de Flávio pediu ao Supremo para investigar Lula. O pedido cita uma reunião de Lula com o ex-banqueiro Daniel Vorcaro. A reunião foi no Palácio do Planalto, fora da agenda oficial. Uma mensagem diz que Lula teria ganhado um uísque de Vorcaro. A campanha acusa Lula de corrupção e de favorecer interesse privado.",
       "status_simples": "Até 5 de outubro de 2026, não havia decisão divulgada sobre investigar. O pedido foi feito em 23 de setembro.",
-      "resposta_simples": "O governo disse que Lula não recebeu presente. Disse que ele não sabe do suposto acordo. E que Lula só teve uma reunião com Vorcaro, em dezembro de 2024."
+      "resposta_simples": "O governo disse que Lula não recebeu presente. Disse que ele não sabe do suposto acordo. E que Lula só teve uma reunião com Vorcaro, em dezembro de 2024.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-10-04",

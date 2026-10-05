@@ -112,6 +112,67 @@ a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 footer{background:var(--bg);border-top:2px solid var(--line);padding:12px 32px;font-size:14px;line-height:1.55;color:var(--ink-2);max-height:8rem;overflow-y:auto}
 footer p{margin:0 0 4px;max-width:140ch;overflow-wrap:anywhere}
 footer a{color:var(--ink-2)}
+.placar{margin-top:18px;max-width:68ch}
+.pl-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(92px,34%) minmax(0,1fr);align-items:center;width:100%;min-height:44px;padding:4px 6px;margin:0;border:0;background:transparent;color:var(--ink);font:inherit;text-align:left}
+button.pl-row{cursor:pointer}
+button.pl-row:hover{background:var(--chip-bg)}
+button.pl-row[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ink);background:var(--chip-bg)}
+button.pl-row:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.pl-head{min-height:0;padding-bottom:8px}
+.pl-who{display:flex;align-items:center;gap:8px;min-width:0;font-weight:700;font-size:15px;line-height:1.2}
+.pl-who.r{justify-content:flex-start}
+.pl-who.l{justify-content:flex-end;text-align:right}
+.pl-who img{width:28px;height:34px;object-fit:cover;object-position:center top;flex:none;display:block;background:var(--chip-bg)}
+.pl-who span{overflow-wrap:anywhere}
+.pl-s{display:flex;align-items:center;gap:8px;min-width:0}
+.pl-n{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:14px;width:3ch;flex:none}
+.pl-l .pl-n{text-align:right}
+.pl-track{flex:1;min-width:0;display:flex}
+.pl-l .pl-track{justify-content:flex-end}
+.pl-bar{height:14px;background:var(--ink-2);min-width:0;max-width:100%}
+.pl-lb{padding:0 8px;text-align:center;font-size:15px;line-height:1.25;overflow-wrap:anywhere}
+.pl-sep{border-top:2px solid var(--line);margin-top:6px;padding-top:6px}
+div.pl-row .pl-lb{color:var(--ink-2)}
+.hero .pl-note{margin:12px 0 0;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:60ch}
+.modos{display:flex;gap:0;padding:12px 24px;background:var(--bg);border-bottom:2px solid var(--line)}
+.modos button{font:inherit;font-size:16px;font-weight:600;min-height:44px;padding:6px 18px;background:transparent;color:var(--ink);border:2px solid var(--ink);cursor:pointer}
+.modos button + button{margin-left:-2px}
+.modos button:first-child{border-radius:999px 0 0 999px}
+.modos button:last-child{border-radius:0 999px 999px 0}
+.modos button[aria-pressed="true"]{background:var(--mark-bg);color:var(--mark-ink)}
+.modos button:focus-visible{outline:2px solid var(--focus);outline-offset:2px;position:relative}
+.cmp{display:none;background:var(--pane)}
+#app[data-modo="ano"] #v-ano,#app[data-modo="assunto"] #v-assunto{display:block}
+#app:not([data-modo="lado"]) #split,#app:not([data-modo="lado"]) .tabs{display:none}
+.cmp-head{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--pane);border-bottom:2px solid var(--line);padding-top:env(safe-area-inset-top)}
+.ch{display:flex;align-items:center;gap:10px;padding:8px 24px;min-width:0}
+.ch + .ch{border-left:2px solid var(--line)}
+.ch img{width:36px;height:44px;object-fit:cover;object-position:center top;flex:none;display:block;background:var(--chip-bg)}
+.ch b{display:block;font-size:17px;line-height:1.2;overflow-wrap:anywhere}
+.ch small{display:block;font-size:14px;color:var(--ink-2)}
+.blk-t{margin:0;padding:12px 24px;text-align:center;font-size:20px;line-height:1.3;background:var(--chip-bg);color:var(--ink);border-bottom:2px solid var(--line)}
+.blk-n{display:block;font-size:14px;font-weight:500;color:var(--ink-2)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid var(--line)}
+.col{list-style:none;margin:0;padding:12px 24px 16px;min-width:0}
+.col + .col{border-left:2px solid var(--line)}
+.col .nada{margin:6px 0;color:var(--ink-2);font-size:15px}
+.card{margin:0 0 10px;background:var(--chip-bg)}
+.card-h{display:block;width:100%;min-height:44px;font:inherit;text-align:left;color:var(--ink);background:transparent;border:0;margin:0;padding:10px 12px;cursor:pointer}
+.card-h:hover{background:var(--line)}
+.card-h:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+.card-h[aria-expanded="true"]{box-shadow:inset 4px 0 0 var(--ink)}
+.ct-d{display:block;font-family:var(--font-mono);font-size:13px;color:var(--ink-2)}
+.ct-t{display:block;font-weight:700;font-size:16px;line-height:1.3;margin:2px 0 6px;overflow-wrap:anywhere}
+.card .tags{margin-top:0}
+.card .tag{background:var(--pane)}
+.card .tag.abr-nacional{background:var(--mark-bg)}
+.card-b{padding:2px 12px 14px;border-top:2px solid var(--line)}
+.card-b p{margin:10px 0 0;font-size:15px;line-height:1.55;color:var(--ink);overflow-wrap:anywhere}
+.card-b b{font-weight:700}
+.card-b .law{padding:6px 8px;background:var(--mark-bg);color:var(--mark-ink)}
+.card-b .st{padding:8px 10px;background:var(--pane);border-left:4px solid var(--ink-2)}
+.card-b a{color:var(--ink);font-weight:500}
+.cmp .empty{margin:24px}
 @media (max-width:700px){
   body{font-size:15px;line-height:1.55}
   .id{flex-direction:column;align-items:flex-start;gap:8px;padding:12px 10px 10px}
@@ -158,22 +219,51 @@ footer a{color:var(--ink-2)}
   .id h2{font-size:22px}
   .scroll{overflow:visible;padding:4px 12px 24px;scrollbar-gutter:auto}
   footer{max-height:none;overflow:visible;padding:12px}
+}@media (max-width:700px){
+  .placar{margin-top:12px}
+  .pl-row{padding:4px 2px;grid-template-columns:minmax(0,1fr) minmax(84px,36%) minmax(0,1fr)}
+  .pl-lb{font-size:14px;padding:0 6px}
+  .pl-who{font-size:14px;gap:6px}
+  .pl-who img{width:24px;height:30px}
+  .pl-n{font-size:13px}
+  .hero .pl-note{font-size:14px}
+  .modos{padding:10px 12px}
+  .modos button{flex:1;font-size:14px;padding:6px 6px}
+  .cmp-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ch{padding:6px 8px;gap:6px}
+  .ch img{width:28px;height:34px}
+  .ch b{font-size:14px}
+  .ch small{font-size:12px}
+  .blk-t{padding:10px 8px;font-size:17px}
+  .col{padding:8px 6px 10px}
+  .card{margin-bottom:8px}
+  .card-h{padding:8px}
+  .ct-d{font-size:12px}
+  .ct-t{font-size:14px}
+  .card .tag{font-size:12px;padding:1px 5px}
+  .card-b{padding:2px 8px 10px}
+  .card-b p{font-size:14px}
+  .col .nada{font-size:13px}
 }@media (prefers-reduced-motion:no-preference){
   .scroll{scroll-behavior:smooth}
 }
 </style>
-<div id="app">
+<div id="app" data-modo="lado">
   <header class="hero">
     <h1>Qual candidato fez o que?</h1>
     <p>Veja as leis e os programas que Lula e Flávio Bolsonaro fizeram ou ajudaram a aprovar. Veja também os casos dos dois na Justiça. Os dois disputam o 2º turno no dia 25 de outubro. Cada item diz de onde veio a informação.</p>
     <div class="filters" id="filters" role="group" aria-label="Filtrar itens por valor"></div>
     <p class="crit" id="crit" aria-live="polite"></p>
+    <div class="placar" id="placar"></div>
   </header>
+  <div class="modos" id="modos" role="group" aria-label="Modo de exibição"></div>
   <div class="tabs" id="tabs" role="tablist" aria-label="Escolher candidato"></div>
   <main class="split" id="split">
     <section class="pane" id="pane-lula" aria-label="Linha do tempo de Lula"></section>
     <section class="pane" id="pane-flavio" aria-label="Linha do tempo de Flávio Bolsonaro"></section>
   </main>
+  <div class="cmp" id="v-ano"></div>
+  <div class="cmp" id="v-assunto"></div>
   <footer id="foot"></footer>
 </div>
 <script>
@@ -204,7 +294,8 @@ const DATA = {lula: {
       "titulo_simples": "Pedido ao Supremo para investigar Lula",
       "texto_simples": "A campanha de Flávio pediu ao Supremo para investigar Lula. O pedido cita uma reunião de Lula com o ex-banqueiro Daniel Vorcaro. A reunião foi no Palácio do Planalto, fora da agenda oficial. Uma mensagem diz que Lula teria ganhado um uísque de Vorcaro. A campanha acusa Lula de corrupção e de favorecer interesse privado.",
       "status_simples": "Até 5 de outubro de 2026, não havia decisão divulgada sobre investigar. O pedido foi feito em 23 de setembro.",
-      "resposta_simples": "O governo disse que Lula não recebeu presente. Disse que ele não sabe do suposto acordo. E que Lula só teve uma reunião com Vorcaro, em dezembro de 2024."
+      "resposta_simples": "O governo disse que Lula não recebeu presente. Disse que ele não sabe do suposto acordo. E que Lula só teve uma reunião com Vorcaro, em dezembro de 2024.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-09",
@@ -218,7 +309,8 @@ const DATA = {lula: {
       },
       "titulo_simples": "Justiça Eleitoral aceita processo contra Lula",
       "texto_simples": "Flávio Bolsonaro abriu um processo contra Lula e Alckmin. Em 28 de setembro de 2026, a Justiça Eleitoral aceitou o processo. Os dois ganharam cinco dias para se defender. Flávio acusa os dois de abuso de poder. Ele alega que usaram o governo e órgãos públicos para ganhar votos.",
-      "status_simples": "Até 5 de outubro de 2026, não havia decisão final."
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-07",
@@ -234,7 +326,8 @@ const DATA = {lula: {
       "titulo_simples": "Lula multado em 15 mil reais por propaganda",
       "texto_simples": "Em maio de 2026, Lula falou num evento em São Paulo. O canal da Presidência no YouTube mostrou o evento. A Justiça Eleitoral de São Paulo multou Lula em 15 mil reais. Para o juiz, ele pediu votos para Simone Tebet e Marina Silva. O partido Missão acusou Lula de pedir votos antes da campanha.",
       "status_simples": "Até 5 de outubro de 2026, cabia pedido para rever a decisão. A multa foi dada em julho de 2026.",
-      "resposta_simples": "A defesa disse que Lula falou no papel de presidente. E que ele não pediu voto de forma clara."
+      "resposta_simples": "A defesa disse que Lula falou no papel de presidente. E que ele não pediu voto de forma clara.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-02-13",
@@ -255,7 +348,8 @@ const DATA = {lula: {
       "titulo_simples": "Auxílio Gás do Povo: ajuda com o gás de cozinha",
       "texto_simples": "Lula assinou uma lei que mudou o nome do Auxílio Gás. Agora ele se chama Auxílio Gás do Povo. A lei criou novos jeitos de o programa funcionar. Também criou um programa nacional para ajudar as famílias a cozinhar.",
       "publico_simples": "Famílias com pouco dinheiro no Cadastro Único",
-      "para_que_serve": "Programas de auxílio gás servem para ajudar famílias pobres a ter como cozinhar em casa."
+      "para_que_serve": "Programas de auxílio gás servem para ajudar famílias pobres a ter como cozinhar em casa.",
+      "assunto": "Ajuda em dinheiro"
     },
     {
       "data": "2026-02",
@@ -269,7 +363,8 @@ const DATA = {lula: {
       },
       "titulo_simples": "Desfile sobre Lula: Justiça Eleitoral não barra",
       "texto_simples": "Uma escola de samba de Niterói contou a vida de Lula. O desfile foi no Carnaval de 2026. Dois partidos pediram à Justiça Eleitoral para barrar o desfile. Todos os juízes do tribunal negaram o pedido de decisão rápida. Eles não viram, naquele momento, sinal concreto de campanha. Os partidos Novo e Missão alegaram propaganda de campanha antes da hora.",
-      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro. Nela, todos os juízes negaram a decisão rápida."
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro. Nela, todos os juízes negaram a decisão rápida.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2025-11-26",
@@ -286,7 +381,8 @@ const DATA = {lula: {
       "titulo_simples": "Sem Imposto de Renda para quem ganha até 5 mil",
       "texto_simples": "Lula assinou uma lei que diminui o Imposto de Renda. Desde 2026, quem ganha até 5 mil por mês não paga. Quem ganha até 7 mil e 350 reais paga menos. A lei também cria um imposto mínimo para quem ganha muito.",
       "publico_simples": "Quem ganha até 7.350 reais por mês",
-      "para_que_serve": "Leis de Imposto de Renda servem para definir quanto cada pessoa paga, de acordo com quanto ganha."
+      "para_que_serve": "Leis de Imposto de Renda servem para definir quanto cada pessoa paga, de acordo com quanto ganha.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2025-07",
@@ -305,7 +401,8 @@ const DATA = {lula: {
       "titulo_simples": "Brasil sai do Mapa da Fome das Nações Unidas",
       "texto_simples": "Um relatório das Nações Unidas mediu a fome no Brasil. Menos de 2,5% dos brasileiros não comiam o suficiente. Isso foi entre 2022 e 2024. Abaixo desse número, o país sai do Mapa da Fome.",
       "publico_simples": "Toda a população do país",
-      "para_que_serve": "Medições da fome servem para mostrar quantas pessoas não comem o suficiente em cada país."
+      "para_que_serve": "Medições da fome servem para mostrar quantas pessoas não comem o suficiente em cada país.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2025-05-30",
@@ -322,7 +419,8 @@ const DATA = {lula: {
       "titulo_simples": "Atendimento com especialista na saúde pública",
       "texto_simples": "O governo Lula criou o programa Agora Tem Especialistas. O programa é voltado ao atendimento com especialistas no SUS.",
       "publico_simples": "Quem usa o SUS e precisa de especialista",
-      "para_que_serve": "Programas de especialistas servem para que pacientes consigam consultas e exames com médicos especialistas."
+      "para_que_serve": "Programas de especialistas servem para que pacientes consigam consultas e exames com médicos especialistas.",
+      "assunto": "Saúde"
     },
     {
       "data": "2025-01-16",
@@ -339,7 +437,8 @@ const DATA = {lula: {
       "titulo_simples": "Novas regras dos impostos sobre o que se compra",
       "texto_simples": "Lula assinou a lei com as regras da reforma dos impostos. A lei criou três novos impostos sobre o que se compra. A reforma veio de uma mudança na Constituição.",
       "publico_simples": "Quem compra e as empresas",
-      "para_que_serve": "Reformas de impostos servem para mudar as regras de como os impostos são cobrados."
+      "para_que_serve": "Reformas de impostos servem para mudar as regras de como os impostos são cobrados.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2024-11-18",
@@ -359,7 +458,8 @@ const DATA = {lula: {
       "titulo_simples": "Aliança de países contra a fome e a pobreza",
       "texto_simples": "O Brasil comandava o grupo das maiores economias do mundo. O Brasil propôs uma aliança contra a fome e a pobreza. Ela foi lançada no Rio de Janeiro, com 148 membros. Entre eles, havia 82 países.",
       "publico_simples": "Países e organizações da aliança",
-      "para_que_serve": "Alianças entre países servem para que vários governos trabalhem juntos contra a fome e a pobreza."
+      "para_que_serve": "Alianças entre países servem para que vários governos trabalhem juntos contra a fome e a pobreza.",
+      "assunto": "Relação com outros países"
     },
     {
       "data": "2024-01-16",
@@ -379,7 +479,8 @@ const DATA = {lula: {
       "titulo_simples": "Poupança para aluno pobre do ensino médio",
       "texto_simples": "Lula assinou a lei que criou o Pé-de-Meia. É um dinheiro em forma de poupança para o estudante. Vale para alunos de família com pouco dinheiro, no ensino médio público. O aluno precisa estar no Cadastro Único do governo.",
       "publico_simples": "Alunos do ensino médio com pouco dinheiro",
-      "para_que_serve": "Programas de poupança para estudantes servem para incentivar os jovens a terminar a escola."
+      "para_que_serve": "Programas de poupança para estudantes servem para incentivar os jovens a terminar a escola.",
+      "assunto": "Educação"
     },
     {
       "data": "2023-11-13",
@@ -396,7 +497,8 @@ const DATA = {lula: {
       "titulo_simples": "Vagas reservadas em escolas e faculdades federais",
       "texto_simples": "Lula assinou mudanças na Lei de Cotas. Cotas são vagas reservadas em universidades e escolas federais. Valem para pretos, pardos, indígenas, quilombolas e pessoas com deficiência. Valem também para quem estudou em escola pública.",
       "publico_simples": "Estudantes dos grupos que têm cotas",
-      "para_que_serve": "Leis de cotas servem para reservar vagas no ensino a grupos que têm menos acesso a ele."
+      "para_que_serve": "Leis de cotas servem para reservar vagas no ensino a grupos que têm menos acesso a ele.",
+      "assunto": "Educação"
     },
     {
       "data": "2023-08-31",
@@ -416,7 +518,8 @@ const DATA = {lula: {
       "titulo_simples": "Plano Brasil Sem Fome: combate à fome",
       "texto_simples": "O presidente Lula assinou uma ordem criando o Plano Brasil Sem Fome. O objetivo é que todos tenham comida boa todo dia.",
       "publico_simples": "Quem não tem comida todo dia",
-      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia."
+      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2023-08-30",
@@ -433,7 +536,8 @@ const DATA = {lula: {
       "titulo_simples": "Novas regras para os gastos do governo",
       "texto_simples": "Lula assinou uma lei com novas regras de gastos do governo. As regras valem para as contas do governo federal. A lei se baseia numa mudança na Constituição.",
       "publico_simples": "Contas do governo federal",
-      "para_que_serve": "Regras de gastos do governo servem para equilibrar o que ele gasta com o que recebe de impostos."
+      "para_que_serve": "Regras de gastos do governo servem para equilibrar o que ele gasta com o que recebe de impostos.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2023-08-28",
@@ -453,7 +557,8 @@ const DATA = {lula: {
       "titulo_simples": "Regra para aumentar o salário mínimo",
       "texto_simples": "Lula assinou uma lei sobre o salário mínimo. A lei definiu o valor do mínimo desde maio de 2023. Também criou uma regra fixa de aumento a partir de 2024. A lei mudou ainda a tabela do Imposto de Renda.",
       "publico_simples": "Quem tem renda ligada ao salário mínimo",
-      "para_que_serve": "Leis de salário mínimo servem para definir o menor valor que um trabalhador pode receber."
+      "para_que_serve": "Leis de salário mínimo servem para definir o menor valor que um trabalhador pode receber.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2023-08-11",
@@ -473,7 +578,8 @@ const DATA = {lula: {
       "titulo_simples": "Novo programa de obras públicas pelo país",
       "texto_simples": "O presidente Lula assinou uma ordem criando o Novo PAC. É um novo programa de obras públicas.",
       "publico_simples": "Obras públicas em todo o país",
-      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa."
+      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2023-07-31",
@@ -490,7 +596,8 @@ const DATA = {lula: {
       "titulo_simples": "Mais horas por dia na escola pública",
       "texto_simples": "Lula assinou a lei que criou o Programa Escola em Tempo Integral. Na escola de tempo integral, o aluno fica mais horas por dia.",
       "publico_simples": "Alunos de escola pública",
-      "para_que_serve": "Programas de escola em tempo integral servem para que os alunos passem mais horas estudando."
+      "para_que_serve": "Programas de escola em tempo integral servem para que os alunos passem mais horas estudando.",
+      "assunto": "Educação"
     },
     {
       "data": "2023-07-03",
@@ -507,7 +614,8 @@ const DATA = {lula: {
       "titulo_simples": "Salário igual para mulheres e homens",
       "texto_simples": "Lula assinou a lei de igualdade salarial. A lei trata de salário igual entre mulheres e homens. Ela mudou as regras de quem trabalha com carteira assinada.",
       "publico_simples": "Quem trabalha com carteira assinada",
-      "para_que_serve": "Leis de igualdade salarial servem para que mulheres e homens ganhem igual pelo mesmo trabalho."
+      "para_que_serve": "Leis de igualdade salarial servem para que mulheres e homens ganhem igual pelo mesmo trabalho.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2023-06-05",
@@ -524,7 +632,8 @@ const DATA = {lula: {
       "titulo_simples": "Ajuda para fazer acordo de dívida atrasada",
       "texto_simples": "O governo Lula criou o Desenrola Brasil. É um programa para renegociar dívidas atrasadas. Renegociar é fazer um novo acordo para pagar. Vale para pessoas, não para empresas.",
       "publico_simples": "Pessoas com dívidas atrasadas",
-      "para_que_serve": "Programas de renegociação servem para ajudar quem está devendo a fazer acordo e pagar a dívida."
+      "para_que_serve": "Programas de renegociação servem para ajudar quem está devendo a fazer acordo e pagar a dívida.",
+      "assunto": "Impostos, dívidas e contas do governo"
     },
     {
       "data": "2023-03-20",
@@ -541,7 +650,8 @@ const DATA = {lula: {
       "titulo_simples": "Mais Médicos muda e passa a formar especialistas",
       "texto_simples": "O governo Lula mudou as regras do Mais Médicos. O programa passou a ter um plano para formar especialistas em saúde.",
       "publico_simples": "Quem usa o SUS e médicos do programa",
-      "para_que_serve": "Programas que levam médicos servem para garantir atendimento onde faltam profissionais de saúde."
+      "para_que_serve": "Programas que levam médicos servem para garantir atendimento onde faltam profissionais de saúde.",
+      "assunto": "Saúde"
     },
     {
       "data": "2023-03-02",
@@ -562,7 +672,8 @@ const DATA = {lula: {
       "titulo_simples": "Bolsa Família volta com novo jeito de calcular",
       "texto_simples": "O governo Lula criou de novo o Bolsa Família. O valor passou a depender de quem faz parte da família. Ele é para famílias pobres do Cadastro Único do governo.",
       "publico_simples": "Famílias pobres no Cadastro Único",
-      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida."
+      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida.",
+      "assunto": "Ajuda em dinheiro"
     },
     {
       "data": "2023-02-14",
@@ -583,7 +694,8 @@ const DATA = {lula: {
       "titulo_simples": "Volta do Minha Casa, Minha Vida",
       "texto_simples": "O governo Lula criou de novo o Minha Casa, Minha Vida. É um programa de moradia.",
       "publico_simples": "Famílias de renda baixa ou média",
-      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar."
+      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar.",
+      "assunto": "Moradia"
     },
     {
       "data": "2010-07-20",
@@ -600,7 +712,8 @@ const DATA = {lula: {
       "titulo_simples": "Lei de igualdade para a população negra",
       "texto_simples": "Lula assinou o Estatuto da Igualdade Racial. É uma lei voltada à população negra.",
       "publico_simples": "A população negra do país",
-      "para_que_serve": "Leis de igualdade racial servem para combater a discriminação por cor e garantir direitos iguais a todos."
+      "para_que_serve": "Leis de igualdade racial servem para combater a discriminação por cor e garantir direitos iguais a todos.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2009-06-16",
@@ -620,7 +733,8 @@ const DATA = {lula: {
       "titulo_simples": "Merenda com comida de pequenos agricultores",
       "texto_simples": "Lula assinou a lei da merenda das escolas públicas. A lei manda comprar comida de pequenos agricultores com parte do dinheiro. São pelo menos 30 de cada 100 reais. Esses agricultores trabalham com a família.",
       "publico_simples": "Alunos de escola pública e pequenos agricultores",
-      "para_que_serve": "Programas de merenda servem para alimentar os alunos enquanto estão na escola."
+      "para_que_serve": "Programas de merenda servem para alimentar os alunos enquanto estão na escola.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2009-03-25",
@@ -641,7 +755,8 @@ const DATA = {lula: {
       "titulo_simples": "Minha Casa, Minha Vida: ajuda para ter casa",
       "texto_simples": "O governo Lula criou o Minha Casa, Minha Vida. É um programa de moradia. Também tratou de dar papel da casa a quem já mora nela.",
       "publico_simples": "Famílias com pouco dinheiro",
-      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar."
+      "para_que_serve": "Programas de moradia servem para ajudar famílias a conseguir uma casa para morar.",
+      "assunto": "Moradia"
     },
     {
       "data": "2008-12-29",
@@ -658,7 +773,8 @@ const DATA = {lula: {
       "titulo_simples": "Novas escolas federais para ensinar uma profissão",
       "texto_simples": "Lula assinou a lei que criou os Institutos Federais. São escolas de ensino profissional, ciência e tecnologia. Ensino profissional é o que prepara para uma profissão.",
       "publico_simples": "Estudantes que querem aprender uma profissão",
-      "para_que_serve": "Escolas de ensino profissional servem para preparar as pessoas para trabalhar numa profissão."
+      "para_que_serve": "Escolas de ensino profissional servem para preparar as pessoas para trabalhar numa profissão.",
+      "assunto": "Educação"
     },
     {
       "data": "2008-12-19",
@@ -675,7 +791,8 @@ const DATA = {lula: {
       "titulo_simples": "Criação do Microempreendedor Individual",
       "texto_simples": "Lula assinou uma lei que mudou o Simples Nacional. A lei criou o Microempreendedor Individual, o MEI. Ele é para quem trabalha por conta própria e pequenos empreendedores.",
       "publico_simples": "Quem trabalha por conta própria",
-      "para_que_serve": "Leis de registro simples servem para ajudar quem trabalha por conta própria a ter negócio legalizado."
+      "para_que_serve": "Leis de registro simples servem para ajudar quem trabalha por conta própria a ter negócio legalizado.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2008-07-16",
@@ -692,7 +809,8 @@ const DATA = {lula: {
       "titulo_simples": "Piso de salário para professor de escola pública",
       "texto_simples": "Lula assinou a lei do piso salarial nacional dos professores. Piso é o menor salário que pode ser pago. Vale para professores de escola pública, da creche ao ensino médio.",
       "publico_simples": "Professores de escola pública",
-      "para_que_serve": "Leis de piso salarial servem para garantir um salário mínimo para uma profissão."
+      "para_que_serve": "Leis de piso salarial servem para garantir um salário mínimo para uma profissão.",
+      "assunto": "Educação"
     },
     {
       "data": "2007-06-20",
@@ -709,7 +827,8 @@ const DATA = {lula: {
       "titulo_simples": "Dinheiro para escolas públicas e professores",
       "texto_simples": "Lula assinou a lei que definiu as regras do Fundeb. O Fundeb é um fundo de dinheiro para a educação básica. Isso vai da creche ao ensino médio. Ele também serve para valorizar quem trabalha na educação.",
       "publico_simples": "Escolas públicas, da creche ao ensino médio",
-      "para_que_serve": "Fundos da educação servem para juntar dinheiro e repartir entre as escolas públicas e quem trabalha nelas."
+      "para_que_serve": "Fundos da educação servem para juntar dinheiro e repartir entre as escolas públicas e quem trabalha nelas.",
+      "assunto": "Educação"
     },
     {
       "data": "2007-04-24",
@@ -726,7 +845,8 @@ const DATA = {lula: {
       "titulo_simples": "Metas para escolas e crescimento das universidades",
       "texto_simples": "O presidente Lula assinou duas ordens sobre educação. Uma criou um plano de metas para as escolas públicas. A outra apoia planos para reorganizar e aumentar as universidades federais.",
       "publico_simples": "Escolas públicas e universidades federais",
-      "para_que_serve": "Planos de metas para o ensino servem para melhorar as escolas e abrir mais vagas nas universidades."
+      "para_que_serve": "Planos de metas para o ensino servem para melhorar as escolas e abrir mais vagas nas universidades.",
+      "assunto": "Educação"
     },
     {
       "data": "2007-01-22",
@@ -746,7 +866,8 @@ const DATA = {lula: {
       "titulo_simples": "Programa de obras públicas pelo país",
       "texto_simples": "O presidente Lula assinou uma ordem criando o PAC. O PAC é um programa de investimento em obras públicas.",
       "publico_simples": "Obras públicas em todo o país",
-      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa."
+      "para_que_serve": "Programas de obras servem para planejar e pagar as obras públicas de que um país precisa.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2006-12-14",
@@ -763,7 +884,8 @@ const DATA = {lula: {
       "titulo_simples": "Jeito próprio de pequena empresa pagar imposto",
       "texto_simples": "Lula assinou a lei das micro e pequenas empresas. A lei criou o Simples Nacional. É um jeito próprio dessas empresas pagarem impostos.",
       "publico_simples": "Micro e pequenas empresas",
-      "para_que_serve": "Regras de imposto para pequenas empresas servem para facilitar o pagamento e diminuir a papelada."
+      "para_que_serve": "Regras de imposto para pequenas empresas servem para facilitar o pagamento e diminuir a papelada.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2006-09-15",
@@ -783,7 +905,8 @@ const DATA = {lula: {
       "titulo_simples": "Lei do direito de todos a comer bem",
       "texto_simples": "Lula assinou uma lei sobre o direito à comida. A lei criou um sistema nacional sobre alimentação. O objetivo é garantir a todos o direito de comer bem.",
       "publico_simples": "Toda a população do país",
-      "para_que_serve": "Leis sobre o direito à comida servem para organizar o governo para que todos comam bem."
+      "para_que_serve": "Leis sobre o direito à comida servem para organizar o governo para que todos comam bem.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2006-08-07",
@@ -804,7 +927,8 @@ const DATA = {lula: {
       "titulo_simples": "Proteção para mulher que sofre violência em casa",
       "texto_simples": "Lula assinou a Lei Maria da Penha. A lei cria formas de combater a violência contra a mulher. Vale para a violência dentro de casa e na família.",
       "publico_simples": "Mulheres que sofrem violência em casa",
-      "para_que_serve": "Leis contra a violência em casa servem para proteger mulheres que sofrem violência na família."
+      "para_que_serve": "Leis contra a violência em casa servem para proteger mulheres que sofrem violência na família.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2006-07-24",
@@ -821,7 +945,8 @@ const DATA = {lula: {
       "titulo_simples": "Lei para os pequenos agricultores",
       "texto_simples": "Lula assinou a lei dos pequenos agricultores que trabalham com a família. A lei traz as bases de um plano do governo para eles. Vale também para pequenos negócios de famílias no campo.",
       "publico_simples": "Pequenos agricultores que trabalham com a família",
-      "para_que_serve": "Leis para pequenos agricultores servem para orientar a ajuda do governo a quem produz no campo."
+      "para_que_serve": "Leis para pequenos agricultores servem para orientar a ajuda do governo a quem produz no campo.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2005-01-13",
@@ -838,7 +963,8 @@ const DATA = {lula: {
       "titulo_simples": "Bolsa de estudo em faculdade particular",
       "texto_simples": "Lula assinou a lei que criou o ProUni. O programa dá bolsas de estudo em faculdades particulares.",
       "publico_simples": "Estudantes de família com pouco dinheiro",
-      "para_que_serve": "Programas de bolsa de estudo servem para ajudar quem tem pouco dinheiro a fazer faculdade."
+      "para_que_serve": "Programas de bolsa de estudo servem para ajudar quem tem pouco dinheiro a fazer faculdade.",
+      "assunto": "Educação"
     },
     {
       "data": "2004-05-13",
@@ -858,7 +984,8 @@ const DATA = {lula: {
       "titulo_simples": "Lei inclui ministério de combate à fome",
       "texto_simples": "Lula assinou uma lei que reorganizou os ministérios. A lei incluiu o Ministério do Desenvolvimento Social e Combate à Fome.",
       "publico_simples": "A organização do governo federal",
-      "para_que_serve": "Leis sobre ministérios servem para dividir as tarefas do governo e dizer quem cuida de quê."
+      "para_que_serve": "Leis sobre ministérios servem para dividir as tarefas do governo e dizer quem cuida de quê.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2004-04-13",
@@ -875,7 +1002,8 @@ const DATA = {lula: {
       "titulo_simples": "Farmácia Popular: ajuda para conseguir remédios",
       "texto_simples": "Lula assinou uma lei sobre remédios. A lei deixou a Fiocruz, órgão de saúde do governo, oferecer remédios. A Fiocruz recebe de volta o custo dos remédios. Essa lei é a base da Farmácia Popular.",
       "publico_simples": "Toda a população que precisa de remédio",
-      "para_que_serve": "Programas de remédios servem para ajudar as pessoas a conseguir os remédios de que precisam."
+      "para_que_serve": "Programas de remédios servem para ajudar as pessoas a conseguir os remédios de que precisam.",
+      "assunto": "Saúde"
     },
     {
       "data": "2003-11-11",
@@ -895,7 +1023,8 @@ const DATA = {lula: {
       "titulo_simples": "Luz elétrica para casas que não tinham",
       "texto_simples": "O presidente Lula assinou uma ordem criando o Luz para Todos. O objetivo é levar luz elétrica para todo mundo. O foco principal são as casas do campo.",
       "publico_simples": "Casas sem luz, principalmente no campo",
-      "para_que_serve": "Programas de energia servem para levar luz elétrica às casas que ainda não têm."
+      "para_que_serve": "Programas de energia servem para levar luz elétrica às casas que ainda não têm.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2003-10-20",
@@ -916,7 +1045,8 @@ const DATA = {lula: {
       "titulo_simples": "Bolsa Família: dinheiro para famílias pobres",
       "texto_simples": "O governo Lula criou o Bolsa Família. O programa dá dinheiro para famílias pobres. Em troca, a família precisa cumprir algumas regras. Ele juntou num só vários programas que já existiam.",
       "publico_simples": "Famílias pobres e muito pobres",
-      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida."
+      "para_que_serve": "Programas de renda servem para dar um mínimo de dinheiro a famílias pobres comprarem comida.",
+      "assunto": "Ajuda em dinheiro"
     },
     {
       "data": "2003-10-01",
@@ -933,7 +1063,8 @@ const DATA = {lula: {
       "titulo_simples": "Direitos para quem tem 60 anos ou mais",
       "texto_simples": "Lula assinou o Estatuto do Idoso. A lei trata dos direitos de quem tem 60 anos ou mais. Hoje ela se chama Estatuto da Pessoa Idosa.",
       "publico_simples": "Quem tem 60 anos ou mais",
-      "para_que_serve": "Leis para idosos servem para proteger as pessoas mais velhas e garantir respeito a elas."
+      "para_que_serve": "Leis para idosos servem para proteger as pessoas mais velhas e garantir respeito a elas.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2003-07-02",
@@ -953,7 +1084,8 @@ const DATA = {lula: {
       "titulo_simples": "Governo compra comida de pequenos agricultores",
       "texto_simples": "Lula assinou a lei que criou este programa. O governo compra comida de pequenos agricultores que trabalham com a família. Parte vai para quem não tem comida todo dia. Outra parte fica guardada como reserva.",
       "publico_simples": "Pequenos agricultores e quem não tem comida",
-      "para_que_serve": "Programas de compra de comida servem para alimentar quem precisa e ajudar pequenos produtores."
+      "para_que_serve": "Programas de compra de comida servem para alimentar quem precisa e ajudar pequenos produtores.",
+      "assunto": "Comida e agricultura"
     },
     {
       "data": "2003-01",
@@ -973,7 +1105,8 @@ const DATA = {lula: {
       "titulo_simples": "Fome Zero: governo contra a fome",
       "texto_simples": "O governo Lula criou o Fome Zero para combater a fome. Um ministro especial cuidava do programa. Depois, Lula assinou a lei do Cartão Alimentação.",
       "publico_simples": "Quem não tem comida todo dia",
-      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia."
+      "para_que_serve": "Programas contra a fome servem para que todos tenham comida todo dia.",
+      "assunto": "Comida e agricultura"
     }
   ]
 }, flavio: {
@@ -1001,7 +1134,8 @@ const DATA = {lula: {
       },
       "titulo_simples": "Vídeo que imita Bolsonaro: Justiça não dá multa",
       "texto_simples": "Na convenção do PL, foi mostrado um vídeo de Jair Bolsonaro. Convenção é a reunião em que o partido escolhe candidatos. O vídeo imitava a imagem e a voz dele com inteligência artificial. Por 4 votos a 3, os juízes negaram o pedido do PT. Para a maioria, mostrar o vídeo na convenção não foi propaganda proibida. O PT alegou propaganda antes da hora e uso de montagem falsa.",
-      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de 1º de setembro. Nela, a Justiça Eleitoral negou o pedido do PT."
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de 1º de setembro. Nela, a Justiça Eleitoral negou o pedido do PT.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-09",
@@ -1015,7 +1149,8 @@ const DATA = {lula: {
       },
       "titulo_simples": "Justiça Eleitoral aceita processo contra Flávio",
       "texto_simples": "O grupo de partidos Brasil Pronto pra Mais abriu um processo. O processo é contra Flávio, Alfredo Gaspar e Mario Frias. A Justiça Eleitoral deu andamento ao processo. Ela pediu ao Facebook e à Shopee dados dos perfis investigados. O caso é sobre uma rede de posts em parceria no Instagram. O grupo alega abuso de poder e mau uso da comunicação.",
-      "status_simples": "Até 5 de outubro de 2026, não havia decisão final."
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-07-13",
@@ -1029,7 +1164,8 @@ const DATA = {lula: {
       },
       "titulo_simples": "Moraes suspende visitas de Flávio ao pai",
       "texto_simples": "Em julho de 2026, Flávio postou uma carta do pai, Jair Bolsonaro. Na carta, o pai apoiava Flávio como futuro candidato. O ministro Moraes, do Supremo, suspendeu as visitas de Flávio ao pai. A suspensão é de 90 dias. Ele também mandou o caso para quem acusa na Justiça Eleitoral. Para Moraes, o pai não podia usar redes, nem por outra pessoa.",
-      "status_simples": "Até 5 de outubro de 2026, não havia decisão final divulgada. A suspensão das visitas foi mantida em agosto."
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final divulgada. A suspensão das visitas foi mantida em agosto.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-07",
@@ -1043,7 +1179,8 @@ const DATA = {lula: {
       },
       "titulo_simples": "Justiça Eleitoral manda tirar vídeo de Flávio",
       "texto_simples": "Flávio publicou um vídeo ligando Lula ao PCC e ao Comando Vermelho. Os partidos PT, PCdoB e PV levaram o caso à Justiça Eleitoral. Por 5 votos a 2, os juízes mandaram tirar o vídeo. Para a maioria, houve propaganda antes da hora. E o vídeo ligou Lula a facções criminosas de forma falsa. Os partidos alegaram propaganda negativa antes da época de campanha.",
-      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de agosto. Nela, os juízes mandaram tirar o vídeo do ar."
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de agosto. Nela, os juízes mandaram tirar o vídeo do ar.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-05-29",
@@ -1059,7 +1196,8 @@ const DATA = {lula: {
       "titulo_simples": "Pedidos de investigação após reunião com Trump",
       "texto_simples": "Em maio de 2026, Flávio se encontrou com Donald Trump em Washington. Ele pediu que o PCC e o Comando Vermelho fossem considerados terroristas. Deputados pediram investigação à Procuradoria-Geral, que pode acusar na Justiça. Eram deputados do PSOL e da Rede, e uma associação de juristas. Depois de uma carta do governo americano, o PT também fez pedidos. Deputados e juristas alegam ataque à soberania, a independência do Brasil.",
       "status_simples": "Até 5 de outubro de 2026, não havia decisão pública sobre investigar.",
-      "resposta_simples": "A campanha disse que o pedido é uma tentativa da esquerda. Segundo ela, a esquerda quer usar a Justiça para seu projeto político. Disse que Flávio buscou ajuda de fora contra o crime organizado."
+      "resposta_simples": "A campanha disse que o pedido é uma tentativa da esquerda. Segundo ela, a esquerda quer usar a Justiça para seu projeto político. Disse que Flávio buscou ajuda de fora contra o crime organizado.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-05-11",
@@ -1079,7 +1217,8 @@ const DATA = {lula: {
       "titulo_simples": "Prisão federal para quem mata agente de segurança",
       "texto_simples": "Flávio foi um dos que cuidaram do texto da lei no Senado. A lei trata de presos por homicídio qualificado contra agentes de segurança. Homicídio qualificado é um assassinato que a lei considera mais grave. Esses presos devem ir para presídios federais de segurança máxima.",
       "publico_simples": "Presos por matar agentes de segurança",
-      "para_que_serve": "Leis sobre presídios de segurança máxima servem para definir quais presos ficam em prisões mais vigiadas."
+      "para_que_serve": "Leis sobre presídios de segurança máxima servem para definir quais presos ficam em prisões mais vigiadas.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2026-05",
@@ -1095,7 +1234,8 @@ const DATA = {lula: {
       "titulo_simples": "Investigação sobre dinheiro de Vorcaro para filme",
       "texto_simples": "Em maio de 2026, foram divulgadas conversas com o ex-banqueiro Daniel Vorcaro. As conversas eram sobre dinheiro para o filme Dark Horse. Em julho, o Supremo autorizou uma investigação pedida pela Polícia Federal. Segundo a polícia, foram pedidos cerca de 131 milhões de reais. Cerca de 60 milhões foram repassados, parte por um fundo americano. A Polícia Federal suspeita de corrupção, lavagem e envio ilegal de dinheiro.",
       "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. O caso está com o ministro André Mendonça, do Supremo.",
-      "resposta_simples": "Flávio nega ter feito algo errado. Ele diz que buscar dinheiro privado para o filme não é errado. O filme é sobre o pai dele."
+      "resposta_simples": "Flávio nega ter feito algo errado. Ele diz que buscar dinheiro privado para o filme não é errado. O filme é sobre o pai dele.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-04",
@@ -1111,7 +1251,8 @@ const DATA = {lula: {
       "titulo_simples": "Investigação por suposta calúnia contra Lula",
       "texto_simples": "Em janeiro de 2026, Flávio postou que \"Lula será delatado\". Na postagem, citou tráfico de drogas e armas e lavagem de dinheiro. Também falou em eleições fraudadas. O ministro Alexandre de Moraes, do Supremo, abriu uma investigação. Em junho, a Polícia Federal viu sinais de calúnia. A Polícia Federal suspeita que ele acusou Lula falsamente de crimes.",
       "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. Nenhuma acusação na Justiça tinha sido divulgada.",
-      "resposta_simples": "Flávio disse que a postagem não acusou Lula de crimes. Nem de forma direta, nem de forma indireta."
+      "resposta_simples": "Flávio disse que a postagem não acusou Lula de crimes. Nem de forma direta, nem de forma indireta.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2024-09-18",
@@ -1128,7 +1269,8 @@ const DATA = {lula: {
       "titulo_simples": "Novas regras para o turismo",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei atualiza as regras do turismo no país. Ela virou a nova Lei Geral do Turismo.",
       "publico_simples": "Quem trabalha com turismo",
-      "para_que_serve": "Leis de turismo servem para organizar o setor e definir regras para empresas e turistas."
+      "para_que_serve": "Leis de turismo servem para organizar o setor e definir regras para empresas e turistas.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2024-04-11",
@@ -1148,7 +1290,8 @@ const DATA = {lula: {
       "titulo_simples": "Lei limita a saída temporária de presos",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei limita a saída temporária, a chamada saidinha. Para passar a uma pena mais leve, o preso passa por avaliação. A lei também trata do uso de tornozeleira eletrônica.",
       "publico_simples": "Pessoas presas no país",
-      "para_que_serve": "Leis sobre cumprimento de pena servem para definir como o preso cumpre a pena e quando pode sair."
+      "para_que_serve": "Leis sobre cumprimento de pena servem para definir como o preso cumpre a pena e quando pode sair.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2022-09-02",
@@ -1165,7 +1308,8 @@ const DATA = {lula: {
       "titulo_simples": "Trabalho a distância e auxílio-alimentação",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei definiu regras para o trabalho feito a distância. Também mudou regras do auxílio-alimentação. Alguns trechos da lei foram barrados.",
       "publico_simples": "Quem trabalha a distância ou tem auxílio-alimentação",
-      "para_que_serve": "Leis sobre trabalho a distância servem para definir direitos e deveres de quem trabalha fora da empresa."
+      "para_que_serve": "Leis sobre trabalho a distância servem para definir direitos e deveres de quem trabalha fora da empresa.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2022-03-08",
@@ -1182,7 +1326,8 @@ const DATA = {lula: {
       "titulo_simples": "Reunião de condomínio pela internet",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei permite assembleias e votações de condomínio pela internet. Também podem ser mistas: parte presencial, parte pela internet. Vale ainda para reuniões de entidades sem fins lucrativos.",
       "publico_simples": "Condomínios e entidades sem fins lucrativos",
-      "para_que_serve": "Leis sobre reuniões pela internet servem para que as pessoas decidam juntas sem estar no mesmo lugar."
+      "para_que_serve": "Leis sobre reuniões pela internet servem para que as pessoas decidam juntas sem estar no mesmo lugar.",
+      "assunto": "Serviços e vida civil"
     },
     {
       "data": "2020-10-19",
@@ -1198,7 +1343,8 @@ const DATA = {lula: {
       "titulo_simples": "Caso das rachadinhas na Assembleia do Rio",
       "texto_simples": "O Ministério Público do Rio (quem acusa na Justiça) acusou Flávio. Mais 16 pessoas foram acusadas, entre elas Fabrício Queiroz. Depois, o Supremo e outro tribunal superior anularam provas. A Justiça do Rio rejeitou a acusação, como pediu o Ministério Público. Depois, o Supremo negou dois pedidos do Ministério Público. O Ministério Público alegava devolução de salários de assessores no gabinete dele.",
       "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro de 2025. Nela, o Supremo negou os pedidos do Ministério Público.",
-      "resposta_simples": "A defesa disse que a acusação não tinha base. Também apontou erros no processo e acesso ilegal a dados protegidos."
+      "resposta_simples": "A defesa disse que a acusação não tinha base. Também apontou erros no processo e acesso ilegal a dados protegidos.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2020-09-23",
@@ -1215,7 +1361,8 @@ const DATA = {lula: {
       "titulo_simples": "Assinatura eletrônica para falar com o governo",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei trata de assinatura eletrônica em contatos com o governo. Também trata de assuntos de saúde e programas de computador do governo. Alguns trechos da lei foram barrados.",
       "publico_simples": "Pessoas e órgãos que falam com o governo",
-      "para_que_serve": "Leis de assinatura eletrônica servem para que papéis assinados pela internet tenham valor."
+      "para_que_serve": "Leis de assinatura eletrônica servem para que papéis assinados pela internet tenham valor.",
+      "assunto": "Serviços e vida civil"
     },
     {
       "data": "2019-11-19",
@@ -1235,7 +1382,8 @@ const DATA = {lula: {
       "titulo_simples": "Empresa pública para serviços de navegação aérea",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei autoriza criar a NAV Brasil, uma empresa pública. Ela cuida de serviços de navegação aérea. A lei vale para todo o país.",
       "publico_simples": "Serviços de navegação aérea do governo",
-      "para_que_serve": "Leis sobre navegação aérea servem para organizar os serviços que dão segurança aos voos."
+      "para_que_serve": "Leis sobre navegação aérea servem para organizar os serviços que dão segurança aos voos.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2019-04-29",
@@ -1256,7 +1404,8 @@ const DATA = {lula: {
       "titulo_simples": "Apoio psicológico para policiais e suas famílias",
       "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. A lei cria apoio psicológico para policiais, bombeiros e guardas de presídio. Vale também para as famílias, em casos de trauma no trabalho.",
       "publico_simples": "Policiais, bombeiros, guardas e suas famílias",
-      "para_que_serve": "Programas de apoio psicológico a agentes de segurança servem para cuidar da saúde mental deles."
+      "para_que_serve": "Programas de apoio psicológico a agentes de segurança servem para cuidar da saúde mental deles.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2018-11-30",
@@ -1276,7 +1425,8 @@ const DATA = {lula: {
       "titulo_simples": "Bebê que nasce sem vida ganha nome na certidão",
       "texto_simples": "Flávio foi um dos autores desta lei. Ela vale só no estado do Rio. Os cartórios devem pôr o nome do bebê que nasce sem vida. O nome vai na certidão de óbito.",
       "publico_simples": "Famílias de bebês que nasceram sem vida",
-      "para_que_serve": "Leis sobre bebês que nascem sem vida servem para respeitar a família e registrar o nome."
+      "para_que_serve": "Leis sobre bebês que nascem sem vida servem para respeitar a família e registrar o nome.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2018-03-02",
@@ -1293,7 +1443,8 @@ const DATA = {lula: {
       "titulo_simples": "Recifes artificiais no litoral do Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei permite ao governo do estado criar o programa \"Costa Viva\". O programa é para criar recifes artificiais no mar. São estruturas no fundo do mar que abrigam peixes e outros bichos.",
       "publico_simples": "O mar do litoral do Rio",
-      "para_que_serve": "Programas de recifes artificiais servem para criar abrigo para peixes e outros seres do mar."
+      "para_que_serve": "Programas de recifes artificiais servem para criar abrigo para peixes e outros seres do mar.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2017-09-22",
@@ -1310,7 +1461,8 @@ const DATA = {lula: {
       "titulo_simples": "Fotos na internet para achar animal perdido",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata do programa \"Encontre seu Amigo\". O programa põe na internet fotos de animais perdidos ou abandonados.",
       "publico_simples": "Donos de animais perdidos ou abandonados",
-      "para_que_serve": "Programas de busca de animais servem para ajudar as pessoas a encontrar animais perdidos."
+      "para_que_serve": "Programas de busca de animais servem para ajudar as pessoas a encontrar animais perdidos.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2016-10-31",
@@ -1330,7 +1482,8 @@ const DATA = {lula: {
       "titulo_simples": "Multa para trote nos telefones de emergência",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei prevê multa para quem liga sem motivo à emergência. Vale para ligações de remoção, resgate, incêndio e polícia.",
       "publico_simples": "Telefones de emergência do estado",
-      "para_que_serve": "Leis contra trotes servem para deixar os telefones de emergência livres para quem precisa de ajuda."
+      "para_que_serve": "Leis contra trotes servem para deixar os telefones de emergência livres para quem precisa de ajuda.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2016-10-18",
@@ -1350,7 +1503,8 @@ const DATA = {lula: {
       "titulo_simples": "Menos horas para quem cuida de pessoa com deficiência",
       "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. O governo do estado pode reduzir as horas de funcionários e militares. São os responsáveis por pessoa com deficiência que precisa de cuidado sempre.",
       "publico_simples": "Funcionários do estado que cuidam de pessoa com deficiência",
-      "para_que_serve": "Leis de jornada menor para cuidadores servem para dar tempo a quem cuida de alguém dependente."
+      "para_que_serve": "Leis de jornada menor para cuidadores servem para dar tempo a quem cuida de alguém dependente.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2014-10-14",
@@ -1370,7 +1524,8 @@ const DATA = {lula: {
       "titulo_simples": "Serviço funerário em desastres no estado do Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata dos serviços funerários, como velório e enterro. Vale para desastres atendidos pela Defesa Civil no estado.",
       "publico_simples": "Famílias de vítimas de desastres",
-      "para_que_serve": "Leis sobre enterro em desastres servem para organizar o atendimento às famílias que perderam alguém."
+      "para_que_serve": "Leis sobre enterro em desastres servem para organizar o atendimento às famílias que perderam alguém.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2014-05-22",
@@ -1390,7 +1545,8 @@ const DATA = {lula: {
       "titulo_simples": "Sem emprego público a condenado por abuso de menor",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Condenados por abuso sexual de menor não podem ter cargo público. Vale só para condenação definitiva, sem chance de pedir revisão. Vale para cargos no governo do estado.",
       "publico_simples": "Quem quer cargo público no estado do Rio",
-      "para_que_serve": "Leis que barram condenados por abuso de menores servem para proteger crianças e adolescentes."
+      "para_que_serve": "Leis que barram condenados por abuso de menores servem para proteger crianças e adolescentes.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2013-11-22",
@@ -1407,7 +1563,8 @@ const DATA = {lula: {
       "titulo_simples": "Farmácia deve avisar sobre remédio genérico",
       "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. Farmácias devem informar sobre genéricos e remédios proibidos pela Vigilância Sanitária. Também devem informar quem tem prioridade no atendimento.",
       "publico_simples": "Clientes de farmácias e drogarias",
-      "para_que_serve": "Leis de informação ao consumidor servem para que as pessoas saibam o que compram e escolham melhor."
+      "para_que_serve": "Leis de informação ao consumidor servem para que as pessoas saibam o que compram e escolham melhor.",
+      "assunto": "Saúde"
     },
     {
       "data": "2013-11-07",
@@ -1424,7 +1581,8 @@ const DATA = {lula: {
       "titulo_simples": "Dentistas no combate à infecção em hospitais",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Dentistas devem participar sempre do controle de infecção hospitalar. Infecção hospitalar é a que o paciente pega no hospital. Vale para hospitais e maternidades que internam pacientes.",
       "publico_simples": "Pacientes de hospitais e maternidades",
-      "para_que_serve": "Leis de controle de infecção hospitalar servem para proteger pacientes de doenças pegas no hospital."
+      "para_que_serve": "Leis de controle de infecção hospitalar servem para proteger pacientes de doenças pegas no hospital.",
+      "assunto": "Saúde"
     },
     {
       "data": "2011-09-12",
@@ -1441,7 +1599,8 @@ const DATA = {lula: {
       "titulo_simples": "Semana para prevenir desastres no estado do Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei cria uma semana para prevenir desastres e alertar a população. Ela acontece na última semana de agosto. Trata de desastres da natureza e da ocupação das cidades.",
       "publico_simples": "Toda a população do estado do Rio",
-      "para_que_serve": "Campanhas de prevenção servem para ensinar a população a evitar riscos e agir em emergências."
+      "para_que_serve": "Campanhas de prevenção servem para ensinar a população a evitar riscos e agir em emergências.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2011-04-04",
@@ -1458,7 +1617,8 @@ const DATA = {lula: {
       "titulo_simples": "Reprovado em teste psicológico pode saber o motivo",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Vale para quem tenta um emprego no governo do estado. Quem for reprovado no exame psicológico tem direito de saber o motivo.",
       "publico_simples": "Quem faz concurso público no estado do Rio",
-      "para_que_serve": "Leis de transparência em concursos servem para o candidato saber por que foi aprovado ou reprovado."
+      "para_que_serve": "Leis de transparência em concursos servem para o candidato saber por que foi aprovado ou reprovado.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2006-12-08",
@@ -1478,7 +1638,8 @@ const DATA = {lula: {
       "titulo_simples": "Cirurgia grátis para não ter mais filhos no Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata de laqueadura e vasectomia grátis. São cirurgias para não ter mais filhos, na mulher e no homem. Vale para a rede de saúde do governo do estado.",
       "publico_simples": "Quem usa a saúde do estado do Rio",
-      "para_que_serve": "Leis de planejamento familiar servem para que as pessoas decidam se e quando querem ter filhos."
+      "para_que_serve": "Leis de planejamento familiar servem para que as pessoas decidam se e quando querem ter filhos.",
+      "assunto": "Saúde"
     },
     {
       "data": "2004-06-21",
@@ -1499,7 +1660,8 @@ const DATA = {lula: {
       "titulo_simples": "Vaga na escola para filhos de agentes mortos",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata da matrícula em escolas do estado. Vale para filhos de policiais, bombeiros e guardas de presídio. O pai ou a mãe precisa ter morrido em serviço.",
       "publico_simples": "Filhos de agentes de segurança mortos em serviço",
-      "para_que_serve": "Leis para famílias de agentes mortos servem para amparar quem perdeu um parente na segurança pública."
+      "para_que_serve": "Leis para famílias de agentes mortos servem para amparar quem perdeu um parente na segurança pública.",
+      "assunto": "Educação"
     },
     {
       "data": "2003-12-29",
@@ -1516,7 +1678,8 @@ const DATA = {lula: {
       "titulo_simples": "Emprego público no Rio sem exigir nome limpo",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Para virar funcionário público do estado, não precisa provar nome limpo. O papel de nome limpo vem de empresas que registram dívidas.",
       "publico_simples": "Quem quer trabalhar para o governo do Rio",
-      "para_que_serve": "Leis sobre a entrada no emprego público servem para definir o que pode ser exigido do candidato."
+      "para_que_serve": "Leis sobre a entrada no emprego público servem para definir o que pode ser exigido do candidato.",
+      "assunto": "Trabalho, salário e negócios"
     }
   ]
 }};
@@ -1628,6 +1791,7 @@ function aplica(){
   const f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
   document.getElementById("crit").textContent = f.crit;
   atualiza("lula"); atualiza("flavio");
+  atualizaPlacar(); atualizaCmp();
 }
 render("lula"); render("flavio");
 let ativo = "lula";
@@ -1672,7 +1836,137 @@ mostra("lula", false);FILTROS.forEach(function(f){
   b.addEventListener("click", function(){ filtroAtual = f.id; aplica(); });
   document.getElementById("filters").appendChild(b);
 });
-aplica();
+const ASSUNTOS = ["Saúde","Educação","Moradia","Comida e agricultura","Ajuda em dinheiro","Trabalho, salário e negócios","Impostos, dívidas e contas do governo","Segurança e Justiça","Direitos e proteção","Obras, energia e transporte","Meio ambiente, animais e desastres","Serviços e vida civil","Relação com outros países","Casos na Justiça"];
+const KEYS = ["lula","flavio"];
+let uid = 0;
+function contaTema(k, id){ return DATA[k].eventos.filter(function(e){ return passa(e, id); }).length; }
+function contaAbr(k, a){ return DATA[k].eventos.filter(function(e){ return e.categoria !== "controversia" && e.abrangencia === a; }).length; }
+function atualizaPlacar(){
+  const box = document.getElementById("placar"); box.textContent = "";
+  const temas = FILTROS.filter(function(f){ return f.id !== "todos"; });
+  const abrs = [["Nacional","Vale no Brasil todo"],["Estadual (RJ)","Vale só no estado do Rio"],["Internacional","Acordo entre países"]];
+  let max = 1;
+  const linhas = [];
+  temas.forEach(function(f){ const a = contaTema("lula", f.id), b = contaTema("flavio", f.id); max = Math.max(max, a, b); linhas.push({id:f.id, nome:f.nome, a:a, b:b}); });
+  const extra = [];
+  abrs.forEach(function(x, i){
+    const a = contaAbr("lula", x[0]), b = contaAbr("flavio", x[0]);
+    if (i < 2 || a || b){ max = Math.max(max, a, b); extra.push({nome:x[1], a:a, b:b}); }
+  });
+  const head = el("div", "pl-row pl-head");
+  KEYS.forEach(function(k, i){
+    if (i === 1) head.appendChild(el("span"));
+    const w = el("div", "pl-who " + (i ? "r" : "l")), im = el("img"); im.src = DATA[k].foto.arquivo; im.alt = "";
+    if (!i) w.appendChild(el("span", null, DATA[k].nome));
+    w.appendChild(im);
+    if (i) w.appendChild(el("span", null, DATA[k].nome));
+    head.appendChild(w);
+  });
+  box.appendChild(head);
+  function lado(cls, n){
+    const s = el("span", "pl-s " + cls), nn = el("span", "pl-n", String(n)), tr = el("span", "pl-track"), br = el("span", "pl-bar");
+    br.style.width = (n / max * 100) + "%"; tr.setAttribute("aria-hidden", "true");
+    tr.appendChild(br);
+    if (cls === "pl-l"){ s.appendChild(nn); s.appendChild(tr); } else { s.appendChild(tr); s.appendChild(nn); }
+    return s;
+  }
+  function linha(l, ehTema, sep){
+    const row = el(ehTema ? "button" : "div", "pl-row" + (sep ? " pl-sep" : ""));
+    if (ehTema){ row.type = "button"; row.setAttribute("aria-pressed", String(filtroAtual === l.id)); row.addEventListener("click", function(){ filtroAtual = l.id; aplica(); }); }
+    row.setAttribute(ehTema ? "aria-label" : "title", l.nome + ": Lula " + l.a + ", Flávio " + l.b);
+    row.appendChild(lado("pl-l", l.a)); row.appendChild(el("span", "pl-lb", l.nome)); row.appendChild(lado("pl-r", l.b));
+    box.appendChild(row);
+  }
+  linhas.forEach(function(l){ linha(l, true, false); });
+  extra.forEach(function(l, i){ linha(l, false, i === 0); });
+  box.appendChild(el("p", "pl-note", "Contar itens não mede qualidade. Uma lei para o Brasil todo e uma lei só do estado do Rio contam igual. Lula foi presidente; Flávio foi deputado estadual e é senador. Cargos diferentes fazem tipos diferentes de lei."));
+}
+function corpo(ev, box){
+  function linha(cls, rotulo, txt){
+    if (!txt) return;
+    const p = el("p", cls); p.appendChild(el("b", null, rotulo + " ")); p.appendChild(document.createTextNode(txt)); box.appendChild(p);
+  }
+  box.appendChild(el("p", null, ev.texto_simples || ev.descricao));
+  linha("pub", "Para quem é:", ev.publico_simples || ev.publico);
+  linha("pub", "Para que serve:", ev.para_que_serve);
+  linha("st", "Em que pé está:", ev.status_simples || ev.status);
+  linha("st", "O que o candidato diz:", ev.resposta_simples || ev.resposta);
+  linha("law", "Lei:", ev.marco_legal);
+  const src = el("p", "src"); src.appendChild(el("b", null, "De onde veio a informação: "));
+  const a = el("a", null, ev.fonte.nome); a.href = ev.fonte.url; a.target = "_blank"; a.rel = "noopener";
+  src.appendChild(a); box.appendChild(src);
+}
+function card(ev){
+  const li = el("li", "card"), id = "cd" + (++uid);
+  const b = el("button", "card-h"); b.type = "button"; b.setAttribute("aria-expanded", "false"); b.setAttribute("aria-controls", id);
+  const tm = el("time", "ct-d", fmtData(ev.data)); tm.dateTime = ev.data; b.appendChild(tm);
+  b.appendChild(el("span", "ct-t", ev.titulo_simples || ev.titulo));
+  const tg = el("span", "tags");
+  if (ev.categoria === "controversia") tg.appendChild(el("span", "tag ctrv", "Caso na Justiça"));
+  else if (ev.abrangencia) tg.appendChild(el("span", "tag abr abr-" + ev.abrangencia.split(" ")[0].toLowerCase(), ABR[ev.abrangencia] || ev.abrangencia));
+  b.appendChild(tg);
+  const bd = el("div", "card-b"); bd.id = id; bd.hidden = true; corpo(ev, bd);
+  b.addEventListener("click", function(){ const aberto = b.getAttribute("aria-expanded") === "true"; b.setAttribute("aria-expanded", String(!aberto)); bd.hidden = aberto; });
+  li.appendChild(b); li.appendChild(bd);
+  return li;
+}
+function coluna(lista, vazio){
+  const ul = el("ul", "col");
+  if (!lista.length) ul.appendChild(el("li", "nada", vazio));
+  lista.forEach(function(ev){ ul.appendChild(card(ev)); });
+  return ul;
+}
+function cabeca(L){
+  const h = el("div", "cmp-head");
+  KEYS.forEach(function(k){
+    const c = el("div", "ch"), im = el("img"); im.src = DATA[k].foto.arquivo; im.alt = ""; c.appendChild(im);
+    const s = el("div"); s.appendChild(el("b", null, DATA[k].nome)); s.appendChild(el("small", null, plural(L[k].length, "item", "itens"))); c.appendChild(s);
+    h.appendChild(c);
+  });
+  return h;
+}
+function bloco(titulo, sub, a, b, vazio){
+  const s = el("section", "blk"), h = el("h3", "blk-t", titulo);
+  if (sub) h.appendChild(el("span", "blk-n", sub));
+  s.appendChild(h);
+  const cols = el("div", "cols"); cols.appendChild(coluna(a, vazio)); cols.appendChild(coluna(b, vazio));
+  s.appendChild(cols);
+  return s;
+}
+function atualizaCmp(){
+  const L = {}; KEYS.forEach(function(k){ L[k] = DATA[k].eventos.filter(function(e){ return passa(e, filtroAtual); }); });
+  const f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
+  const va = document.getElementById("v-ano"), vs = document.getElementById("v-assunto");
+  va.textContent = ""; vs.textContent = "";
+  va.appendChild(cabeca(L)); vs.appendChild(cabeca(L));
+  const anos = {};
+  KEYS.forEach(function(k){ L[k].forEach(function(e){ anos[String(e.data).slice(0, 4)] = 1; }); });
+  const lista = Object.keys(anos).sort().reverse();
+  lista.forEach(function(ano){
+    const por = function(k){ return L[k].filter(function(e){ return String(e.data).slice(0, 4) === ano; }); };
+    va.appendChild(bloco(ano, null, por("lula"), por("flavio"), "Nada neste ano"));
+  });
+  let n = 0;
+  ASSUNTOS.forEach(function(nome){
+    const por = function(k){ return L[k].filter(function(e){ return e.assunto === nome; }); };
+    const a = por("lula"), b = por("flavio");
+    if (!a.length && !b.length) return;
+    n++;
+    vs.appendChild(bloco(nome, "Lula " + a.length + " · Flávio " + b.length, a, b, "Nenhum item neste assunto"));
+  });
+  if (!lista.length) va.appendChild(el("p", "empty", "Nenhum item entra em " + f.nome + "."));
+  if (!n) vs.appendChild(el("p", "empty", "Nenhum item entra em " + f.nome + "."));
+}
+const MODOS = [["lado","Lado a lado"],["ano","Por ano"],["assunto","Por assunto"]];
+MODOS.forEach(function(m){
+  const b = el("button", null, m[1]); b.type = "button"; b.dataset.m = m[0];
+  b.setAttribute("aria-pressed", String(m[0] === "lado"));
+  b.addEventListener("click", function(){
+    document.getElementById("app").dataset.modo = m[0];
+    Array.prototype.forEach.call(document.querySelectorAll("#modos button"), function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+  });
+  document.getElementById("modos").appendChild(b);
+});aplica();
 (function(){
   const f = document.getElementById("foot");
   f.appendChild(el("p", null, "As informações são públicas. Cada item diz de onde veio. Atualizado em 5 de outubro de 2026. As regras são as mesmas para os dois: entram leis e programas que já valem e casos na Justiça, do mais novo para o mais antigo. Projetos que ainda não viraram lei não entram. Quem fez esta página separou os itens por tema seguindo as regras de cada botão. A lei e a fonte de cada item ficam para quem quiser conferir."));
