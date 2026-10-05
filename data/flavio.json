@@ -56,7 +56,8 @@
       "titulo_simples": "Emprego público no Rio sem exigir nome limpo",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Para virar funcionário público do estado, não precisa provar nome limpo. O papel de nome limpo vem de empresas que registram dívidas.",
       "publico_simples": "Quem quer trabalhar para o governo do Rio",
-      "para_que_serve": "Leis sobre a entrada no emprego público servem para definir o que pode ser exigido do candidato."
+      "para_que_serve": "Leis sobre a entrada no emprego público servem para definir o que pode ser exigido do candidato.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2004-06-21",
@@ -77,7 +78,8 @@
       "titulo_simples": "Vaga na escola para filhos de agentes mortos",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata da matrícula em escolas do estado. Vale para filhos de policiais, bombeiros e guardas de presídio. O pai ou a mãe precisa ter morrido em serviço.",
       "publico_simples": "Filhos de agentes de segurança mortos em serviço",
-      "para_que_serve": "Leis para famílias de agentes mortos servem para amparar quem perdeu um parente na segurança pública."
+      "para_que_serve": "Leis para famílias de agentes mortos servem para amparar quem perdeu um parente na segurança pública.",
+      "assunto": "Educação"
     },
     {
       "data": "2006-10",
@@ -107,7 +109,8 @@
       "titulo_simples": "Cirurgia grátis para não ter mais filhos no Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata de laqueadura e vasectomia grátis. São cirurgias para não ter mais filhos, na mulher e no homem. Vale para a rede de saúde do governo do estado.",
       "publico_simples": "Quem usa a saúde do estado do Rio",
-      "para_que_serve": "Leis de planejamento familiar servem para que as pessoas decidam se e quando querem ter filhos."
+      "para_que_serve": "Leis de planejamento familiar servem para que as pessoas decidam se e quando querem ter filhos.",
+      "assunto": "Saúde"
     },
     {
       "data": "2007",
@@ -144,7 +147,8 @@
       "titulo_simples": "Reprovado em teste psicológico pode saber o motivo",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Vale para quem tenta um emprego no governo do estado. Quem for reprovado no exame psicológico tem direito de saber o motivo.",
       "publico_simples": "Quem faz concurso público no estado do Rio",
-      "para_que_serve": "Leis de transparência em concursos servem para o candidato saber por que foi aprovado ou reprovado."
+      "para_que_serve": "Leis de transparência em concursos servem para o candidato saber por que foi aprovado ou reprovado.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2011-09-12",
@@ -161,7 +165,8 @@
       "titulo_simples": "Semana para prevenir desastres no estado do Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei cria uma semana para prevenir desastres e alertar a população. Ela acontece na última semana de agosto. Trata de desastres da natureza e da ocupação das cidades.",
       "publico_simples": "Toda a população do estado do Rio",
-      "para_que_serve": "Campanhas de prevenção servem para ensinar a população a evitar riscos e agir em emergências."
+      "para_que_serve": "Campanhas de prevenção servem para ensinar a população a evitar riscos e agir em emergências.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2013-11-07",
@@ -178,7 +183,8 @@
       "titulo_simples": "Dentistas no combate à infecção em hospitais",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Dentistas devem participar sempre do controle de infecção hospitalar. Infecção hospitalar é a que o paciente pega no hospital. Vale para hospitais e maternidades que internam pacientes.",
       "publico_simples": "Pacientes de hospitais e maternidades",
-      "para_que_serve": "Leis de controle de infecção hospitalar servem para proteger pacientes de doenças pegas no hospital."
+      "para_que_serve": "Leis de controle de infecção hospitalar servem para proteger pacientes de doenças pegas no hospital.",
+      "assunto": "Saúde"
     },
     {
       "data": "2013-11-22",
@@ -195,7 +201,8 @@
       "titulo_simples": "Farmácia deve avisar sobre remédio genérico",
       "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. Farmácias devem informar sobre genéricos e remédios proibidos pela Vigilância Sanitária. Também devem informar quem tem prioridade no atendimento.",
       "publico_simples": "Clientes de farmácias e drogarias",
-      "para_que_serve": "Leis de informação ao consumidor servem para que as pessoas saibam o que compram e escolham melhor."
+      "para_que_serve": "Leis de informação ao consumidor servem para que as pessoas saibam o que compram e escolham melhor.",
+      "assunto": "Saúde"
     },
     {
       "data": "2014-05-22",
@@ -215,7 +222,8 @@
       "titulo_simples": "Sem emprego público a condenado por abuso de menor",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. Condenados por abuso sexual de menor não podem ter cargo público. Vale só para condenação definitiva, sem chance de pedir revisão. Vale para cargos no governo do estado.",
       "publico_simples": "Quem quer cargo público no estado do Rio",
-      "para_que_serve": "Leis que barram condenados por abuso de menores servem para proteger crianças e adolescentes."
+      "para_que_serve": "Leis que barram condenados por abuso de menores servem para proteger crianças e adolescentes.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2014-10",
@@ -245,7 +253,8 @@
       "titulo_simples": "Serviço funerário em desastres no estado do Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata dos serviços funerários, como velório e enterro. Vale para desastres atendidos pela Defesa Civil no estado.",
       "publico_simples": "Famílias de vítimas de desastres",
-      "para_que_serve": "Leis sobre enterro em desastres servem para organizar o atendimento às famílias que perderam alguém."
+      "para_que_serve": "Leis sobre enterro em desastres servem para organizar o atendimento às famílias que perderam alguém.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2016-03-21",
@@ -285,7 +294,8 @@
       "titulo_simples": "Menos horas para quem cuida de pessoa com deficiência",
       "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. O governo do estado pode reduzir as horas de funcionários e militares. São os responsáveis por pessoa com deficiência que precisa de cuidado sempre.",
       "publico_simples": "Funcionários do estado que cuidam de pessoa com deficiência",
-      "para_que_serve": "Leis de jornada menor para cuidadores servem para dar tempo a quem cuida de alguém dependente."
+      "para_que_serve": "Leis de jornada menor para cuidadores servem para dar tempo a quem cuida de alguém dependente.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2016-10-31",
@@ -305,7 +315,8 @@
       "titulo_simples": "Multa para trote nos telefones de emergência",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei prevê multa para quem liga sem motivo à emergência. Vale para ligações de remoção, resgate, incêndio e polícia.",
       "publico_simples": "Telefones de emergência do estado",
-      "para_que_serve": "Leis contra trotes servem para deixar os telefones de emergência livres para quem precisa de ajuda."
+      "para_que_serve": "Leis contra trotes servem para deixar os telefones de emergência livres para quem precisa de ajuda.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2017-09-22",
@@ -322,7 +333,8 @@
       "titulo_simples": "Fotos na internet para achar animal perdido",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei trata do programa \"Encontre seu Amigo\". O programa põe na internet fotos de animais perdidos ou abandonados.",
       "publico_simples": "Donos de animais perdidos ou abandonados",
-      "para_que_serve": "Programas de busca de animais servem para ajudar as pessoas a encontrar animais perdidos."
+      "para_que_serve": "Programas de busca de animais servem para ajudar as pessoas a encontrar animais perdidos.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2018-03-02",
@@ -339,7 +351,8 @@
       "titulo_simples": "Recifes artificiais no litoral do Rio",
       "texto_simples": "Flávio escreveu esta lei, que vale só no estado do Rio. A lei permite ao governo do estado criar o programa \"Costa Viva\". O programa é para criar recifes artificiais no mar. São estruturas no fundo do mar que abrigam peixes e outros bichos.",
       "publico_simples": "O mar do litoral do Rio",
-      "para_que_serve": "Programas de recifes artificiais servem para criar abrigo para peixes e outros seres do mar."
+      "para_que_serve": "Programas de recifes artificiais servem para criar abrigo para peixes e outros seres do mar.",
+      "assunto": "Meio ambiente, animais e desastres"
     },
     {
       "data": "2018-05-07",
@@ -379,7 +392,8 @@
       "titulo_simples": "Bebê que nasce sem vida ganha nome na certidão",
       "texto_simples": "Flávio foi um dos autores desta lei. Ela vale só no estado do Rio. Os cartórios devem pôr o nome do bebê que nasce sem vida. O nome vai na certidão de óbito.",
       "publico_simples": "Famílias de bebês que nasceram sem vida",
-      "para_que_serve": "Leis sobre bebês que nascem sem vida servem para respeitar a família e registrar o nome."
+      "para_que_serve": "Leis sobre bebês que nascem sem vida servem para respeitar a família e registrar o nome.",
+      "assunto": "Direitos e proteção"
     },
     {
       "data": "2019-02-01",
@@ -432,7 +446,8 @@
       "titulo_simples": "Apoio psicológico para policiais e suas famílias",
       "texto_simples": "Flávio foi o primeiro autor desta lei. Ela vale só no estado do Rio. A lei cria apoio psicológico para policiais, bombeiros e guardas de presídio. Vale também para as famílias, em casos de trauma no trabalho.",
       "publico_simples": "Policiais, bombeiros, guardas e suas famílias",
-      "para_que_serve": "Programas de apoio psicológico a agentes de segurança servem para cuidar da saúde mental deles."
+      "para_que_serve": "Programas de apoio psicológico a agentes de segurança servem para cuidar da saúde mental deles.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2019-11-19",
@@ -462,7 +477,8 @@
       "titulo_simples": "Empresa pública para serviços de navegação aérea",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei autoriza criar a NAV Brasil, uma empresa pública. Ela cuida de serviços de navegação aérea. A lei vale para todo o país.",
       "publico_simples": "Serviços de navegação aérea do governo",
-      "para_que_serve": "Leis sobre navegação aérea servem para organizar os serviços que dão segurança aos voos."
+      "para_que_serve": "Leis sobre navegação aérea servem para organizar os serviços que dão segurança aos voos.",
+      "assunto": "Obras, energia e transporte"
     },
     {
       "data": "2020-09-23",
@@ -479,7 +495,8 @@
       "titulo_simples": "Assinatura eletrônica para falar com o governo",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei trata de assinatura eletrônica em contatos com o governo. Também trata de assuntos de saúde e programas de computador do governo. Alguns trechos da lei foram barrados.",
       "publico_simples": "Pessoas e órgãos que falam com o governo",
-      "para_que_serve": "Leis de assinatura eletrônica servem para que papéis assinados pela internet tenham valor."
+      "para_que_serve": "Leis de assinatura eletrônica servem para que papéis assinados pela internet tenham valor.",
+      "assunto": "Serviços e vida civil"
     },
     {
       "data": "2020-10-19",
@@ -495,7 +512,8 @@
       "titulo_simples": "Caso das rachadinhas na Assembleia do Rio",
       "texto_simples": "O Ministério Público do Rio (quem acusa na Justiça) acusou Flávio. Mais 16 pessoas foram acusadas, entre elas Fabrício Queiroz. Depois, o Supremo e outro tribunal superior anularam provas. A Justiça do Rio rejeitou a acusação, como pediu o Ministério Público. Depois, o Supremo negou dois pedidos do Ministério Público. O Ministério Público alegava devolução de salários de assessores no gabinete dele.",
       "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de fevereiro de 2025. Nela, o Supremo negou os pedidos do Ministério Público.",
-      "resposta_simples": "A defesa disse que a acusação não tinha base. Também apontou erros no processo e acesso ilegal a dados protegidos."
+      "resposta_simples": "A defesa disse que a acusação não tinha base. Também apontou erros no processo e acesso ilegal a dados protegidos.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2021-05-31",
@@ -532,7 +550,8 @@
       "titulo_simples": "Reunião de condomínio pela internet",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei permite assembleias e votações de condomínio pela internet. Também podem ser mistas: parte presencial, parte pela internet. Vale ainda para reuniões de entidades sem fins lucrativos.",
       "publico_simples": "Condomínios e entidades sem fins lucrativos",
-      "para_que_serve": "Leis sobre reuniões pela internet servem para que as pessoas decidam juntas sem estar no mesmo lugar."
+      "para_que_serve": "Leis sobre reuniões pela internet servem para que as pessoas decidam juntas sem estar no mesmo lugar.",
+      "assunto": "Serviços e vida civil"
     },
     {
       "data": "2022-06-10",
@@ -559,7 +578,8 @@
       "titulo_simples": "Trabalho a distância e auxílio-alimentação",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei definiu regras para o trabalho feito a distância. Também mudou regras do auxílio-alimentação. Alguns trechos da lei foram barrados.",
       "publico_simples": "Quem trabalha a distância ou tem auxílio-alimentação",
-      "para_que_serve": "Leis sobre trabalho a distância servem para definir direitos e deveres de quem trabalha fora da empresa."
+      "para_que_serve": "Leis sobre trabalho a distância servem para definir direitos e deveres de quem trabalha fora da empresa.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2023-04-05",
@@ -589,7 +609,8 @@
       "titulo_simples": "Lei limita a saída temporária de presos",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei limita a saída temporária, a chamada saidinha. Para passar a uma pena mais leve, o preso passa por avaliação. A lei também trata do uso de tornozeleira eletrônica.",
       "publico_simples": "Pessoas presas no país",
-      "para_que_serve": "Leis sobre cumprimento de pena servem para definir como o preso cumpre a pena e quando pode sair."
+      "para_que_serve": "Leis sobre cumprimento de pena servem para definir como o preso cumpre a pena e quando pode sair.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2024-05-15",
@@ -617,7 +638,8 @@
       "titulo_simples": "Novas regras para o turismo",
       "texto_simples": "Flávio foi quem cuidou do texto da lei no Senado. A lei atualiza as regras do turismo no país. Ela virou a nova Lei Geral do Turismo.",
       "publico_simples": "Quem trabalha com turismo",
-      "para_que_serve": "Leis de turismo servem para organizar o setor e definir regras para empresas e turistas."
+      "para_que_serve": "Leis de turismo servem para organizar o setor e definir regras para empresas e turistas.",
+      "assunto": "Trabalho, salário e negócios"
     },
     {
       "data": "2025-02-19",
@@ -719,7 +741,8 @@
       "titulo_simples": "Investigação por suposta calúnia contra Lula",
       "texto_simples": "Em janeiro de 2026, Flávio postou que \"Lula será delatado\". Na postagem, citou tráfico de drogas e armas e lavagem de dinheiro. Também falou em eleições fraudadas. O ministro Alexandre de Moraes, do Supremo, abriu uma investigação. Em junho, a Polícia Federal viu sinais de calúnia. A Polícia Federal suspeita que ele acusou Lula falsamente de crimes.",
       "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. Nenhuma acusação na Justiça tinha sido divulgada.",
-      "resposta_simples": "Flávio disse que a postagem não acusou Lula de crimes. Nem de forma direta, nem de forma indireta."
+      "resposta_simples": "Flávio disse que a postagem não acusou Lula de crimes. Nem de forma direta, nem de forma indireta.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-05-11",
@@ -739,7 +762,8 @@
       "titulo_simples": "Prisão federal para quem mata agente de segurança",
       "texto_simples": "Flávio foi um dos que cuidaram do texto da lei no Senado. A lei trata de presos por homicídio qualificado contra agentes de segurança. Homicídio qualificado é um assassinato que a lei considera mais grave. Esses presos devem ir para presídios federais de segurança máxima.",
       "publico_simples": "Presos por matar agentes de segurança",
-      "para_que_serve": "Leis sobre presídios de segurança máxima servem para definir quais presos ficam em prisões mais vigiadas."
+      "para_que_serve": "Leis sobre presídios de segurança máxima servem para definir quais presos ficam em prisões mais vigiadas.",
+      "assunto": "Segurança e Justiça"
     },
     {
       "data": "2026-05",
@@ -755,7 +779,8 @@
       "titulo_simples": "Investigação sobre dinheiro de Vorcaro para filme",
       "texto_simples": "Em maio de 2026, foram divulgadas conversas com o ex-banqueiro Daniel Vorcaro. As conversas eram sobre dinheiro para o filme Dark Horse. Em julho, o Supremo autorizou uma investigação pedida pela Polícia Federal. Segundo a polícia, foram pedidos cerca de 131 milhões de reais. Cerca de 60 milhões foram repassados, parte por um fundo americano. A Polícia Federal suspeita de corrupção, lavagem e envio ilegal de dinheiro.",
       "status_simples": "Até 5 de outubro de 2026, a investigação não tinha terminado. O caso está com o ministro André Mendonça, do Supremo.",
-      "resposta_simples": "Flávio nega ter feito algo errado. Ele diz que buscar dinheiro privado para o filme não é errado. O filme é sobre o pai dele."
+      "resposta_simples": "Flávio nega ter feito algo errado. Ele diz que buscar dinheiro privado para o filme não é errado. O filme é sobre o pai dele.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-05-29",
@@ -771,7 +796,8 @@
       "titulo_simples": "Pedidos de investigação após reunião com Trump",
       "texto_simples": "Em maio de 2026, Flávio se encontrou com Donald Trump em Washington. Ele pediu que o PCC e o Comando Vermelho fossem considerados terroristas. Deputados pediram investigação à Procuradoria-Geral, que pode acusar na Justiça. Eram deputados do PSOL e da Rede, e uma associação de juristas. Depois de uma carta do governo americano, o PT também fez pedidos. Deputados e juristas alegam ataque à soberania, a independência do Brasil.",
       "status_simples": "Até 5 de outubro de 2026, não havia decisão pública sobre investigar.",
-      "resposta_simples": "A campanha disse que o pedido é uma tentativa da esquerda. Segundo ela, a esquerda quer usar a Justiça para seu projeto político. Disse que Flávio buscou ajuda de fora contra o crime organizado."
+      "resposta_simples": "A campanha disse que o pedido é uma tentativa da esquerda. Segundo ela, a esquerda quer usar a Justiça para seu projeto político. Disse que Flávio buscou ajuda de fora contra o crime organizado.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-07-13",
@@ -785,7 +811,8 @@
       },
       "titulo_simples": "Moraes suspende visitas de Flávio ao pai",
       "texto_simples": "Em julho de 2026, Flávio postou uma carta do pai, Jair Bolsonaro. Na carta, o pai apoiava Flávio como futuro candidato. O ministro Moraes, do Supremo, suspendeu as visitas de Flávio ao pai. A suspensão é de 90 dias. Ele também mandou o caso para quem acusa na Justiça Eleitoral. Para Moraes, o pai não podia usar redes, nem por outra pessoa.",
-      "status_simples": "Até 5 de outubro de 2026, não havia decisão final divulgada. A suspensão das visitas foi mantida em agosto."
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final divulgada. A suspensão das visitas foi mantida em agosto.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-07",
@@ -799,7 +826,8 @@
       },
       "titulo_simples": "Justiça Eleitoral manda tirar vídeo de Flávio",
       "texto_simples": "Flávio publicou um vídeo ligando Lula ao PCC e ao Comando Vermelho. Os partidos PT, PCdoB e PV levaram o caso à Justiça Eleitoral. Por 5 votos a 2, os juízes mandaram tirar o vídeo. Para a maioria, houve propaganda antes da hora. E o vídeo ligou Lula a facções criminosas de forma falsa. Os partidos alegaram propaganda negativa antes da época de campanha.",
-      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de agosto. Nela, os juízes mandaram tirar o vídeo do ar."
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de agosto. Nela, os juízes mandaram tirar o vídeo do ar.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-07-25",
@@ -833,7 +861,8 @@
       },
       "titulo_simples": "Vídeo que imita Bolsonaro: Justiça não dá multa",
       "texto_simples": "Na convenção do PL, foi mostrado um vídeo de Jair Bolsonaro. Convenção é a reunião em que o partido escolhe candidatos. O vídeo imitava a imagem e a voz dele com inteligência artificial. Por 4 votos a 3, os juízes negaram o pedido do PT. Para a maioria, mostrar o vídeo na convenção não foi propaganda proibida. O PT alegou propaganda antes da hora e uso de montagem falsa.",
-      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de 1º de setembro. Nela, a Justiça Eleitoral negou o pedido do PT."
+      "status_simples": "Até 5 de outubro de 2026, a última decisão informada era de 1º de setembro. Nela, a Justiça Eleitoral negou o pedido do PT.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-09",
@@ -847,7 +876,8 @@
       },
       "titulo_simples": "Justiça Eleitoral aceita processo contra Flávio",
       "texto_simples": "O grupo de partidos Brasil Pronto pra Mais abriu um processo. O processo é contra Flávio, Alfredo Gaspar e Mario Frias. A Justiça Eleitoral deu andamento ao processo. Ela pediu ao Facebook e à Shopee dados dos perfis investigados. O caso é sobre uma rede de posts em parceria no Instagram. O grupo alega abuso de poder e mau uso da comunicação.",
-      "status_simples": "Até 5 de outubro de 2026, não havia decisão final."
+      "status_simples": "Até 5 de outubro de 2026, não havia decisão final.",
+      "assunto": "Casos na Justiça"
     },
     {
       "data": "2026-10-04",

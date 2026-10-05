@@ -105,6 +105,67 @@ a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 footer{background:var(--bg);border-top:2px solid var(--line);padding:12px 32px;font-size:14px;line-height:1.55;color:var(--ink-2);max-height:8rem;overflow-y:auto}
 footer p{margin:0 0 4px;max-width:140ch;overflow-wrap:anywhere}
 footer a{color:var(--ink-2)}
+.placar{margin-top:18px;max-width:68ch}
+.pl-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(92px,34%) minmax(0,1fr);align-items:center;width:100%;min-height:44px;padding:4px 6px;margin:0;border:0;background:transparent;color:var(--ink);font:inherit;text-align:left}
+button.pl-row{cursor:pointer}
+button.pl-row:hover{background:var(--chip-bg)}
+button.pl-row[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ink);background:var(--chip-bg)}
+button.pl-row:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.pl-head{min-height:0;padding-bottom:8px}
+.pl-who{display:flex;align-items:center;gap:8px;min-width:0;font-weight:700;font-size:15px;line-height:1.2}
+.pl-who.r{justify-content:flex-start}
+.pl-who.l{justify-content:flex-end;text-align:right}
+.pl-who img{width:28px;height:34px;object-fit:cover;object-position:center top;flex:none;display:block;background:var(--chip-bg)}
+.pl-who span{overflow-wrap:anywhere}
+.pl-s{display:flex;align-items:center;gap:8px;min-width:0}
+.pl-n{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:14px;width:3ch;flex:none}
+.pl-l .pl-n{text-align:right}
+.pl-track{flex:1;min-width:0;display:flex}
+.pl-l .pl-track{justify-content:flex-end}
+.pl-bar{height:14px;background:var(--ink-2);min-width:0;max-width:100%}
+.pl-lb{padding:0 8px;text-align:center;font-size:15px;line-height:1.25;overflow-wrap:anywhere}
+.pl-sep{border-top:2px solid var(--line);margin-top:6px;padding-top:6px}
+div.pl-row .pl-lb{color:var(--ink-2)}
+.hero .pl-note{margin:12px 0 0;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:60ch}
+.modos{display:flex;gap:0;padding:12px 24px;background:var(--bg);border-bottom:2px solid var(--line)}
+.modos button{font:inherit;font-size:16px;font-weight:600;min-height:44px;padding:6px 18px;background:transparent;color:var(--ink);border:2px solid var(--ink);cursor:pointer}
+.modos button + button{margin-left:-2px}
+.modos button:first-child{border-radius:999px 0 0 999px}
+.modos button:last-child{border-radius:0 999px 999px 0}
+.modos button[aria-pressed="true"]{background:var(--mark-bg);color:var(--mark-ink)}
+.modos button:focus-visible{outline:2px solid var(--focus);outline-offset:2px;position:relative}
+.cmp{display:none;background:var(--pane)}
+#app[data-modo="ano"] #v-ano,#app[data-modo="assunto"] #v-assunto{display:block}
+#app:not([data-modo="lado"]) #split,#app:not([data-modo="lado"]) .tabs{display:none}
+.cmp-head{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--pane);border-bottom:2px solid var(--line);padding-top:env(safe-area-inset-top)}
+.ch{display:flex;align-items:center;gap:10px;padding:8px 24px;min-width:0}
+.ch + .ch{border-left:2px solid var(--line)}
+.ch img{width:36px;height:44px;object-fit:cover;object-position:center top;flex:none;display:block;background:var(--chip-bg)}
+.ch b{display:block;font-size:17px;line-height:1.2;overflow-wrap:anywhere}
+.ch small{display:block;font-size:14px;color:var(--ink-2)}
+.blk-t{margin:0;padding:12px 24px;text-align:center;font-size:20px;line-height:1.3;background:var(--chip-bg);color:var(--ink);border-bottom:2px solid var(--line)}
+.blk-n{display:block;font-size:14px;font-weight:500;color:var(--ink-2)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-bottom:2px solid var(--line)}
+.col{list-style:none;margin:0;padding:12px 24px 16px;min-width:0}
+.col + .col{border-left:2px solid var(--line)}
+.col .nada{margin:6px 0;color:var(--ink-2);font-size:15px}
+.card{margin:0 0 10px;background:var(--chip-bg)}
+.card-h{display:block;width:100%;min-height:44px;font:inherit;text-align:left;color:var(--ink);background:transparent;border:0;margin:0;padding:10px 12px;cursor:pointer}
+.card-h:hover{background:var(--line)}
+.card-h:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+.card-h[aria-expanded="true"]{box-shadow:inset 4px 0 0 var(--ink)}
+.ct-d{display:block;font-family:var(--font-mono);font-size:13px;color:var(--ink-2)}
+.ct-t{display:block;font-weight:700;font-size:16px;line-height:1.3;margin:2px 0 6px;overflow-wrap:anywhere}
+.card .tags{margin-top:0}
+.card .tag{background:var(--pane)}
+.card .tag.abr-nacional{background:var(--mark-bg)}
+.card-b{padding:2px 12px 14px;border-top:2px solid var(--line)}
+.card-b p{margin:10px 0 0;font-size:15px;line-height:1.55;color:var(--ink);overflow-wrap:anywhere}
+.card-b b{font-weight:700}
+.card-b .law{padding:6px 8px;background:var(--mark-bg);color:var(--mark-ink)}
+.card-b .st{padding:8px 10px;background:var(--pane);border-left:4px solid var(--ink-2)}
+.card-b a{color:var(--ink);font-weight:500}
+.cmp .empty{margin:24px}
 @media (max-width:700px){
   body{font-size:15px;line-height:1.55}
   .id{flex-direction:column;align-items:flex-start;gap:8px;padding:12px 10px 10px}
@@ -151,22 +212,51 @@ footer a{color:var(--ink-2)}
   .id h2{font-size:22px}
   .scroll{overflow:visible;padding:4px 12px 24px;scrollbar-gutter:auto}
   footer{max-height:none;overflow:visible;padding:12px}
+}@media (max-width:700px){
+  .placar{margin-top:12px}
+  .pl-row{padding:4px 2px;grid-template-columns:minmax(0,1fr) minmax(84px,36%) minmax(0,1fr)}
+  .pl-lb{font-size:14px;padding:0 6px}
+  .pl-who{font-size:14px;gap:6px}
+  .pl-who img{width:24px;height:30px}
+  .pl-n{font-size:13px}
+  .hero .pl-note{font-size:14px}
+  .modos{padding:10px 12px}
+  .modos button{flex:1;font-size:14px;padding:6px 6px}
+  .cmp-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ch{padding:6px 8px;gap:6px}
+  .ch img{width:28px;height:34px}
+  .ch b{font-size:14px}
+  .ch small{font-size:12px}
+  .blk-t{padding:10px 8px;font-size:17px}
+  .col{padding:8px 6px 10px}
+  .card{margin-bottom:8px}
+  .card-h{padding:8px}
+  .ct-d{font-size:12px}
+  .ct-t{font-size:14px}
+  .card .tag{font-size:12px;padding:1px 5px}
+  .card-b{padding:2px 8px 10px}
+  .card-b p{font-size:14px}
+  .col .nada{font-size:13px}
 }@media (prefers-reduced-motion:no-preference){
   .scroll{scroll-behavior:smooth}
 }
 </style>
-<div id="app">
+<div id="app" data-modo="lado">
   <header class="hero">
     <h1>Qual candidato fez o que?</h1>
     <p>Veja as leis e os programas que Lula e Flávio Bolsonaro fizeram ou ajudaram a aprovar. Veja também os casos dos dois na Justiça. Os dois disputam o 2º turno no dia 25 de outubro. Cada item diz de onde veio a informação.</p>
     <div class="filters" id="filters" role="group" aria-label="Filtrar itens por valor"></div>
     <p class="crit" id="crit" aria-live="polite"></p>
+    <div class="placar" id="placar"></div>
   </header>
+  <div class="modos" id="modos" role="group" aria-label="Modo de exibição"></div>
   <div class="tabs" id="tabs" role="tablist" aria-label="Escolher candidato"></div>
   <main class="split" id="split">
     <section class="pane" id="pane-lula" aria-label="Linha do tempo de Lula"></section>
     <section class="pane" id="pane-flavio" aria-label="Linha do tempo de Flávio Bolsonaro"></section>
   </main>
+  <div class="cmp" id="v-ano"></div>
+  <div class="cmp" id="v-assunto"></div>
   <footer id="foot"></footer>
 </div>
 <script>
@@ -279,6 +369,7 @@ function aplica(){
   const f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
   document.getElementById("crit").textContent = f.crit;
   atualiza("lula"); atualiza("flavio");
+  atualizaPlacar(); atualizaCmp();
 }
 render("lula"); render("flavio");
 let ativo = "lula";
@@ -323,7 +414,137 @@ mostra("lula", false);FILTROS.forEach(function(f){
   b.addEventListener("click", function(){ filtroAtual = f.id; aplica(); });
   document.getElementById("filters").appendChild(b);
 });
-aplica();
+const ASSUNTOS = ["Saúde","Educação","Moradia","Comida e agricultura","Ajuda em dinheiro","Trabalho, salário e negócios","Impostos, dívidas e contas do governo","Segurança e Justiça","Direitos e proteção","Obras, energia e transporte","Meio ambiente, animais e desastres","Serviços e vida civil","Relação com outros países","Casos na Justiça"];
+const KEYS = ["lula","flavio"];
+let uid = 0;
+function contaTema(k, id){ return DATA[k].eventos.filter(function(e){ return passa(e, id); }).length; }
+function contaAbr(k, a){ return DATA[k].eventos.filter(function(e){ return e.categoria !== "controversia" && e.abrangencia === a; }).length; }
+function atualizaPlacar(){
+  const box = document.getElementById("placar"); box.textContent = "";
+  const temas = FILTROS.filter(function(f){ return f.id !== "todos"; });
+  const abrs = [["Nacional","Vale no Brasil todo"],["Estadual (RJ)","Vale só no estado do Rio"],["Internacional","Acordo entre países"]];
+  let max = 1;
+  const linhas = [];
+  temas.forEach(function(f){ const a = contaTema("lula", f.id), b = contaTema("flavio", f.id); max = Math.max(max, a, b); linhas.push({id:f.id, nome:f.nome, a:a, b:b}); });
+  const extra = [];
+  abrs.forEach(function(x, i){
+    const a = contaAbr("lula", x[0]), b = contaAbr("flavio", x[0]);
+    if (i < 2 || a || b){ max = Math.max(max, a, b); extra.push({nome:x[1], a:a, b:b}); }
+  });
+  const head = el("div", "pl-row pl-head");
+  KEYS.forEach(function(k, i){
+    if (i === 1) head.appendChild(el("span"));
+    const w = el("div", "pl-who " + (i ? "r" : "l")), im = el("img"); im.src = DATA[k].foto.arquivo; im.alt = "";
+    if (!i) w.appendChild(el("span", null, DATA[k].nome));
+    w.appendChild(im);
+    if (i) w.appendChild(el("span", null, DATA[k].nome));
+    head.appendChild(w);
+  });
+  box.appendChild(head);
+  function lado(cls, n){
+    const s = el("span", "pl-s " + cls), nn = el("span", "pl-n", String(n)), tr = el("span", "pl-track"), br = el("span", "pl-bar");
+    br.style.width = (n / max * 100) + "%"; tr.setAttribute("aria-hidden", "true");
+    tr.appendChild(br);
+    if (cls === "pl-l"){ s.appendChild(nn); s.appendChild(tr); } else { s.appendChild(tr); s.appendChild(nn); }
+    return s;
+  }
+  function linha(l, ehTema, sep){
+    const row = el(ehTema ? "button" : "div", "pl-row" + (sep ? " pl-sep" : ""));
+    if (ehTema){ row.type = "button"; row.setAttribute("aria-pressed", String(filtroAtual === l.id)); row.addEventListener("click", function(){ filtroAtual = l.id; aplica(); }); }
+    row.setAttribute(ehTema ? "aria-label" : "title", l.nome + ": Lula " + l.a + ", Flávio " + l.b);
+    row.appendChild(lado("pl-l", l.a)); row.appendChild(el("span", "pl-lb", l.nome)); row.appendChild(lado("pl-r", l.b));
+    box.appendChild(row);
+  }
+  linhas.forEach(function(l){ linha(l, true, false); });
+  extra.forEach(function(l, i){ linha(l, false, i === 0); });
+  box.appendChild(el("p", "pl-note", "Contar itens não mede qualidade. Uma lei para o Brasil todo e uma lei só do estado do Rio contam igual. Lula foi presidente; Flávio foi deputado estadual e é senador. Cargos diferentes fazem tipos diferentes de lei."));
+}
+function corpo(ev, box){
+  function linha(cls, rotulo, txt){
+    if (!txt) return;
+    const p = el("p", cls); p.appendChild(el("b", null, rotulo + " ")); p.appendChild(document.createTextNode(txt)); box.appendChild(p);
+  }
+  box.appendChild(el("p", null, ev.texto_simples || ev.descricao));
+  linha("pub", "Para quem é:", ev.publico_simples || ev.publico);
+  linha("pub", "Para que serve:", ev.para_que_serve);
+  linha("st", "Em que pé está:", ev.status_simples || ev.status);
+  linha("st", "O que o candidato diz:", ev.resposta_simples || ev.resposta);
+  linha("law", "Lei:", ev.marco_legal);
+  const src = el("p", "src"); src.appendChild(el("b", null, "De onde veio a informação: "));
+  const a = el("a", null, ev.fonte.nome); a.href = ev.fonte.url; a.target = "_blank"; a.rel = "noopener";
+  src.appendChild(a); box.appendChild(src);
+}
+function card(ev){
+  const li = el("li", "card"), id = "cd" + (++uid);
+  const b = el("button", "card-h"); b.type = "button"; b.setAttribute("aria-expanded", "false"); b.setAttribute("aria-controls", id);
+  const tm = el("time", "ct-d", fmtData(ev.data)); tm.dateTime = ev.data; b.appendChild(tm);
+  b.appendChild(el("span", "ct-t", ev.titulo_simples || ev.titulo));
+  const tg = el("span", "tags");
+  if (ev.categoria === "controversia") tg.appendChild(el("span", "tag ctrv", "Caso na Justiça"));
+  else if (ev.abrangencia) tg.appendChild(el("span", "tag abr abr-" + ev.abrangencia.split(" ")[0].toLowerCase(), ABR[ev.abrangencia] || ev.abrangencia));
+  b.appendChild(tg);
+  const bd = el("div", "card-b"); bd.id = id; bd.hidden = true; corpo(ev, bd);
+  b.addEventListener("click", function(){ const aberto = b.getAttribute("aria-expanded") === "true"; b.setAttribute("aria-expanded", String(!aberto)); bd.hidden = aberto; });
+  li.appendChild(b); li.appendChild(bd);
+  return li;
+}
+function coluna(lista, vazio){
+  const ul = el("ul", "col");
+  if (!lista.length) ul.appendChild(el("li", "nada", vazio));
+  lista.forEach(function(ev){ ul.appendChild(card(ev)); });
+  return ul;
+}
+function cabeca(L){
+  const h = el("div", "cmp-head");
+  KEYS.forEach(function(k){
+    const c = el("div", "ch"), im = el("img"); im.src = DATA[k].foto.arquivo; im.alt = ""; c.appendChild(im);
+    const s = el("div"); s.appendChild(el("b", null, DATA[k].nome)); s.appendChild(el("small", null, plural(L[k].length, "item", "itens"))); c.appendChild(s);
+    h.appendChild(c);
+  });
+  return h;
+}
+function bloco(titulo, sub, a, b, vazio){
+  const s = el("section", "blk"), h = el("h3", "blk-t", titulo);
+  if (sub) h.appendChild(el("span", "blk-n", sub));
+  s.appendChild(h);
+  const cols = el("div", "cols"); cols.appendChild(coluna(a, vazio)); cols.appendChild(coluna(b, vazio));
+  s.appendChild(cols);
+  return s;
+}
+function atualizaCmp(){
+  const L = {}; KEYS.forEach(function(k){ L[k] = DATA[k].eventos.filter(function(e){ return passa(e, filtroAtual); }); });
+  const f = FILTROS.filter(function(x){ return x.id === filtroAtual; })[0];
+  const va = document.getElementById("v-ano"), vs = document.getElementById("v-assunto");
+  va.textContent = ""; vs.textContent = "";
+  va.appendChild(cabeca(L)); vs.appendChild(cabeca(L));
+  const anos = {};
+  KEYS.forEach(function(k){ L[k].forEach(function(e){ anos[String(e.data).slice(0, 4)] = 1; }); });
+  const lista = Object.keys(anos).sort().reverse();
+  lista.forEach(function(ano){
+    const por = function(k){ return L[k].filter(function(e){ return String(e.data).slice(0, 4) === ano; }); };
+    va.appendChild(bloco(ano, null, por("lula"), por("flavio"), "Nada neste ano"));
+  });
+  let n = 0;
+  ASSUNTOS.forEach(function(nome){
+    const por = function(k){ return L[k].filter(function(e){ return e.assunto === nome; }); };
+    const a = por("lula"), b = por("flavio");
+    if (!a.length && !b.length) return;
+    n++;
+    vs.appendChild(bloco(nome, "Lula " + a.length + " · Flávio " + b.length, a, b, "Nenhum item neste assunto"));
+  });
+  if (!lista.length) va.appendChild(el("p", "empty", "Nenhum item entra em " + f.nome + "."));
+  if (!n) vs.appendChild(el("p", "empty", "Nenhum item entra em " + f.nome + "."));
+}
+const MODOS = [["lado","Lado a lado"],["ano","Por ano"],["assunto","Por assunto"]];
+MODOS.forEach(function(m){
+  const b = el("button", null, m[1]); b.type = "button"; b.dataset.m = m[0];
+  b.setAttribute("aria-pressed", String(m[0] === "lado"));
+  b.addEventListener("click", function(){
+    document.getElementById("app").dataset.modo = m[0];
+    Array.prototype.forEach.call(document.querySelectorAll("#modos button"), function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+  });
+  document.getElementById("modos").appendChild(b);
+});aplica();
 (function(){
   const f = document.getElementById("foot");
   f.appendChild(el("p", null, "As informações são públicas. Cada item diz de onde veio. Atualizado em 5 de outubro de 2026. As regras são as mesmas para os dois: entram leis e programas que já valem e casos na Justiça, do mais novo para o mais antigo. Projetos que ainda não viraram lei não entram. Quem fez esta página separou os itens por tema seguindo as regras de cada botão. A lei e a fonte de cada item ficam para quem quiser conferir."));
